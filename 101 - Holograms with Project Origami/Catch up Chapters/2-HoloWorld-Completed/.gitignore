@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+.vs
+App
+bin
+Library
+obj
+Temp
+UnityVS.2-HoloWorld-Completed.sln
+UnityVS.2-HoloWorld-Completed.CSharp.Editor.csproj
+UnityVS.2-HoloWorld-Completed.CSharp.csproj
+Assembly-CSharp.csproj
+Assembly-CSharp-vs.csproj
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp-Editor-vs.csproj
+Assembly-CSharp-firstpass-uwp.csproj
+Assembly-CSharp-uwp.csproj
+2-HoloWorld-Completed.sln
+2-HoloWorld-Completed-csharp.sln
+WSATestCertificate.pfx
+WSATestCertificate.pfx.meta

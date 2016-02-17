@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+.vs
+App
+bin
+Library
+obj
+Temp
+UnityVS.4-Gesture-Completed.sln
+UnityVS.4-Gesture-Completed.CSharp.Editor.csproj
+UnityVS.4-Gesture-Completed.CSharp.csproj
+Assembly-CSharp.csproj
+Assembly-CSharp-vs.csproj
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp-Editor-vs.csproj
+Assembly-CSharp-firstpass-uwp.csproj
+Assembly-CSharp-uwp.csproj
+4-Gesture-Completed.sln
+4-Gesture-Completed-csharp.sln
+WSATestCertificate.pfx
+WSATestCertificate.pfx.meta
