@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6a6af9fcc3a260d43b5541e1cb970480
+timeCreated: 1445048254
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - FingerPressedSound: {fileID: 8300000, guid: 9c0ace72966b7234b9d9f946da8b666d,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

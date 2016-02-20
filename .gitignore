@@ -1,0 +1,12 @@
+*.ipch
+*.opensdf
+*.sdf
+*.obj
+*.suo
+*.tlog
+*.log
+*.idb
+*.opendb
+*.pfx
+/Library
+/Temp
