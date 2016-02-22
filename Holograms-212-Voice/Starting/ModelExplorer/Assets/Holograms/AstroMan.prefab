@@ -1371,7 +1371,6 @@ GameObject:
   - 95: {fileID: 9502782}
   - 114: {fileID: 11499228}
   - 114: {fileID: 11471476}
-  - 114: {fileID: 11481904}
   m_Layer: 8
   m_Name: AstroMan
   m_TagString: Untagged
@@ -6240,18 +6239,6 @@ MonoBehaviour:
     Scrollable: 1
     Placeable: 1
   TargetFeedbackSound: {fileID: 0}
---- !u!114 &11481904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620d0af99a37487449bed787b0b9c231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotationSensitivity: 10
 --- !u!114 &11485082
 MonoBehaviour:
   m_ObjectHideFlags: 1

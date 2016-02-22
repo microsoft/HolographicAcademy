@@ -1528,7 +1528,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 449304}
-  - 95: {fileID: 9507592}
   m_Layer: 8
   m_Name: AstroMan_Expanded
   m_TagString: Untagged
@@ -7862,23 +7861,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131652}
   m_Mesh: {fileID: 4300054, guid: c86cef2b5255fc743a2f2319b9cac145, type: 3}
---- !u!95 &9507592
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154686}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c802ef60c45ec6c4c8a1ce96b7fe19da, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9552254
 Animator:
   serializedVersion: 3
