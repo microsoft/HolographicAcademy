@@ -13,7 +13,7 @@ public class GestureManager : MonoBehaviour
         gestureRecognizer = new GestureRecognizer();
         gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
 
-        gestureRecognizer.TappedEvent += (source, ray) =>
+        gestureRecognizer.TappedEvent += (source, tapCount, ray) =>
         {
             GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
 
