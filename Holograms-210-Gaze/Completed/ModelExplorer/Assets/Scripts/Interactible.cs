@@ -11,7 +11,7 @@ public class Interactible : MonoBehaviour
     private AudioSource audioSource;
 
     private Material[] defaultMaterials;
-    private Material[] materialsWithHightlight;
+    private Material[] materialsWithHighlight;
     private Material highlightMaterial;
 
     void Start()
@@ -20,13 +20,13 @@ public class Interactible : MonoBehaviour
 
         highlightMaterial = Resources.Load("Materials/AdditiveRimShader", typeof(Material)) as Material;
 
-        // Add highlightMaterial to materialsWithHightlight.
-        materialsWithHightlight = new Material[defaultMaterials.Length + 1];
+        // Add highlightMaterial to materialsWithHighlight.
+        materialsWithHighlight = new Material[defaultMaterials.Length + 1];
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
-            materialsWithHightlight[i] = defaultMaterials[i];
+            materialsWithHighlight[i] = defaultMaterials[i];
         }
-        materialsWithHightlight[materialsWithHightlight.Length - 1] = highlightMaterial;
+        materialsWithHighlight[materialsWithHighlight.Length - 1] = highlightMaterial;
 
         // Add a BoxCollider if the interactible does not contain one.
         Collider collider = GetComponentInChildren<Collider>();
@@ -69,7 +69,7 @@ public class Interactible : MonoBehaviour
         {
             // 2.d: Set GetComponent Renderer's materials to
             // materialsWithHighlight when gazed at.
-            GetComponent<Renderer>().materials = materialsWithHightlight;
+            GetComponent<Renderer>().materials = materialsWithHighlight;
         }
     }
 

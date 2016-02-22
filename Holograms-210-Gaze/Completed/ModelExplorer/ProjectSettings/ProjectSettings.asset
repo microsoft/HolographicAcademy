@@ -365,10 +365,10 @@ PlayerSettings:
       CodeGeneration: False
       EnterpriseAuthentication: False
       HumanInterfaceDevice: False
-      InternetClient: True
-      InternetClientServer: True
+      InternetClient: False
+      InternetClientServer: False
       Location: False
-      Microphone: True
+      Microphone: False
       MusicLibrary: False
       Objects3D: False
       PhoneCall: False
