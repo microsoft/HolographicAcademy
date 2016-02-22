@@ -27,16 +27,16 @@ public class HandsManager : Singleton<HandsManager>
     {
         EnableAudioHapticFeedback();
 
-        SourceManager.SourceDetected += SourceManager_SourceDetected;
-        SourceManager.SourceLost += SourceManager_SourceLost;
+        InteractionManager.SourceDetected += InteractionManager_SourceDetected;
+        InteractionManager.SourceLost += InteractionManager_SourceLost;
 
         /* TODO: DEVELOPER CODE ALONG 2.a */
 
         // 2.a: Register for SourceManager.SourcePressed event.
-        //SourceManager.SourcePressed += SourceManager_SourcePressed;
+        //InteractionManager.SourcePressed += InteractionManager_SourcePressed;
 
         // 2.a: Register for SourceManager.SourceReleased event.
-        //SourceManager.SourceReleased += SourceManager_SourceReleased;
+        //InteractionManager.SourceReleased += InteractionManager_SourceReleased;
 
         // 2.a: Initialize FocusedGameObject as null.
         //FocusedGameObject = null;
@@ -60,12 +60,12 @@ public class HandsManager : Singleton<HandsManager>
         }
     }
 
-    private void SourceManager_SourceDetected(SourceState hand)
+    private void InteractionManager_SourceDetected(InteractionSourceState hand)
     {
         HandDetected = true;
     }
 
-    private void SourceManager_SourceLost(SourceState hand)
+    private void InteractionManager_SourceLost(InteractionSourceState hand)
     {
         HandDetected = false;
 
@@ -73,12 +73,12 @@ public class HandsManager : Singleton<HandsManager>
         //ResetFocusedGameObject();
     }
 
-    private void SourceManager_SourcePressed(SourceState hand)
+    private void InteractionManager_SourcePressed(InteractionSourceState hand)
     {
         if (InteractibleManager.Instance.FocusedGameObject != null)
         {
             // Play a select sound if we have an audio source and are not targetting an asset with a select sound.
-            if (audioSource != null && !audioSource.isPlaying && 
+            if (audioSource != null && !audioSource.isPlaying &&
                 (InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>() != null &&
                 InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>().TargetFeedbackSound == null))
             {
@@ -90,7 +90,7 @@ public class HandsManager : Singleton<HandsManager>
         }
     }
 
-    private void SourceManager_SourceReleased(SourceState hand)
+    private void InteractionManager_SourceReleased(InteractionSourceState hand)
     {
         // 2.a: Reset FocusedGameObject.
         //ResetFocusedGameObject();
@@ -108,13 +108,13 @@ public class HandsManager : Singleton<HandsManager>
 
     void OnDestroy()
     {
-        SourceManager.SourceDetected -= SourceManager_SourceDetected;
-        SourceManager.SourceLost -= SourceManager_SourceLost;
+        InteractionManager.SourceDetected -= InteractionManager_SourceDetected;
+        InteractionManager.SourceLost -= InteractionManager_SourceLost;
 
         // 2.a: Unregister the SourceManager.SourceReleased event.
-        //SourceManager.SourceReleased -= SourceManager_SourceReleased;
+        //InteractionManager.SourceReleased -= InteractionManager_SourceReleased;
 
         // 2.a: Unregister for SourceManager.SourcePressed event.
-        //SourceManager.SourcePressed -= SourceManager_SourcePressed;
+        //InteractionManager.SourcePressed -= InteractionManager_SourcePressed;
     }
 }
