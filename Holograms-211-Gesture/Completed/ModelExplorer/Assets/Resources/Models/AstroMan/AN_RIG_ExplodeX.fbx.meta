@@ -1,0 +1,745 @@
+fileFormatVersion: 2
+guid: c86cef2b5255fc743a2f2319b9cac145
+timeCreated: 1444763224
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Abs1_Left
+    100002: Abs1_Right
+    100004: Abs_Center
+    100006: AN_INT_GEO_G
+    100008: An_JetPack_Center
+    100010: //RootNode
+    100012: An_Side_Left
+    100014: An_Side_Right
+    100016: Arm1_Left
+    100018: Arm1_Right
+    100020: Arm2_Left
+    100022: Arm2_Right
+    100024: Back_Center
+    100026: Boot_Left
+    100028: Boot_Right
+    100030: Chest1_Left
+    100032: Chest1_Right
+    100034: Chest2_Left
+    100036: Chest2_Right
+    100038: ChestButton_Center
+    100040: Collar1_Center
+    100042: Elbow_Left
+    100044: Elbow_Right
+    100046: FArm1_Left
+    100048: FArm1_Right
+    100050: FArmRing_Left
+    100052: FArmRing_Right
+    100054: FLeg1_Left
+    100056: FLeg1_Right
+    100058: GEO_Center
+    100060: GEO_G
+    100062: GEO_Left_G
+    100064: GEO_Right_G
+    100066: Glove_Left
+    100068: Glove_Right
+    100070: Helmet_Back
+    100072: Helmet_Collar_In
+    100074: Helmet_Collar_Out
+    100076: Helmet_Main_G
+    100078: Helmet_Side_Left
+    100080: Helmet_Side_R
+    100082: Helmet_SideS_Left
+    100084: Helmet_SideS_R
+    100086: Helmet_Top
+    100088: Helmet_Trim1
+    100090: Helmet_Trim2
+    100092: Helmet_VisorFront
+    100094: Helmet_VisorTop
+    100096: HipStrap_Center
+    100098: Knee_Left
+    100100: Knee_Right
+    100102: Lefteg1_L
+    100104: Lefteg2_L
+    100106: LeftegRing1_L
+    100108: Leg1_Right
+    100110: Leg2_Right
+    100112: LegRing1_Right
+    100114: Plenum_Center
+    100116: Ring_FL1_Left
+    100118: Ring_FL1_Right
+    100120: ScapulaM_Left
+    100122: ScapulaM_Right
+    100124: Shoulder1_Left
+    100126: Shoulder1_Right
+    100128: ShoulderM_Left
+    100130: ShoulderM_Right
+    100132: TorsoSide1_Left1
+    100134: TorsoSide1_Right
+    100136: Torus_anm_01
+    100138: Torus_anm_02
+    100140: Torus_anm_03
+    100142: Torus_anm_04
+    100144: Torus_anm_05
+    100146: Torus_anm_06
+    100148: Torus_anm_07
+    100150: Torus_anm_08
+    100152: Torus_anm_09
+    100154: Torus_anm_10
+    100156: Torus_anm_11
+    100158: Torus_anm_12
+    100160: Torus_anm_13
+    100162: Torus_anm_14
+    100164: Torus_anm_15
+    100166: Torus_anm_16
+    100168: Torus_anm_17
+    100170: Torus_anm_18
+    100172: Torus_anm_19
+    100174: Torus_anm_20
+    100176: Torus_anm_21
+    100178: Torus_anm_22
+    100180: Torus_anm_23
+    100182: Torus_anm_24
+    100184: Torus_anm_25
+    100186: Torus_anm_25 1
+    100188: Torus_anm_26
+    400000: Abs1_Left
+    400002: Abs1_Right
+    400004: Abs_Center
+    400006: AN_INT_GEO_G
+    400008: An_JetPack_Center
+    400010: //RootNode
+    400012: An_Side_Left
+    400014: An_Side_Right
+    400016: Arm1_Left
+    400018: Arm1_Right
+    400020: Arm2_Left
+    400022: Arm2_Right
+    400024: Back_Center
+    400026: Boot_Left
+    400028: Boot_Right
+    400030: Chest1_Left
+    400032: Chest1_Right
+    400034: Chest2_Left
+    400036: Chest2_Right
+    400038: ChestButton_Center
+    400040: Collar1_Center
+    400042: Elbow_Left
+    400044: Elbow_Right
+    400046: FArm1_Left
+    400048: FArm1_Right
+    400050: FArmRing_Left
+    400052: FArmRing_Right
+    400054: FLeg1_Left
+    400056: FLeg1_Right
+    400058: GEO_Center
+    400060: GEO_G
+    400062: GEO_Left_G
+    400064: GEO_Right_G
+    400066: Glove_Left
+    400068: Glove_Right
+    400070: Helmet_Back
+    400072: Helmet_Collar_In
+    400074: Helmet_Collar_Out
+    400076: Helmet_Main_G
+    400078: Helmet_Side_Left
+    400080: Helmet_Side_R
+    400082: Helmet_SideS_Left
+    400084: Helmet_SideS_R
+    400086: Helmet_Top
+    400088: Helmet_Trim1
+    400090: Helmet_Trim2
+    400092: Helmet_VisorFront
+    400094: Helmet_VisorTop
+    400096: HipStrap_Center
+    400098: Knee_Left
+    400100: Knee_Right
+    400102: Lefteg1_L
+    400104: Lefteg2_L
+    400106: LeftegRing1_L
+    400108: Leg1_Right
+    400110: Leg2_Right
+    400112: LegRing1_Right
+    400114: Plenum_Center
+    400116: Ring_FL1_Left
+    400118: Ring_FL1_Right
+    400120: ScapulaM_Left
+    400122: ScapulaM_Right
+    400124: Shoulder1_Left
+    400126: Shoulder1_Right
+    400128: ShoulderM_Left
+    400130: ShoulderM_Right
+    400132: TorsoSide1_Left1
+    400134: TorsoSide1_Right
+    400136: Torus_anm_01
+    400138: Torus_anm_02
+    400140: Torus_anm_03
+    400142: Torus_anm_04
+    400144: Torus_anm_05
+    400146: Torus_anm_06
+    400148: Torus_anm_07
+    400150: Torus_anm_08
+    400152: Torus_anm_09
+    400154: Torus_anm_10
+    400156: Torus_anm_11
+    400158: Torus_anm_12
+    400160: Torus_anm_13
+    400162: Torus_anm_14
+    400164: Torus_anm_15
+    400166: Torus_anm_16
+    400168: Torus_anm_17
+    400170: Torus_anm_18
+    400172: Torus_anm_19
+    400174: Torus_anm_20
+    400176: Torus_anm_21
+    400178: Torus_anm_22
+    400180: Torus_anm_23
+    400182: Torus_anm_24
+    400184: Torus_anm_25
+    400186: Torus_anm_25 1
+    400188: Torus_anm_26
+    2300000: Abs1_Left
+    2300002: Abs1_Right
+    2300004: Abs_Center
+    2300006: An_JetPack_Center
+    2300008: An_Side_Left
+    2300010: An_Side_Right
+    2300012: Arm1_Left
+    2300014: Arm1_Right
+    2300016: Arm2_Left
+    2300018: Arm2_Right
+    2300020: Back_Center
+    2300022: Boot_Left
+    2300024: Boot_Right
+    2300026: Chest1_Left
+    2300028: Chest1_Right
+    2300030: Chest2_Left
+    2300032: Chest2_Right
+    2300034: ChestButton_Center
+    2300036: Collar1_Center
+    2300038: Elbow_Left
+    2300040: Elbow_Right
+    2300042: FArm1_Left
+    2300044: FArm1_Right
+    2300046: FArmRing_Left
+    2300048: FArmRing_Right
+    2300050: FLeg1_Left
+    2300052: FLeg1_Right
+    2300054: Glove_Left
+    2300056: Glove_Right
+    2300058: Helmet_Back
+    2300060: Helmet_Collar_In
+    2300062: Helmet_Collar_Out
+    2300064: Helmet_Side_Left
+    2300066: Helmet_Side_R
+    2300068: Helmet_SideS_Left
+    2300070: Helmet_SideS_R
+    2300072: Helmet_Top
+    2300074: Helmet_Trim1
+    2300076: Helmet_Trim2
+    2300078: Helmet_VisorFront
+    2300080: Helmet_VisorTop
+    2300082: HipStrap_Center
+    2300084: Knee_Left
+    2300086: Knee_Right
+    2300088: Lefteg1_L
+    2300090: Lefteg2_L
+    2300092: LeftegRing1_L
+    2300094: Leg1_Right
+    2300096: Leg2_Right
+    2300098: LegRing1_Right
+    2300100: Plenum_Center
+    2300102: Ring_FL1_Left
+    2300104: Ring_FL1_Right
+    2300106: ScapulaM_Left
+    2300108: ScapulaM_Right
+    2300110: Shoulder1_Left
+    2300112: Shoulder1_Right
+    2300114: ShoulderM_Left
+    2300116: ShoulderM_Right
+    2300118: TorsoSide1_Left1
+    2300120: TorsoSide1_Right
+    2300122: Torus_anm_01
+    2300124: Torus_anm_02
+    2300126: Torus_anm_03
+    2300128: Torus_anm_04
+    2300130: Torus_anm_05
+    2300132: Torus_anm_06
+    2300134: Torus_anm_07
+    2300136: Torus_anm_08
+    2300138: Torus_anm_09
+    2300140: Torus_anm_10
+    2300142: Torus_anm_11
+    2300144: Torus_anm_12
+    2300146: Torus_anm_13
+    2300148: Torus_anm_14
+    2300150: Torus_anm_15
+    2300152: Torus_anm_16
+    2300154: Torus_anm_17
+    2300156: Torus_anm_18
+    2300158: Torus_anm_19
+    2300160: Torus_anm_20
+    2300162: Torus_anm_21
+    2300164: Torus_anm_22
+    2300166: Torus_anm_23
+    2300168: Torus_anm_24
+    2300170: Torus_anm_25
+    2300172: Torus_anm_25 1
+    2300174: Torus_anm_26
+    3300000: Abs1_Left
+    3300002: Abs1_Right
+    3300004: Abs_Center
+    3300006: An_JetPack_Center
+    3300008: An_Side_Left
+    3300010: An_Side_Right
+    3300012: Arm1_Left
+    3300014: Arm1_Right
+    3300016: Arm2_Left
+    3300018: Arm2_Right
+    3300020: Back_Center
+    3300022: Boot_Left
+    3300024: Boot_Right
+    3300026: Chest1_Left
+    3300028: Chest1_Right
+    3300030: Chest2_Left
+    3300032: Chest2_Right
+    3300034: ChestButton_Center
+    3300036: Collar1_Center
+    3300038: Elbow_Left
+    3300040: Elbow_Right
+    3300042: FArm1_Left
+    3300044: FArm1_Right
+    3300046: FArmRing_Left
+    3300048: FArmRing_Right
+    3300050: FLeg1_Left
+    3300052: FLeg1_Right
+    3300054: Glove_Left
+    3300056: Glove_Right
+    3300058: Helmet_Back
+    3300060: Helmet_Collar_In
+    3300062: Helmet_Collar_Out
+    3300064: Helmet_Side_Left
+    3300066: Helmet_Side_R
+    3300068: Helmet_SideS_Left
+    3300070: Helmet_SideS_R
+    3300072: Helmet_Top
+    3300074: Helmet_Trim1
+    3300076: Helmet_Trim2
+    3300078: Helmet_VisorFront
+    3300080: Helmet_VisorTop
+    3300082: HipStrap_Center
+    3300084: Knee_Left
+    3300086: Knee_Right
+    3300088: Lefteg1_L
+    3300090: Lefteg2_L
+    3300092: LeftegRing1_L
+    3300094: Leg1_Right
+    3300096: Leg2_Right
+    3300098: LegRing1_Right
+    3300100: Plenum_Center
+    3300102: Ring_FL1_Left
+    3300104: Ring_FL1_Right
+    3300106: ScapulaM_Left
+    3300108: ScapulaM_Right
+    3300110: Shoulder1_Left
+    3300112: Shoulder1_Right
+    3300114: ShoulderM_Left
+    3300116: ShoulderM_Right
+    3300118: TorsoSide1_Left1
+    3300120: TorsoSide1_Right
+    3300122: Torus_anm_01
+    3300124: Torus_anm_02
+    3300126: Torus_anm_03
+    3300128: Torus_anm_04
+    3300130: Torus_anm_05
+    3300132: Torus_anm_06
+    3300134: Torus_anm_07
+    3300136: Torus_anm_08
+    3300138: Torus_anm_09
+    3300140: Torus_anm_10
+    3300142: Torus_anm_11
+    3300144: Torus_anm_12
+    3300146: Torus_anm_13
+    3300148: Torus_anm_14
+    3300150: Torus_anm_15
+    3300152: Torus_anm_16
+    3300154: Torus_anm_17
+    3300156: Torus_anm_18
+    3300158: Torus_anm_19
+    3300160: Torus_anm_20
+    3300162: Torus_anm_21
+    3300164: Torus_anm_22
+    3300166: Torus_anm_23
+    3300168: Torus_anm_24
+    3300170: Torus_anm_25
+    3300172: Torus_anm_25 1
+    3300174: Torus_anm_26
+    4300000: ChestButton_Center
+    4300002: Collar1_Center
+    4300004: Plenum_Center
+    4300006: Abs_Center
+    4300008: Back_Center
+    4300010: An_JetPack_Center
+    4300012: HipStrap_Center
+    4300014: Chest1_Right
+    4300016: Chest2_Right
+    4300018: Abs1_Right
+    4300020: ShoulderM_Right
+    4300022: An_Side_Right
+    4300024: ScapulaM_Right
+    4300026: Chest1_Left
+    4300028: Chest2_Left
+    4300030: Abs1_Left
+    4300032: ShoulderM_Left
+    4300034: An_Side_Left
+    4300036: ScapulaM_Left
+    4300038: Arm2_Right
+    4300040: Shoulder1_Right
+    4300042: Arm1_Right
+    4300044: Elbow_Right
+    4300046: FArm1_Right
+    4300048: Glove_Right
+    4300050: TorsoSide1_Right
+    4300052: Leg1_Right
+    4300054: Leg2_Right
+    4300056: LegRing1_Right
+    4300058: FLeg1_Right
+    4300060: Knee_Right
+    4300062: FArmRing_Right
+    4300064: Ring_FL1_Right
+    4300066: Boot_Right
+    4300068: Arm2_Left
+    4300070: Shoulder1_Left
+    4300072: Arm1_Left
+    4300074: Elbow_Left
+    4300076: FArm1_Left
+    4300078: Glove_Left
+    4300080: TorsoSide1_Left1
+    4300082: Lefteg1_L
+    4300084: Lefteg2_L
+    4300086: LeftegRing1_L
+    4300088: FLeg1_Left
+    4300090: Knee_Left
+    4300092: FArmRing_Left
+    4300094: Ring_FL1_Left
+    4300096: Boot_Left
+    4300098: Helmet_VisorFront
+    4300100: Helmet_VisorTop
+    4300102: Helmet_Side_R
+    4300104: Helmet_Side_Left
+    4300106: Helmet_SideS_R
+    4300108: Helmet_SideS_Left
+    4300110: Helmet_Top
+    4300112: Helmet_Back
+    4300114: Helmet_Trim1
+    4300116: Helmet_Trim2
+    4300118: Helmet_Collar_In
+    4300120: Helmet_Collar_Out
+    4300122: Torus_anm_01
+    4300124: Torus_anm_02
+    4300126: Torus_anm_03
+    4300128: Torus_anm_04
+    4300130: Torus_anm_05
+    4300132: Torus_anm_06
+    4300134: Torus_anm_07
+    4300136: Torus_anm_08
+    4300138: Torus_anm_09
+    4300140: Torus_anm_10
+    4300142: Torus_anm_11
+    4300144: Torus_anm_12
+    4300146: Torus_anm_13
+    4300148: Torus_anm_14
+    4300150: Torus_anm_15
+    4300152: Torus_anm_16
+    4300154: Torus_anm_17
+    4300156: Torus_anm_18
+    4300158: Torus_anm_19
+    4300160: Torus_anm_20
+    4300162: Torus_anm_21
+    4300164: Torus_anm_22
+    4300166: Torus_anm_25
+    4300168: Torus_anm_23
+    4300170: Torus_anm_24
+    4300172: Torus_anm_26
+    4300174: Torus_anm_25
+    7400000: explode_clip
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: explode_clip
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 225
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GEO_G
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_01
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_02
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_03
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_04
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_05
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_06
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_07
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_08
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_09
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_10
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_11
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_12
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_13
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_14
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_15
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_16
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_17
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_18
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_19
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_20
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_21
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_22
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_22/Torus_anm_25
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_23
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_24
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_26
+        weight: 1
+      - path: GEO_G/AN_INT_GEO_G/Torus_anm_26/Torus_anm_25 1
+        weight: 1
+      - path: GEO_G/GEO_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Abs1_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/Abs1_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/Abs_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/An_JetPack_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/An_Side_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/An_Side_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/Back_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest1_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest1_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest2_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest2_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/ChestButton_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Collar1_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/HipStrap_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Plenum_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/ScapulaM_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/ScapulaM_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/ShoulderM_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/ShoulderM_Right
+        weight: 1
+      - path: GEO_G/GEO_Left_G
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Arm1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Arm2_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Boot_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Elbow_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/FArm1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/FArmRing_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/FLeg1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Glove_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Knee_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Lefteg1_L
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Lefteg2_L
+        weight: 1
+      - path: GEO_G/GEO_Left_G/LeftegRing1_L
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Ring_FL1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/Shoulder1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left_G/TorsoSide1_Left1
+        weight: 1
+      - path: GEO_G/GEO_Right_G
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Arm1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Arm2_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Boot_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Elbow_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/FArm1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/FArmRing_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/FLeg1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Glove_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Knee_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Leg1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Leg2_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/LegRing1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Ring_FL1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/Shoulder1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right_G/TorsoSide1_Right
+        weight: 1
+      - path: GEO_G/Helmet_Main_G
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Back
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Collar_In
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Collar_Out
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Side_Left
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Side_R
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_SideS_Left
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_SideS_R
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Top
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Trim1
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_Trim2
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_VisorFront
+        weight: 1
+      - path: GEO_G/Helmet_Main_G/Helmet_VisorTop
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
