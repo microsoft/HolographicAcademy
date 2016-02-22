@@ -53,6 +53,7 @@ public class GestureManager : Singleton<GestureManager>
 
     void OnDestroy()
     {
+        // Unregister the Tapped and Navigation events on the NavigationRecognizer.
         NavigationRecognizer.TappedEvent -= NavigationRecognizer_TappedEvent;
 
         NavigationRecognizer.NavigationStartedEvent -= NavigationRecognizer_NavigationStartedEvent;
@@ -60,6 +61,7 @@ public class GestureManager : Singleton<GestureManager>
         NavigationRecognizer.NavigationCompletedEvent -= NavigationRecognizer_NavigationCompletedEvent;
         NavigationRecognizer.NavigationCanceledEvent -= NavigationRecognizer_NavigationCanceledEvent;
 
+        // Unregister the Manipulation events on the ManipulationRecognizer.
         ManipulationRecognizer.ManipulationStartedEvent -= ManipulationRecognizer_ManipulationStartedEvent;
         ManipulationRecognizer.ManipulationUpdatedEvent -= ManipulationRecognizer_ManipulationUpdatedEvent;
         ManipulationRecognizer.ManipulationCompletedEvent -= ManipulationRecognizer_ManipulationCompletedEvent;
