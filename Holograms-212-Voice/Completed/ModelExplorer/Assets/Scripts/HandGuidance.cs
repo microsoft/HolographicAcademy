@@ -28,9 +28,9 @@ public class HandGuidance : Singleton<HandGuidance>
     {
         // Register for hand and finger events to know where your hand
         // is being tracked and what state it is in.
-        SourceManager.SourceLost += SourceManager_SourceLost;
-        SourceManager.SourceUpdated += SourceManager_SourceUpdated;
-        SourceManager.SourceReleased += SourceManager_SourceReleased;
+        InteractionManager.SourceLost += InteractionManager_SourceLost;
+        InteractionManager.SourceUpdated += InteractionManager_SourceUpdated;
+        InteractionManager.SourceReleased += InteractionManager_SourceReleased;
 
         if (HandGuidanceIndicator != null)
         {
@@ -52,7 +52,7 @@ public class HandGuidance : Singleton<HandGuidance>
     /// This indicator will show what direction the user should move their hand to increase their guidance score.
     /// </summary>
     /// <param name="hand">The hand being tracked.</param>
-    private void ShowHandGuidanceIndicator(SourceState hand)
+    private void ShowHandGuidanceIndicator(InteractionSourceState hand)
     {
         if (!currentlyTrackedHand.HasValue)
         {
@@ -71,7 +71,7 @@ public class HandGuidance : Singleton<HandGuidance>
         }
     }
 
-    private void GetIndicatorPositionAndRotation(SourceState hand, out Vector3 position, out Quaternion rotation)
+    private void GetIndicatorPositionAndRotation(InteractionSourceState hand, out Vector3 position, out Quaternion rotation)
     {
         float maxDistanceFromCenter = 0.3f;
         float distanceFromCenter = (float)(hand.properties.sourceLossRisk * maxDistanceFromCenter);
@@ -81,7 +81,7 @@ public class HandGuidance : Singleton<HandGuidance>
         rotation = Quaternion.LookRotation(Camera.main.transform.forward, hand.properties.sourceLossMitigationDirection);
     }
 
-    private void HideHandGuidanceIndicator(SourceState hand)
+    private void HideHandGuidanceIndicator(InteractionSourceState hand)
     {
         if (!currentlyTrackedHand.HasValue)
         {
@@ -95,7 +95,7 @@ public class HandGuidance : Singleton<HandGuidance>
     }
 
     // Call these events from HandsManager. This fires when the hand is moved.
-    private void SourceManager_SourceUpdated(SourceState hand)
+    private void InteractionManager_SourceUpdated(InteractionSourceState hand)
     {
         // Only display hand indicators when we have targeted an interactible and the hand is in a pressed state.
         if (!hand.pressed ||
@@ -129,13 +129,13 @@ public class HandGuidance : Singleton<HandGuidance>
     }
 
     // This fires when the finger is released.
-    private void SourceManager_SourceReleased(SourceState hand)
+    private void InteractionManager_SourceReleased(InteractionSourceState hand)
     {
         RemoveTrackedHand(hand);
     }
 
     // This fires when the hand is lost.
-    private void SourceManager_SourceLost(SourceState hand)
+    private void InteractionManager_SourceLost(InteractionSourceState hand)
     {
         if (!currentlyTrackedHand.HasValue || currentlyTrackedHand.Value != hand.source.id)
         {
@@ -145,7 +145,7 @@ public class HandGuidance : Singleton<HandGuidance>
         RemoveTrackedHand(hand);
     }
 
-    private void RemoveTrackedHand(SourceState hand)
+    private void RemoveTrackedHand(InteractionSourceState hand)
     {
         if (currentlyTrackedHand.HasValue && currentlyTrackedHand.Value == hand.source.id)
         {
@@ -156,8 +156,8 @@ public class HandGuidance : Singleton<HandGuidance>
 
     void OnDestroy()
     {
-        SourceManager.SourceLost -= SourceManager_SourceLost;
-        SourceManager.SourceUpdated -= SourceManager_SourceUpdated;
-        SourceManager.SourceReleased -= SourceManager_SourceReleased;
+        InteractionManager.SourceLost -= InteractionManager_SourceLost;
+        InteractionManager.SourceUpdated -= InteractionManager_SourceUpdated;
+        InteractionManager.SourceReleased -= InteractionManager_SourceReleased;
     }
 }

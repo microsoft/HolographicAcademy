@@ -27,11 +27,11 @@ public class HandsManager : Singleton<HandsManager>
     {
         EnableAudioHapticFeedback();
 
-        SourceManager.SourceDetected += SourceManager_SourceDetected;
-        SourceManager.SourceLost += SourceManager_SourceLost;
+        InteractionManager.SourceDetected += InteractionManager_SourceDetected;
+        InteractionManager.SourceLost += InteractionManager_SourceLost;
 
-        SourceManager.SourcePressed += SourceManager_SourcePressed;
-        SourceManager.SourceReleased += SourceManager_SourceReleased;
+        InteractionManager.SourcePressed += InteractionManager_SourcePressed;
+        InteractionManager.SourceReleased += InteractionManager_SourceReleased;
 
         FocusedGameObject = null;
     }
@@ -54,19 +54,19 @@ public class HandsManager : Singleton<HandsManager>
         }
     }
 
-    private void SourceManager_SourceDetected(SourceState hand)
+    private void InteractionManager_SourceDetected(InteractionSourceState hand)
     {
         HandDetected = true;
     }
 
-    private void SourceManager_SourceLost(SourceState hand)
+    private void InteractionManager_SourceLost(InteractionSourceState hand)
     {
         HandDetected = false;
 
         ResetFocusedGameObject();
     }
 
-    private void SourceManager_SourcePressed(SourceState hand)
+    private void InteractionManager_SourcePressed(InteractionSourceState hand)
     {
         if (InteractibleManager.Instance.FocusedGameObject != null)
         {
@@ -82,7 +82,7 @@ public class HandsManager : Singleton<HandsManager>
         }
     }
 
-    private void SourceManager_SourceReleased(SourceState hand)
+    private void InteractionManager_SourceReleased(InteractionSourceState hand)
     {
         ResetFocusedGameObject();
     }
@@ -96,10 +96,10 @@ public class HandsManager : Singleton<HandsManager>
 
     void OnDestroy()
     {
-        SourceManager.SourceDetected -= SourceManager_SourceDetected;
-        SourceManager.SourceLost -= SourceManager_SourceLost;
+        InteractionManager.SourceDetected -= InteractionManager_SourceDetected;
+        InteractionManager.SourceLost -= InteractionManager_SourceLost;
 
-        SourceManager.SourceReleased -= SourceManager_SourceReleased;
-        SourceManager.SourcePressed -= SourceManager_SourcePressed;
+        InteractionManager.SourceReleased -= InteractionManager_SourceReleased;
+        InteractionManager.SourcePressed -= InteractionManager_SourcePressed;
     }
 }

@@ -101,31 +101,31 @@ public class GestureManager : Singleton<GestureManager>
         ActiveRecognizer = newRecognizer;
     }
 
-    private void NavigationRecognizer_NavigationStartedEvent(SourceKind source, Vector3 relativePosition, Ray ray)
+    private void NavigationRecognizer_NavigationStartedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
     {
         IsNavigating = true;
 
         NavigationPosition = relativePosition;
     }
 
-    private void NavigationRecognizer_NavigationUpdatedEvent(SourceKind source, Vector3 relativePosition, Ray ray)
+    private void NavigationRecognizer_NavigationUpdatedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
     {
         IsNavigating = true;
 
         NavigationPosition = relativePosition;
     }
 
-    private void NavigationRecognizer_NavigationCompletedEvent(SourceKind source, Vector3 relativePosition, Ray ray)
+    private void NavigationRecognizer_NavigationCompletedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
     {
         IsNavigating = false;
     }
 
-    private void NavigationRecognizer_NavigationCanceledEvent(SourceKind source, Vector3 relativePosition, Ray ray)
+    private void NavigationRecognizer_NavigationCanceledEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
     {
         IsNavigating = false;
     }
 
-    private void ManipulationRecognizer_ManipulationStartedEvent(SourceKind source, Vector3 position, Ray ray)
+    private void ManipulationRecognizer_ManipulationStartedEvent(InteractionSourceKind source, Vector3 position, Ray ray)
     {
         if (HandsManager.Instance.FocusedGameObject != null)
         {
@@ -137,7 +137,7 @@ public class GestureManager : Singleton<GestureManager>
         }
     }
 
-    private void ManipulationRecognizer_ManipulationUpdatedEvent(SourceKind source, Vector3 position, Ray ray)
+    private void ManipulationRecognizer_ManipulationUpdatedEvent(InteractionSourceKind source, Vector3 position, Ray ray)
     {
         if (HandsManager.Instance.FocusedGameObject != null)
         {
@@ -149,17 +149,17 @@ public class GestureManager : Singleton<GestureManager>
         }
     }
 
-    private void ManipulationRecognizer_ManipulationCompletedEvent(SourceKind source, Vector3 position, Ray ray)
+    private void ManipulationRecognizer_ManipulationCompletedEvent(InteractionSourceKind source, Vector3 position, Ray ray)
     {
         IsManipulating = false;
     }
 
-    private void ManipulationRecognizer_ManipulationCanceledEvent(SourceKind source, Vector3 position, Ray ray)
+    private void ManipulationRecognizer_ManipulationCanceledEvent(InteractionSourceKind source, Vector3 position, Ray ray)
     {
         IsManipulating = false;
     }
 
-    private void NavigationRecognizer_TappedEvent(SourceKind source, Ray ray)
+    private void NavigationRecognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray ray)
     {
         GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
 

@@ -41,7 +41,7 @@ public class Fitbox : MonoBehaviour
 
         // Set up our GestureRecognizer to listen for the SelectEvent
         recognizer = new GestureRecognizer();
-        recognizer.TappedEvent += (source, ray) =>
+        recognizer.TappedEvent += (source, tapCount, ray) =>
         {
             DismissFitbox();
         };
