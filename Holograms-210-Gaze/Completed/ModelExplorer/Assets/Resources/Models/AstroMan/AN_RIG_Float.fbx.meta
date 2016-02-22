@@ -1,0 +1,776 @@
+fileFormatVersion: 2
+guid: 82ac801e723c0d7488db324ad4aecd65
+timeCreated: 1444428701
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Abs1_Left
+    100002: Abs1_Right
+    100004: Abs_Center
+    100006: An_JetPack_Center
+    100008: //RootNode
+    100010: An_Side_Left
+    100012: An_Side_Right
+    100014: Ankle_Left
+    100016: Ankle_Right
+    100018: Arm1_Left
+    100020: Arm1_Right
+    100022: Arm2_Left
+    100024: Arm2_Right
+    100026: Armpit_JL1
+    100028: Armpit_JL2
+    100030: Armpit_JR1
+    100032: Armpit_JR2
+    100034: Back_Center
+    100036: Boot_Left
+    100038: Boot_Right
+    100040: Chest1_Left
+    100042: Chest1_Right
+    100044: Chest2_Left
+    100046: Chest2_Right
+    100048: Chest_Center
+    100050: ChestButton_Center
+    100052: ChestButton_J1
+    100054: ChestButton_J2
+    100056: Collar1_Center
+    100058: DeformationSystem
+    100060: Elbow_Left
+    100062: Elbow_Right
+    100064: ElbowM_Left
+    100066: ElbowM_Right
+    100068: ElbowPart1_Left
+    100070: ElbowPart1_Right
+    100072: ElbowPart2_Left
+    100074: ElbowPart2_Right
+    100076: Eye_Left
+    100078: Eye_Left 1
+    100080: Eye_Right
+    100082: Eye_Right 1
+    100084: EyeEnd_Left
+    100086: EyeEnd_Right
+    100088: FArm1_Left
+    100090: FArm1_Right
+    100092: FArmRing_Left
+    100094: FArmRing_Right
+    100096: FLeg1_Left
+    100098: FLeg1_Right
+    100100: GEO_Center
+    100102: GEO_G
+    100104: GEO_Left
+    100106: GEO_Right
+    100108: Glove_Left
+    100110: Glove_Right
+    100112: Hand_Left
+    100114: Hand_Right
+    100116: Head_Center
+    100118: Head_G
+    100120: Head_NGeo
+    100122: HeadEnd_Center
+    100124: Helmet_Back
+    100126: Helmet_Centerain_G
+    100128: Helmet_Collar_In
+    100130: Helmet_Collar_Out
+    100132: Helmet_GEO_G
+    100134: Helmet_Side_Left
+    100136: Helmet_Side_R
+    100138: Helmet_SideS_Left
+    100140: Helmet_SideS_R
+    100142: Helmet_Top
+    100144: Helmet_Trim1
+    100146: Helmet_Trim2
+    100148: Helmet_VisorFront
+    100150: Helmet_VisorTop
+    100152: Hip_Left
+    100154: Hip_Right
+    100156: HipPart1_Left
+    100158: HipPart1_Right
+    100160: HipPart2_Left
+    100162: HipPart2_Right
+    100164: HipStrap_Center
+    100166: Jaw_Center
+    100168: JawEnd_Center
+    100170: JetPack_J1
+    100172: JetPack_J2
+    100174: Knee_Left
+    100176: Knee_Right
+    100178: KneeM_Left
+    100180: KneeM_Right
+    100182: Leg1_Left
+    100184: Leg1_Right
+    100186: Leg2_Left
+    100188: Leg2_Right
+    100190: LegRing1_Left
+    100192: LegRing1_Right
+    100194: LH_JL1
+    100196: LH_JR1
+    100198: Neck_Center
+    100200: NeckPart1_Center
+    100202: NeckPart2_Center
+    100204: Plenum_Center
+    100206: Ring_FL1_Left
+    100208: Ring_FL1_Right
+    100210: Root_Center
+    100212: RootPart1_Center
+    100214: RootPart2_Center
+    100216: Scapula_Left
+    100218: Scapula_Right
+    100220: ScapulaM_Left
+    100222: ScapulaM_Right
+    100224: Shoulder1_Left
+    100226: Shoulder1_Right
+    100228: Shoulder_Left
+    100230: Shoulder_Right
+    100232: ShoulderM_Left
+    100234: ShoulderM_Right
+    100236: ShoulderPart1_Left
+    100238: ShoulderPart1_Right
+    100240: ShoulderPart2_Left
+    100242: ShoulderPart2_Right
+    100244: Spine1_Center
+    100246: Spine1Part1_Center
+    100248: Spine1Part2_Center
+    100250: Toes_Left
+    100252: Toes_Right
+    100254: ToesEnd_Left
+    100256: ToesEnd_Right
+    100258: TorsoSide1_Left1
+    100260: TorsoSide1_Right
+    100262: Wrist_Left
+    100264: Wrist_Right
+    400000: Abs1_Left
+    400002: Abs1_Right
+    400004: Abs_Center
+    400006: An_JetPack_Center
+    400008: //RootNode
+    400010: An_Side_Left
+    400012: An_Side_Right
+    400014: Ankle_Left
+    400016: Ankle_Right
+    400018: Arm1_Left
+    400020: Arm1_Right
+    400022: Arm2_Left
+    400024: Arm2_Right
+    400026: Armpit_JL1
+    400028: Armpit_JL2
+    400030: Armpit_JR1
+    400032: Armpit_JR2
+    400034: Back_Center
+    400036: Boot_Left
+    400038: Boot_Right
+    400040: Chest1_Left
+    400042: Chest1_Right
+    400044: Chest2_Left
+    400046: Chest2_Right
+    400048: Chest_Center
+    400050: ChestButton_Center
+    400052: ChestButton_J1
+    400054: ChestButton_J2
+    400056: Collar1_Center
+    400058: DeformationSystem
+    400060: Elbow_Left
+    400062: Elbow_Right
+    400064: ElbowM_Left
+    400066: ElbowM_Right
+    400068: ElbowPart1_Left
+    400070: ElbowPart1_Right
+    400072: ElbowPart2_Left
+    400074: ElbowPart2_Right
+    400076: Eye_Left
+    400078: Eye_Left 1
+    400080: Eye_Right
+    400082: Eye_Right 1
+    400084: EyeEnd_Left
+    400086: EyeEnd_Right
+    400088: FArm1_Left
+    400090: FArm1_Right
+    400092: FArmRing_Left
+    400094: FArmRing_Right
+    400096: FLeg1_Left
+    400098: FLeg1_Right
+    400100: GEO_Center
+    400102: GEO_G
+    400104: GEO_Left
+    400106: GEO_Right
+    400108: Glove_Left
+    400110: Glove_Right
+    400112: Hand_Left
+    400114: Hand_Right
+    400116: Head_Center
+    400118: Head_G
+    400120: Head_NGeo
+    400122: HeadEnd_Center
+    400124: Helmet_Back
+    400126: Helmet_Centerain_G
+    400128: Helmet_Collar_In
+    400130: Helmet_Collar_Out
+    400132: Helmet_GEO_G
+    400134: Helmet_Side_Left
+    400136: Helmet_Side_R
+    400138: Helmet_SideS_Left
+    400140: Helmet_SideS_R
+    400142: Helmet_Top
+    400144: Helmet_Trim1
+    400146: Helmet_Trim2
+    400148: Helmet_VisorFront
+    400150: Helmet_VisorTop
+    400152: Hip_Left
+    400154: Hip_Right
+    400156: HipPart1_Left
+    400158: HipPart1_Right
+    400160: HipPart2_Left
+    400162: HipPart2_Right
+    400164: HipStrap_Center
+    400166: Jaw_Center
+    400168: JawEnd_Center
+    400170: JetPack_J1
+    400172: JetPack_J2
+    400174: Knee_Left
+    400176: Knee_Right
+    400178: KneeM_Left
+    400180: KneeM_Right
+    400182: Leg1_Left
+    400184: Leg1_Right
+    400186: Leg2_Left
+    400188: Leg2_Right
+    400190: LegRing1_Left
+    400192: LegRing1_Right
+    400194: LH_JL1
+    400196: LH_JR1
+    400198: Neck_Center
+    400200: NeckPart1_Center
+    400202: NeckPart2_Center
+    400204: Plenum_Center
+    400206: Ring_FL1_Left
+    400208: Ring_FL1_Right
+    400210: Root_Center
+    400212: RootPart1_Center
+    400214: RootPart2_Center
+    400216: Scapula_Left
+    400218: Scapula_Right
+    400220: ScapulaM_Left
+    400222: ScapulaM_Right
+    400224: Shoulder1_Left
+    400226: Shoulder1_Right
+    400228: Shoulder_Left
+    400230: Shoulder_Right
+    400232: ShoulderM_Left
+    400234: ShoulderM_Right
+    400236: ShoulderPart1_Left
+    400238: ShoulderPart1_Right
+    400240: ShoulderPart2_Left
+    400242: ShoulderPart2_Right
+    400244: Spine1_Center
+    400246: Spine1Part1_Center
+    400248: Spine1Part2_Center
+    400250: Toes_Left
+    400252: Toes_Right
+    400254: ToesEnd_Left
+    400256: ToesEnd_Right
+    400258: TorsoSide1_Left1
+    400260: TorsoSide1_Right
+    400262: Wrist_Left
+    400264: Wrist_Right
+    2300000: Eye_Left
+    2300002: Eye_Right
+    2300004: Head_NGeo
+    2300006: Helmet_Back
+    2300008: Helmet_Collar_In
+    2300010: Helmet_Collar_Out
+    2300012: Helmet_Side_Left
+    2300014: Helmet_Side_R
+    2300016: Helmet_SideS_Left
+    2300018: Helmet_SideS_R
+    2300020: Helmet_Top
+    2300022: Helmet_Trim1
+    2300024: Helmet_Trim2
+    2300026: Helmet_VisorFront
+    2300028: Helmet_VisorTop
+    3300000: Eye_Left
+    3300002: Eye_Right
+    3300004: Head_NGeo
+    3300006: Helmet_Back
+    3300008: Helmet_Collar_In
+    3300010: Helmet_Collar_Out
+    3300012: Helmet_Side_Left
+    3300014: Helmet_Side_R
+    3300016: Helmet_SideS_Left
+    3300018: Helmet_SideS_R
+    3300020: Helmet_Top
+    3300022: Helmet_Trim1
+    3300024: Helmet_Trim2
+    3300026: Helmet_VisorFront
+    3300028: Helmet_VisorTop
+    4300000: ChestButton_Center
+    4300002: Collar1_Center
+    4300004: Plenum_Center
+    4300006: Abs_Center
+    4300008: Back_Center
+    4300010: An_JetPack_Center
+    4300012: HipStrap_Center
+    4300014: Chest1_Right
+    4300016: Chest2_Right
+    4300018: Abs1_Right
+    4300020: ShoulderM_Right
+    4300022: An_Side_Right
+    4300024: ScapulaM_Right
+    4300026: Chest1_Left
+    4300028: Chest2_Left
+    4300030: Abs1_Left
+    4300032: ShoulderM_Left
+    4300034: An_Side_Left
+    4300036: ScapulaM_Left
+    4300038: Arm2_Right
+    4300040: Shoulder1_Right
+    4300042: Arm1_Right
+    4300044: ElbowM_Right
+    4300046: FArm1_Right
+    4300048: Glove_Right
+    4300050: TorsoSide1_Right
+    4300052: Leg1_Right
+    4300054: Leg2_Right
+    4300056: LegRing1_Right
+    4300058: FLeg1_Right
+    4300060: KneeM_Right
+    4300062: FArmRing_Right
+    4300064: Ring_FL1_Right
+    4300066: Boot_Right
+    4300068: Arm2_Left
+    4300070: Shoulder1_Left
+    4300072: Arm1_Left
+    4300074: ElbowM_Left
+    4300076: FArm1_Left
+    4300078: Glove_Left
+    4300080: TorsoSide1_Left1
+    4300082: Leg1_Left
+    4300084: Leg2_Left
+    4300086: LegRing1_Left
+    4300088: FLeg1_Left
+    4300090: KneeM_Left
+    4300092: FArmRing_Left
+    4300094: Ring_FL1_Left
+    4300096: Boot_Left
+    4300098: Helmet_VisorFront
+    4300100: Helmet_VisorTop
+    4300102: Helmet_Side_R
+    4300104: Helmet_Side_Left
+    4300106: Helmet_SideS_R
+    4300108: Helmet_SideS_Left
+    4300110: Helmet_Top
+    4300112: Helmet_Back
+    4300114: Helmet_Trim1
+    4300116: Helmet_Trim2
+    4300118: Helmet_Collar_In
+    4300120: Helmet_Collar_Out
+    4300122: Head_NGeo
+    4300124: Eye_Right
+    4300126: Eye_Left
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Abs1_Left
+    13700002: Abs1_Right
+    13700004: Abs_Center
+    13700006: An_JetPack_Center
+    13700008: An_Side_Left
+    13700010: An_Side_Right
+    13700012: Arm1_Left
+    13700014: Arm1_Right
+    13700016: Arm2_Left
+    13700018: Arm2_Right
+    13700020: Back_Center
+    13700022: Boot_Left
+    13700024: Boot_Right
+    13700026: Chest1_Left
+    13700028: Chest1_Right
+    13700030: Chest2_Left
+    13700032: Chest2_Right
+    13700034: ChestButton_Center
+    13700036: Collar1_Center
+    13700038: ElbowM_Left
+    13700040: ElbowM_Right
+    13700042: FArm1_Left
+    13700044: FArm1_Right
+    13700046: FArmRing_Left
+    13700048: FArmRing_Right
+    13700050: FLeg1_Left
+    13700052: FLeg1_Right
+    13700054: Glove_Left
+    13700056: Glove_Right
+    13700058: HipStrap_Center
+    13700060: KneeM_Left
+    13700062: KneeM_Right
+    13700064: Leg1_Left
+    13700066: Leg1_Right
+    13700068: Leg2_Left
+    13700070: Leg2_Right
+    13700072: LegRing1_Left
+    13700074: LegRing1_Right
+    13700076: Plenum_Center
+    13700078: Ring_FL1_Left
+    13700080: Ring_FL1_Right
+    13700082: ScapulaM_Left
+    13700084: ScapulaM_Right
+    13700086: Shoulder1_Left
+    13700088: Shoulder1_Right
+    13700090: ShoulderM_Left
+    13700092: ShoulderM_Right
+    13700094: TorsoSide1_Left1
+    13700096: TorsoSide1_Right
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 481
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DeformationSystem
+        weight: 1
+      - path: DeformationSystem/Root_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Left/HipPart1_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Left/HipPart1_Left/HipPart2_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Left/HipPart1_Left/HipPart2_Left/Knee_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Left/HipPart1_Left/HipPart2_Left/Knee_Left/Ankle_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Left/HipPart1_Left/HipPart2_Left/Knee_Left/Ankle_Left/Toes_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Left/HipPart1_Left/HipPart2_Left/Knee_Left/Ankle_Left/Toes_Left/ToesEnd_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Right/HipPart1_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Right/HipPart1_Right/HipPart2_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Right/HipPart1_Right/HipPart2_Right/Knee_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Right/HipPart1_Right/HipPart2_Right/Knee_Right/Ankle_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Right/HipPart1_Right/HipPart2_Right/Knee_Right/Ankle_Right/Toes_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/Hip_Right/HipPart1_Right/HipPart2_Right/Knee_Right/Ankle_Right/Toes_Right/ToesEnd_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/LH_JL1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/LH_JR1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Armpit_JL1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Armpit_JL1/Armpit_JL2
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Armpit_JR1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Armpit_JR1/Armpit_JR2
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/ChestButton_J1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/ChestButton_J1/ChestButton_J2
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Head_G
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Head_G/Eye_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Head_G/Eye_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Head_G/Head_NGeo
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Back
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Collar_In
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Collar_Out
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Side_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Side_R
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_SideS_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_SideS_R
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Top
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Trim1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_Trim2
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_VisorFront
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Helmet_GEO_G/Helmet_Centerain_G/Helmet_VisorTop
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/JetPack_J1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/JetPack_J1/JetPack_J2
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center/Eye_Left
+          1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center/Eye_Left
+          1/EyeEnd_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center/Eye_Right
+          1
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center/Eye_Right
+          1/EyeEnd_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center/HeadEnd_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center/Jaw_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Neck_Center/NeckPart1_Center/NeckPart2_Center/Head_Center/Jaw_Center/JawEnd_Center
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left/ShoulderPart1_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left/ShoulderPart1_Left/ShoulderPart2_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left/ShoulderPart1_Left/ShoulderPart2_Left/Elbow_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left/ShoulderPart1_Left/ShoulderPart2_Left/Elbow_Left/ElbowPart1_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left/ShoulderPart1_Left/ShoulderPart2_Left/Elbow_Left/ElbowPart1_Left/ElbowPart2_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left/ShoulderPart1_Left/ShoulderPart2_Left/Elbow_Left/ElbowPart1_Left/ElbowPart2_Left/Wrist_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Left/Shoulder_Left/ShoulderPart1_Left/ShoulderPart2_Left/Elbow_Left/ElbowPart1_Left/ElbowPart2_Left/Wrist_Left/Hand_Left
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right/ShoulderPart1_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right/ShoulderPart1_Right/ShoulderPart2_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right/ShoulderPart1_Right/ShoulderPart2_Right/Elbow_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right/ShoulderPart1_Right/ShoulderPart2_Right/Elbow_Right/ElbowPart1_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right/ShoulderPart1_Right/ShoulderPart2_Right/Elbow_Right/ElbowPart1_Right/ElbowPart2_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right/ShoulderPart1_Right/ShoulderPart2_Right/Elbow_Right/ElbowPart1_Right/ElbowPart2_Right/Wrist_Right
+        weight: 1
+      - path: DeformationSystem/Root_Center/RootPart1_Center/RootPart2_Center/Spine1_Center/Spine1Part1_Center/Spine1Part2_Center/Chest_Center/Scapula_Right/Shoulder_Right/ShoulderPart1_Right/ShoulderPart2_Right/Elbow_Right/ElbowPart1_Right/ElbowPart2_Right/Wrist_Right/Hand_Right
+        weight: 1
+      - path: GEO_G
+        weight: 1
+      - path: GEO_G/GEO_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Abs1_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/Abs1_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/Abs_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/An_JetPack_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/An_Side_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/An_Side_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/Back_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest1_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest1_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest2_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/Chest2_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/ChestButton_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Collar1_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/HipStrap_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/Plenum_Center
+        weight: 1
+      - path: GEO_G/GEO_Center/ScapulaM_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/ScapulaM_Right
+        weight: 1
+      - path: GEO_G/GEO_Center/ShoulderM_Left
+        weight: 1
+      - path: GEO_G/GEO_Center/ShoulderM_Right
+        weight: 1
+      - path: GEO_G/GEO_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Arm1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Arm2_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Boot_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/ElbowM_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/FArm1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/FArmRing_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/FLeg1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Glove_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/KneeM_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Leg1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Leg2_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/LegRing1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Ring_FL1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/Shoulder1_Left
+        weight: 1
+      - path: GEO_G/GEO_Left/TorsoSide1_Left1
+        weight: 1
+      - path: GEO_G/GEO_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Arm1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Arm2_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Boot_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/ElbowM_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/FArm1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/FArmRing_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/FLeg1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Glove_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/KneeM_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Leg1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Leg2_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/LegRing1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Ring_FL1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/Shoulder1_Right
+        weight: 1
+      - path: GEO_G/GEO_Right/TorsoSide1_Right
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
