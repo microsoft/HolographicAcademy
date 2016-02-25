@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: e9d50d0d1672de64d903b4d1fd064122
+timeCreated: 1444088206
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Asteroid_Outer
+    100002: Asteroid_Outer001
+    100004: Asteroids_Inner
+    100006: Asteroids_Inner001
+    100008: Card_Earth
+    100010: Card_Jupiter
+    100012: Card_Mars
+    100014: Card_Mercury
+    100016: Card_Neptune
+    100018: Card_Pluto
+    100020: Card_Saturn
+    100022: Card_Sun
+    100024: Card_Uranaus
+    100026: Card_Venus
+    100028: Earth
+    100030: Jupiter
+    100032: Mars
+    100034: Mercury
+    100036: Neptune
+    100038: Pluto
+    100040: Ring_Pluto
+    100042: Rings
+    100044: Saturn
+    100046: //RootNode
+    100048: StarCards
+    100050: Sun
+    100052: Uranaus
+    100054: Venus
+    400000: Asteroid_Outer
+    400002: Asteroid_Outer001
+    400004: Asteroids_Inner
+    400006: Asteroids_Inner001
+    400008: Card_Earth
+    400010: Card_Jupiter
+    400012: Card_Mars
+    400014: Card_Mercury
+    400016: Card_Neptune
+    400018: Card_Pluto
+    400020: Card_Saturn
+    400022: Card_Sun
+    400024: Card_Uranaus
+    400026: Card_Venus
+    400028: Earth
+    400030: Jupiter
+    400032: Mars
+    400034: Mercury
+    400036: Neptune
+    400038: Pluto
+    400040: Ring_Pluto
+    400042: Rings
+    400044: Saturn
+    400046: //RootNode
+    400048: StarCards
+    400050: Sun
+    400052: Uranaus
+    400054: Venus
+    2300000: Asteroid_Outer
+    2300002: Asteroid_Outer001
+    2300004: Asteroids_Inner
+    2300006: Asteroids_Inner001
+    2300008: Card_Earth
+    2300010: Card_Jupiter
+    2300012: Card_Mars
+    2300014: Card_Mercury
+    2300016: Card_Neptune
+    2300018: Card_Pluto
+    2300020: Card_Saturn
+    2300022: Card_Sun
+    2300024: Card_Uranaus
+    2300026: Card_Venus
+    2300028: Earth
+    2300030: Jupiter
+    2300032: Mars
+    2300034: Mercury
+    2300036: Neptune
+    2300038: Pluto
+    2300040: Ring_Pluto
+    2300042: Rings
+    2300044: Saturn
+    2300046: StarCards
+    2300048: Sun
+    2300050: Uranaus
+    2300052: Venus
+    3300000: Asteroid_Outer
+    3300002: Asteroid_Outer001
+    3300004: Asteroids_Inner
+    3300006: Asteroids_Inner001
+    3300008: Card_Earth
+    3300010: Card_Jupiter
+    3300012: Card_Mars
+    3300014: Card_Mercury
+    3300016: Card_Neptune
+    3300018: Card_Pluto
+    3300020: Card_Saturn
+    3300022: Card_Sun
+    3300024: Card_Uranaus
+    3300026: Card_Venus
+    3300028: Earth
+    3300030: Jupiter
+    3300032: Mars
+    3300034: Mercury
+    3300036: Neptune
+    3300038: Pluto
+    3300040: Ring_Pluto
+    3300042: Rings
+    3300044: Saturn
+    3300046: StarCards
+    3300048: Sun
+    3300050: Uranaus
+    3300052: Venus
+    4300000: Sun
+    4300002: Mercury
+    4300004: Venus
+    4300006: Earth
+    4300008: Mars
+    4300010: Jupiter
+    4300012: Saturn
+    4300014: Uranaus
+    4300016: Neptune
+    4300018: Pluto
+    4300020: StarCards
+    4300022: Card_Earth
+    4300024: Card_Jupiter
+    4300026: Card_Mars
+    4300028: Card_Mercury
+    4300030: Card_Neptune
+    4300032: Card_Pluto
+    4300034: Card_Saturn
+    4300036: Card_Sun
+    4300038: Card_Uranaus
+    4300040: Card_Venus
+    4300042: Rings
+    4300044: Ring_Pluto
+    4300046: Asteroids_Inner
+    4300048: Asteroid_Outer
+    4300050: Asteroids_Inner001
+    4300052: Asteroid_Outer001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
