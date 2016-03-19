@@ -81,8 +81,7 @@ namespace HoloToolkit.Unity
         /// </summary>
         private void Start()
         {
-            observer.SetVolumeAsAxisAlignedBox(Vector3.zero, Extents);
-            RegisterEventHandlers();
+            observer.SetVolumeAsAxisAlignedBox(Vector3.zero, Extents);            
         }
 
         /// <summary>
@@ -101,13 +100,13 @@ namespace HoloToolkit.Unity
                     SurfaceData surfaceData = surfaceWorkQueue.Dequeue();
 
                     // If RequestMeshAsync succeeds, then we have successfully scheduled mesh creation.
-                    surfaceWorkOutstanding = SurfaceObserver.RequestMeshAsync(surfaceData);
+                    surfaceWorkOutstanding = observer.RequestMeshAsync(surfaceData, SurfaceObserver_OnDataReady);
                 }
-                // If we don't have any other work to do,  and enough time has passed since the previous
+                // If we don't have any other work to do, and enough time has passed since the previous
                 // update request, request updates for the spatial mapping data.
-                else if ((Time.time - updateTime) >= TimeBetweenUpdates)
+                else if (surfaceWorkOutstanding == false && (Time.time - updateTime) >= TimeBetweenUpdates)
                 {
-                    observer.Update();
+                    observer.Update(SurfaceObserver_OnSurfaceChanged);
                     updateTime = Time.time;
                 }
             }
@@ -122,7 +121,9 @@ namespace HoloToolkit.Unity
             {
                 Debug.Log("Starting the observer.");
                 ObserverState = ObserverStates.Running;
-                updateTime = Time.time;
+
+                // We want the first update immediately.
+                updateTime = 0;
             }
         }
 
@@ -235,42 +236,12 @@ namespace HoloToolkit.Unity
         }
 
         /// <summary>
-        /// Registers event handlers used by the Surface Observer.
-        /// </summary>
-        private void RegisterEventHandlers()
-        {
-            if (observer == null)
-            {
-                return;
-            }
-
-            SurfaceObserver.OnDataReady += SurfaceObserver_OnDataReady;
-            observer.OnSurfaceChanged += SurfaceObserver_OnSurfaceChanged;
-        }
-
-        /// <summary>
-        /// Unregisters event handlers used by the Surface Observer.
-        /// </summary>
-        private void UnregisterEventHandlers()
-        {
-            if (observer == null)
-            {
-                return;
-            }
-
-            SurfaceObserver.OnDataReady -= SurfaceObserver_OnDataReady;
-            observer.OnSurfaceChanged -= SurfaceObserver_OnSurfaceChanged;
-        }
-
-        /// <summary>
         /// Called when the GameObject is unloaded.
         /// </summary>
         private void OnDestroy()
         {
             // Stop the observer.
             StopObserving();
-
-            UnregisterEventHandlers();
 
             observer.Dispose(); 
             observer = null;
