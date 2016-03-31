@@ -41,7 +41,6 @@ public class SpatialMapping : MonoBehaviour
     {
         Observer = new SurfaceObserver();
         Observer.SetVolumeAsAxisAlignedBox(Vector3.zero, BoundingVolume);
-        Observer.OnSurfaceChanged += Observer_OnSurfaceChanged;
         surfaces = new Dictionary<int, GameObject>();
         surfaceDataQueue = new Queue<SurfaceData>();
         UpdateSurfaceObserver();
@@ -51,7 +50,7 @@ public class SpatialMapping : MonoBehaviour
     {
         if (mappingEnabled)
         {
-            Observer.Update();
+            Observer.Update(Observer_OnSurfaceChanged);
             Invoke("UpdateSurfaceObserver", UpdateFrequency);
         }
     }
@@ -113,9 +112,20 @@ public class SpatialMapping : MonoBehaviour
             if (surfaceDataQueue.Count > 0)
             {
                 SurfaceData smsd = surfaceDataQueue.Dequeue();
-                SurfaceObserver.RequestMeshAsync(smsd);
+                Observer.RequestMeshAsync(smsd, Observer_OnDataReady);
             }
         }
+    }
+
+    /// <summary>
+    /// Handles the SurfaceObserver's OnDataReady event.
+    /// </summary>
+    /// <param name="cookedData">Struct containing output data.</param>
+    /// <param name="outputWritten">Set to true if output has been written.</param>
+    /// <param name="elapsedCookTimeSeconds">Seconds between mesh cook request and propagation of this event.</param>
+    private void Observer_OnDataReady(SurfaceData bakedData, bool outputWritten, float elapsedBakeTimeSeconds)
+    {
+        // Passthrough. 
     }
 
     public void SetMappingEnabled(bool isEnabled)
