@@ -59,6 +59,7 @@ public class PlayerAvatarStore : Singleton<PlayerAvatarStore>
         // Show the possible avatars in front of user and evenly spaced from right to left.
         Vector3 startPosition = Camera.main.transform.position + Camera.main.transform.forward * PickerDistanceFromUser;
         startPosition.y = Camera.main.transform.position.y;
+        transform.position = startPosition;
 
         int halfAvatarLength = PlayerAvatars.Length / 2;
         for (int index = 0; index < PlayerAvatars.Length; index++)
