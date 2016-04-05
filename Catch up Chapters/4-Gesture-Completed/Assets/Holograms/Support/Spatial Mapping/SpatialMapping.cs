@@ -29,6 +29,13 @@ public class SpatialMapping : MonoBehaviour
     // If true, Spatial Mapping is enabled. 
     private bool mappingEnabled = true;
 
+    /// <summary>
+    /// To prevent too many meshes from being generated at the same time, we will
+    /// only request one mesh to be created at a time.  This variable will track
+    /// if a mesh creation request is in flight.
+    /// </summary>
+    private bool surfaceWorkOutstanding = false;
+
     void Awake()
     {
         Instance = this;
@@ -109,10 +116,10 @@ public class SpatialMapping : MonoBehaviour
                 surface.GetComponent<MeshRenderer>().enabled = DrawVisualMeshes;
             }
 
-            if (surfaceDataQueue.Count > 0)
+            if (surfaceWorkOutstanding == false && surfaceDataQueue.Count > 0)
             {
                 SurfaceData smsd = surfaceDataQueue.Dequeue();
-                Observer.RequestMeshAsync(smsd, Observer_OnDataReady);
+                surfaceWorkOutstanding = Observer.RequestMeshAsync(smsd, Observer_OnDataReady);
             }
         }
     }
@@ -125,7 +132,7 @@ public class SpatialMapping : MonoBehaviour
     /// <param name="elapsedCookTimeSeconds">Seconds between mesh cook request and propagation of this event.</param>
     private void Observer_OnDataReady(SurfaceData bakedData, bool outputWritten, float elapsedBakeTimeSeconds)
     {
-        // Passthrough. 
+        surfaceWorkOutstanding = false;
     }
 
     public void SetMappingEnabled(bool isEnabled)
