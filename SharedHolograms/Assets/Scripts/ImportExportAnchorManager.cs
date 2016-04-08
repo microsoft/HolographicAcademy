@@ -133,6 +133,20 @@ public class ImportExportAnchorManager : Singleton<ImportExportAnchorManager>
         roomManager.AddListener(roomManagerCallbacks);
     }
 
+    void OnDestroy()
+    {
+        if (roomManagerCallbacks != null)
+        {
+            roomManagerCallbacks.AnchorsDownloadedEvent -= RoomManagerCallbacks_AnchorsDownloaded;
+            roomManagerCallbacks.AnchorUploadedEvent -= RoomManagerCallbacks_AnchorUploaded;
+        }
+
+        if (roomManager != null)
+        {
+            roomManager.RemoveListener(roomManagerCallbacks);
+        }
+    }
+
     /// <summary>
     /// Called when anchor upload operations complete.
     /// </summary>
@@ -360,6 +374,8 @@ public class ImportExportAnchorManager : Singleton<ImportExportAnchorManager>
             Debug.Log("Failed to locate local anchor (super bad!)");
             CurrentState = ImportExportState.Failed;
         }
+
+        self.OnTrackingChanged -= Anchor_OnTrackingChanged_InitialAnchor;
     }
 
     /// <summary>
@@ -498,5 +514,4 @@ public class ImportExportAnchorManager : Singleton<ImportExportAnchorManager>
             CurrentState = ImportExportState.InitialAnchorRequired;
         }
     }
-
 }
