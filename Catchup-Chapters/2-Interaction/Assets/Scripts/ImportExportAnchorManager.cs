@@ -139,11 +139,11 @@ public class ImportExportAnchorManager : Singleton<ImportExportAnchorManager>
         {
             roomManagerCallbacks.AnchorsDownloadedEvent -= RoomManagerCallbacks_AnchorsDownloaded;
             roomManagerCallbacks.AnchorUploadedEvent -= RoomManagerCallbacks_AnchorUploaded;
-        }
 
-        if (roomManager != null)
-        {
-            roomManager.RemoveListener(roomManagerCallbacks);
+            if (roomManager != null)
+            {
+                roomManager.RemoveListener(roomManagerCallbacks);
+            }
         }
     }
 
