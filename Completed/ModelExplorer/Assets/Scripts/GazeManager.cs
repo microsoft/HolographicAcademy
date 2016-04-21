@@ -50,7 +50,7 @@ public class GazeManager : Singleton<GazeManager>
         // 2.a: Assign Camera's main transform position to gazeOrigin.
         gazeOrigin = Camera.main.transform.position;
 
-        // 2.a: Assign Camera's main tranform forward to gazeDirection.
+        // 2.a: Assign Camera's main transform forward to gazeDirection.
         gazeDirection = Camera.main.transform.forward;
 
         // 3.a: Using gazeStabilizer, call function UpdateHeadStability.
@@ -71,7 +71,7 @@ public class GazeManager : Singleton<GazeManager>
     {
         /* TODO: DEVELOPER CODING EXERCISE 2.a */
 
-        // 2.a: Create a variable hitInfo of type RaycastHit.        
+        // 2.a: Create a variable hitInfo of type RaycastHit.
         RaycastHit hitInfo;
 
         // 2.a: Perform a Unity Physics Raycast.
@@ -101,10 +101,9 @@ public class GazeManager : Singleton<GazeManager>
         else
         {
             // If raycast did not hit a hologram...
-
             // Save defaults ...
 
-            // 2.a: Assign Position to be gazeOrigin plus MaxGazeDistance times gazeDirection.            
+            // 2.a: Assign Position to be gazeOrigin plus MaxGazeDistance times gazeDirection.
             Position = gazeOrigin + (gazeDirection * MaxGazeDistance);
             // 2.a: Assign Normal to be the user's gazeDirection.
             Normal = gazeDirection;

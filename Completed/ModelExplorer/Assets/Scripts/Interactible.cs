@@ -2,7 +2,7 @@
 
 /// <summary>
 /// The Interactible class flags a Game Object as being "Interactible".
-/// Determines what happens when an Interactinle is being gazed at.
+/// Determines what happens when an Interactible is being gazed at.
 /// </summary>
 public class Interactible : MonoBehaviour
 {
@@ -65,7 +65,7 @@ public class Interactible : MonoBehaviour
 
     void GazeEntered()
     {
-        if (highlightMaterial != null)
+        if (materialsWithHighlight != null && highlightMaterial != null)
         {
             // 2.d: Set GetComponent Renderer's materials to
             // materialsWithHighlight when gazed at.
@@ -75,7 +75,7 @@ public class Interactible : MonoBehaviour
 
     void GazeExited()
     {
-        if (highlightMaterial != null)
+        if (defaultMaterials != null && highlightMaterial != null)
         {
             // 2.d: Set GetComponent Renderer's materials to 
             // defaultMaterials when gazed away.
