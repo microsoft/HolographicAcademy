@@ -17,7 +17,7 @@ public class HandGuidance : Singleton<HandGuidance>
     // Hand guidance score to start showing a hand indicator.
     // As the guidance score approaches 0, the hand is closer to being out of view.
     [Range(0.0f, 1.0f)]
-    [Tooltip("When to start showing the Hand Guidance Indicator. 0 is out of view, 1 is centered in view.")]
+    [Tooltip("When to start showing the Hand Guidance Indicator. 1 is out of view, 0 is centered in view.")]
     public float HandGuidanceThreshold = 0.5f;
 
     private Quaternion defaultHandGuidanceRotation;

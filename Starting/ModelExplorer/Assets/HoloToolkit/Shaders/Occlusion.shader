@@ -28,7 +28,7 @@ Shader "HoloToolkit/Occlusion"
 			#include "UnityCG.cginc"
 
 			struct v2f {
-				float4  pos : SV_POSITION;
+				float4 pos : SV_POSITION;
 			};
 
 			v2f vert (appdata_base v)
