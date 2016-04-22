@@ -80,7 +80,6 @@ public class GazeManager : Singleton<GazeManager>
         else
         {
             // If raycast did not hit a hologram...
-
             // Save defaults ...
             Position = gazeOrigin + (gazeDirection * MaxGazeDistance);
             Normal = gazeDirection;

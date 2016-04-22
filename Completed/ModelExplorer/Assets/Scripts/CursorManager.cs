@@ -35,7 +35,7 @@ public class CursorManager : Singleton<CursorManager>
     private static void SetLayerCollisions()
     {
         int maxLayers = 31;
-        // To protect apps that dont have an Interactible layer in their project.
+        // To protect apps that don't have an Interactible layer in their project.
         int interactibleLayer = LayerMask.NameToLayer("Interactible");
 
         if (interactibleLayer < 0 || interactibleLayer > maxLayers)

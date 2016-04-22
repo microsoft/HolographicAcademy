@@ -1,6 +1,6 @@
 //Very fast shader that uses the Unity lighting model
 //Compiles down to only performing the operations you're actually using
-//Uses material property drawers rather than a custom editor for ease of maintainance
+//Uses material property drawers rather than a custom editor for ease of maintenance
 //Does not currently support stereo instancing as it is not supported for surface shaders by Unity yet...
 
 Shader "HoloToolkit/Lambertian Configurable Transparent"

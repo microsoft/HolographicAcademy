@@ -28,10 +28,10 @@ namespace HoloToolkit
         [Range(0.25f, 0.85f)]
         public float DirectionStrength = 0.83f;
 
-        [Tooltip("Stabiliy average weight multiplier factor.")]
+        [Tooltip("Stability average weight multiplier factor.")]
         public float StabilityAverageDistanceWeight = 2.0f;
 
-        [Tooltip("Stabiliy variance weight multiplier factor.")]
+        [Tooltip("Stability variance weight multiplier factor.")]
         public float StabilityVarianceWeight = 1.0f;
 
         // Access the below public properties from the client class to consume stable values.
@@ -65,10 +65,10 @@ namespace HoloToolkit
 
         /// <summary>
         /// Updates the StableHeadPosition and StableHeadRotation based on GazeSample values.
-        /// Call this method with Raycasthit parameters to get stable values.
+        /// Call this method with RaycastHit parameters to get stable values.
         /// </summary>
-        /// <param name="position">Position value from a Raycasthit point.</param>
-        /// <param name="rotation">Roration value from a Raycasthit rotation.</param>
+        /// <param name="position">Position value from a RaycastHit point.</param>
+        /// <param name="rotation">Rotation value from a RaycastHit rotation.</param>
         public void UpdateHeadStability(Vector3 position, Quaternion rotation)
         {
             gazePosition = position;

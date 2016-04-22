@@ -12,7 +12,7 @@ public class MicrophoneManager : MonoBehaviour
 
     private DictationRecognizer dictationRecognizer;
 
-    // Use this string to cache the text currently displayed in the textbox.
+    // Use this string to cache the text currently displayed in the text box.
     private StringBuilder textSoFar;
 
     // Using an empty string specifies the default microphone. 
@@ -36,7 +36,7 @@ public class MicrophoneManager : MonoBehaviour
         dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
 
         // 3.a: Register for dictationRecognizer.DictationComplete and implement DictationComplete below
-        // This event is fired when the recognizer stops, whether from Stop() being called, a timeout occuring, or some other error.
+        // This event is fired when the recognizer stops, whether from Stop() being called, a timeout occurring, or some other error.
         dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
 
         // 3.a: Register for dictationRecognizer.DictationError and implement DictationError below
@@ -48,7 +48,7 @@ public class MicrophoneManager : MonoBehaviour
         int unused;
         Microphone.GetDeviceCaps(deviceName, out unused, out samplingRate);
 
-        // Use this string to cache the text currently displayed in the textbox.
+        // Use this string to cache the text currently displayed in the text box.
         textSoFar = new StringBuilder();
     }
 
@@ -123,7 +123,7 @@ public class MicrophoneManager : MonoBehaviour
     }
 
     /// <summary>
-    /// This event is fired when the recognizer stops, whether from Stop() being called, a timeout occuring, or some other error.
+    /// This event is fired when the recognizer stops, whether from Stop() being called, a timeout occurring, or some other error.
     /// Typically, this will simply return "Complete". In this case, we check to see if the recognizer timed out.
     /// </summary>
     /// <param name="cause">An enumerated reason for the session completing.</param>

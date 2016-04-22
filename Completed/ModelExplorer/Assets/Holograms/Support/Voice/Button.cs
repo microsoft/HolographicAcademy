@@ -8,9 +8,9 @@ using UnityEngine.Events;
 [RequireComponent(typeof(AudioSource))]
 public class Button : MonoBehaviour
 {
-    [Tooltip("The gameobject to be displayed to 'highlight' the button on gaze.")]
+    [Tooltip("The GameObject to be displayed to 'highlight' the button on gaze.")]
     public GameObject Highlight;
-    [Tooltip("Set the intial state of the button.")]
+    [Tooltip("Set the initial state of the button.")]
     public State StartingState;
     [Tooltip("The method to be called on click.")]
     public UnityEvent Method;

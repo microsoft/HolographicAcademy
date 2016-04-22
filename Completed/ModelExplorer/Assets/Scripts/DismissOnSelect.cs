@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Destroys the gameobject when it receives the OnSelect message.
+/// Destroys the GameObject when it receives the OnSelect message.
 /// </summary>
 public class DismissOnSelect : MonoBehaviour
 {

@@ -72,7 +72,7 @@ public class CursorStates : MonoBehaviour
             // so that feedback assets move and rotate with this parent.
             instantiatedPrefab.transform.parent = FeedbackParent.transform;
 
-            // Set starting state of gameobject to be inactive.
+            // Set starting state of the prefab's GameObject to be inactive.
             instantiatedPrefab.gameObject.SetActive(false);
         }
 
@@ -149,7 +149,7 @@ public class CursorStates : MonoBehaviour
 
         bool voiceCommandAvailable = InteractibleManager.Instance.FocusedGameObject.tag.Equals("VoiceCommand") && !AstronautWatch.Instance.CommunicatorOpen;
 
-        // Show cursor feedbact that voice command is available.
+        // Show cursor feedback that voice command is available.
         voiceCommandDetectedGameObject.SetActive(voiceCommandAvailable);
     }
 }
