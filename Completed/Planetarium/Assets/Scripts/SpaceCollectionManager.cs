@@ -16,7 +16,7 @@ public class SpaceCollectionManager : Singleton<SpaceCollectionManager>
     /// Generates a collection of Placeable objects in the world and sets them on planes that match their affinity.
     /// </summary>
     /// <param name="horizontalSurfaces">Horizontal surface planes (floors, tables).</param>
-    /// <param name="verticalSurfaces">Vertical sufrace planes (walls).</param>
+    /// <param name="verticalSurfaces">Vertical surface planes (walls).</param>
     public void GenerateItemsInWorld(List<GameObject> horizontalSurfaces, List<GameObject> verticalSurfaces)
     {
         List<GameObject> horizontalObjects = new List<GameObject>();

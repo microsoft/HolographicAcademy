@@ -9,7 +9,7 @@ namespace HoloToolkit.Unity
     public class RemoteMappingManager : Singleton<RemoteMappingManager>
     { 
         /// <summary>
-        /// Recieves meshes collected over the network.
+        /// Receives meshes collected over the network.
         /// </summary>
         private RemoteMeshTarget remoteMeshTarget;
 
@@ -42,7 +42,7 @@ namespace HoloToolkit.Unity
 
             if (remoteMeshTarget != null && SpatialMappingManager.Instance.Source == null)
             {
-                // Use the network-based mapping source to recieve meshes in the Unity editor.
+                // Use the network-based mapping source to receive meshes in the Unity editor.
                 SpatialMappingManager.Instance.SetSpatialMappingSource(remoteMeshTarget);
             }
 #endif

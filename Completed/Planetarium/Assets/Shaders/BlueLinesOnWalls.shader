@@ -67,8 +67,8 @@
 
 				// If the normal isn't pointing very much up or down and the position in world space
 				// is within where a line should be drawn, draw the line.
-				// Since we are checking wpmod.y we will be making horizontal blue lines.
-				// If wpmod.y was replaces with wpmod.x or wpmod.z we would be making vertical lines.
+				// Since we are checking wpmod.y, we will be making horizontal blue lines.
+				// If wpmod.y was replaced with wpmod.x or wpmod.z, we would be making vertical lines.
 				if (abs(normal.y) < 0.2f && abs(wpmod.y) < _LineScale* _LinesPerMeter)
 				{
 					ret.b = 1 - (abs(wpmod.y) / (_LineScale* _LinesPerMeter));

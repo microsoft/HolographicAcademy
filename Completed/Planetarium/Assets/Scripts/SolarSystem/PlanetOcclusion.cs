@@ -56,9 +56,6 @@ public class PlanetOcclusion : MonoBehaviour
             // Assign the result to a new Vector3 variable called 'direction'.
             Vector3 direction = checkPt - Camera.main.transform.position;
 
-            // 5.a: Create a RaycastHit variable called 'hitInfo'.
-            RaycastHit hitInfo;
-
             // Used to indicate if the call to Physics.Raycast() was successful.
             bool raycastHit = false;
 
@@ -66,11 +63,10 @@ public class PlanetOcclusion : MonoBehaviour
             // Call Physics.Raycast() with the following arguments:
             // - Pass in the Main Camera's position as the origin.
             // - Pass in 'direction' for the direction.
-            // - Pass in 'hitInfo' for the out parameter.
             // - Pass in 'distance' for the maxDistance.
             // - Pass in SpatialMappingManager.Instance.LayerMask as layerMask.
             // Assign the result to 'raycastHit'.
-            raycastHit = Physics.Raycast(Camera.main.transform.position, direction, out hitInfo, distance, SpatialMappingManager.Instance.LayerMask);
+            raycastHit = Physics.Raycast(Camera.main.transform.position, direction, distance, SpatialMappingManager.Instance.LayerMask);
 
             if (raycastHit)
             {

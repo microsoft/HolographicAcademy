@@ -13,7 +13,7 @@ public class InteractibleParameters
 
 /// <summary>
 /// The Interactible class flags a Game Object as being "Interactible".
-/// Determines what happens when an Interactinle is being gazed at.
+/// Determines what happens when an Interactible is being gazed at.
 /// </summary>
 public class Interactible : MonoBehaviour
 {

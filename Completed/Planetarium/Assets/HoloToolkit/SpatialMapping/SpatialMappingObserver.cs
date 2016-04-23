@@ -156,6 +156,12 @@ namespace HoloToolkit.Unity
                 renderer.sharedMaterial = SpatialMappingManager.Instance.SurfaceMaterial;
                 renderer.enabled = SpatialMappingManager.Instance.DrawVisualMeshes;
 
+                MeshFilter filter = surface.GetComponent<MeshFilter>();
+                if(filter != null && filter.sharedMesh != null)
+                {
+                    filter.sharedMesh.RecalculateNormals();
+                }
+
                 if(SpatialMappingManager.Instance.CastShadows == false)
                 {
                     renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
@@ -184,7 +190,7 @@ namespace HoloToolkit.Unity
 
             switch (changeType)
             {
-                // Adding and updating are nearly identical.  The only difference is if a new gameobject to contain 
+                // Adding and updating are nearly identical.  The only difference is if a new GameObject to contain 
                 // the surface needs to be created.
                 case SurfaceChange.Added:
                 case SurfaceChange.Updated:

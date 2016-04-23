@@ -110,7 +110,7 @@ namespace HoloToolkit.Unity
             {
                 makingPlanes = true;
                 // Processing the mesh can be expensive...
-                // We use Coroutine to split the work across multiple frames and avoid impacting the framerate too much.
+                // We use Coroutine to split the work across multiple frames and avoid impacting the frame rate too much.
                 StartCoroutine(MakePlanesRoutine());
             }
         }

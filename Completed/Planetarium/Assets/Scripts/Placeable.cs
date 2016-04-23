@@ -101,7 +101,7 @@ public class Placeable : MonoBehaviour
 	    boxCollider = gameObject.GetComponent<BoxCollider>();
         if (boxCollider == null)
         {
-            // The object does not have a collder, create one and remember that
+            // The object does not have a collider, create one and remember that
             // we are managing it.
             managingBoxCollider = true;
             boxCollider = gameObject.AddComponent<BoxCollider>();
@@ -420,7 +420,7 @@ public class Placeable : MonoBehaviour
         
         // Orient the object.
         // We are using the return value from Physics.Raycast to instruct
-        // the OrientObject function to align to the vertical surface if appopriate.
+        // the OrientObject function to align to the vertical surface if appropriate.
         OrientObject(hit, surfaceNormal);
     }
 
@@ -429,7 +429,7 @@ public class Placeable : MonoBehaviour
     /// </summary>
     /// <param name="alignToVerticalSurface">
     /// If true and the object is to be placed on a vertical surface, 
-    /// orient paralell to the target surface.  If false, orient the object 
+    /// orient parallel to the target surface.  If false, orient the object 
     /// to face the user.
     /// </param>
     /// <param name="surfaceNormal">
@@ -551,7 +551,7 @@ public class Placeable : MonoBehaviour
     /// Distance to compare.
     /// </param>
     /// <returns>
-    /// True if the distances are within the desired tollerance, otherwise false.
+    /// True if the distances are within the desired tolerance, otherwise false.
     /// </returns>
     private bool IsEquivalentDistance(float d1, float d2)
     {

@@ -13,7 +13,7 @@ Shader "Custom/OcclusionGrid"
 	{
 		Tags{"Queue" = "Transparent" "RenderType" = "Transparent"}
 		ZWrite Off // Turn ZWrite off to ignore the depth buffer, use ZTest to determine if the pixel should be rendered.
-		ZTest Greater // 'Greater' will only renders pixels that are occluded.
+		ZTest Greater // 'Greater' will only render pixels that are occluded.
 		Blend SrcAlpha OneMinusSrcAlpha // Alpha blending.
 		LOD 80 // Level of detail.
 

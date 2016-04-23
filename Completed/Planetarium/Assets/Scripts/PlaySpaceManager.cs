@@ -71,7 +71,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
                 /* TODO: 3.a DEVELOPER CODING EXERCISE 3.a */
 
                 // 3.a: Check if IsObserverRunning() is true on the
-                // SpatialMappingManager.Instace.
+                // SpatialMappingManager.Instance.
                 if(SpatialMappingManager.Instance.IsObserverRunning())
                 {
                     // 3.a: If running, Stop the observer by calling
@@ -133,7 +133,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 
             // 3.a: We are all done processing the mesh, so we can now
             // initialize a collection of Placeable holograms in the world
-            // and use floor/wall planes to set thier starting positions.
+            // and use floor/wall planes to set their starting positions.
             // Call SpaceCollectionManager.Instance.GenerateItemsInWorld().
             // Pass in the lists of floors and walls that we found earlier.
             SpaceCollectionManager.Instance.GenerateItemsInWorld(floors, walls);
