@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EnergyOrbFinalImpactLifetime : MonoBehaviour
 {
-
-	void Start ()
+    void Start()
     {
         Invoke("DestroyGameObject", 0.5f);
-	}
-	
-	void DestroyGameObject()
+    }
+
+    void DestroyGameObject()
     {
         Destroy(gameObject);
     }
