@@ -37,7 +37,7 @@ public class AppStateManager : Singleton<AppStateManager>
         // We start in the 'picking avatar' mode.
         CurrentAppState = AppState.PickingAvatar;
 
-        // Spatial maping should be disabled when we start up so as not
+        // Spatial mapping should be disabled when we start up so as not
         // to distract from the avatar picking.
         SpatialMappingManager.Instance.StopObserver();
         SpatialMappingManager.Instance.gameObject.SetActive(false);
