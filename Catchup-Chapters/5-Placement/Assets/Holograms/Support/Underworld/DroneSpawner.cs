@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using HoloToolkit.Unity;
 using System.Collections.Generic;
-using HoloToolkit.Unity;
+using UnityEngine;
 
 public class DroneSpawner : Singleton<DroneSpawner>
 {
@@ -17,20 +17,19 @@ public class DroneSpawner : Singleton<DroneSpawner>
     [Range(0.2f, 0.5f)]
     public List<float> DroneSpeeds;
 
-	// Use this for initialization.
-	void Start ()
+    void Start()
     {
-        if(NavigationPaths.Count != DroneColors.Count && NavigationPaths.Count != DroneSpeeds.Count)
+        if (NavigationPaths.Count != DroneColors.Count && NavigationPaths.Count != DroneSpeeds.Count)
         {
             Debug.Log("NavigationPaths, DroneColors, and DroneSpeeds should have the same number of elements!");
         }
 
         // Spawn a drone for each navigation path.
-        for(int i = 0; i < NavigationPaths.Count; i++)
+        for (int i = 0; i < NavigationPaths.Count; i++)
         {
             SpawnDrone(i);
         }
-	}
+    }
 
     /// <summary>
     /// Spawns a drone at the first position in the NavigationPath.

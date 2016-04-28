@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Blob : MonoBehaviour
 {
-
     public float scrollSpeed = 0.05F;
     public Renderer rend;
 
