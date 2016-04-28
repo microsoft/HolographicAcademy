@@ -97,7 +97,7 @@ public class DroneBehavior : MonoBehaviour
             RotateDrone(targetPosition);
             Vector3 direction = targetPosition - transform.position;
 
-            // If the drone has moved outside of the underword, rotate to look at user.
+            // If the drone has moved outside of the underworld, rotate to look at user.
             if (hasOutPoint && NavPositions[navIndex].gameObject.name.EndsWith("_out"))
             {
                 RotateDrone(Camera.main.transform.position);

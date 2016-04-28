@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.Windows.Speech;
+﻿using HoloToolkit.Sharing;
 using HoloToolkit.Unity;
-using HoloToolkit.Sharing;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Windows.Speech;
 
 public class HologramPlacement : Singleton<HologramPlacement>
 {
@@ -30,7 +30,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
         // We care about getting updates for the model transform.
         CustomMessages.Instance.MessageHandlers[CustomMessages.TestMessageID.StageTransform] = this.OnStageTransfrom;
 
-        // And when a new user join we will send the model transform we have.
+        // And when a new user joins we will send the model transform we have.
         SharingSessionTracker.Instance.SessionJoined += Instance_SessionJoined;
 
         // And if the users want to reset the stage transform.
@@ -45,8 +45,8 @@ public class HologramPlacement : Singleton<HologramPlacement>
     }
 
     /// <summary>
-    /// When the keyword recognizer hears a command this will be called.  
-    /// In this case we only have one keyword, which will re-enable moving the 
+    /// When the keyword recognizer hears a command this will be called.
+    /// In this case we only have one keyword, which will re-enable moving the
     /// target.
     /// </summary>
     /// <param name="args">information to help route the voice command.</param>
@@ -124,7 +124,6 @@ public class HologramPlacement : Singleton<HologramPlacement>
         disabledRenderers.Clear();
     }
 
-
     void Update()
     {
         // Wait till users pick an avatar to enable renderers.
@@ -139,7 +138,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
                 // And if we've already been sent the relative transform, we will use it.
                 if (GotTransform)
                 {
-                    // This triggers the animation sequence for the model and 
+                    // This triggers the animation sequence for the model and
                     // puts the cool materials on the model.
                     GetComponent<EnergyHubBase>().SendMessage("OnSelect");
                 }

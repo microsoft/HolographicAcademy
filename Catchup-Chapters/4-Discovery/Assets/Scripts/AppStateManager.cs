@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
+using UnityEngine;
 
 /// <summary>
 /// Keeps track of the current state of the experience.
@@ -12,9 +12,9 @@ public class AppStateManager : Singleton<AppStateManager>
     public enum AppState
     {
         Starting = 0,
+        PickingAvatar,
         WaitingForAnchor,
         WaitingForStageTransform,
-        PickingAvatar,
         Ready
     }
 

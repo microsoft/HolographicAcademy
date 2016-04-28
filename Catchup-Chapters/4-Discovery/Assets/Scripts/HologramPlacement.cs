@@ -7,8 +7,8 @@ using HoloToolkit.Sharing;
 public class HologramPlacement : Singleton<HologramPlacement>
 {
     /// <summary>
-    /// Tracks if we have been sent a tranform for the model.
-    /// The model is rendererd relative to the actual anchor.
+    /// Tracks if we have been sent a transform for the model.
+    /// The model is rendered relative to the actual anchor.
     /// </summary>
     public bool GotTransform { get; private set; }
 
@@ -25,7 +25,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
         // We care about getting updates for the model transform.
         CustomMessages.Instance.MessageHandlers[CustomMessages.TestMessageID.StageTransform] = this.OnStageTransfrom;
 
-        // And when a new user join we will send the model transform we have.
+        // And when a new user joins we will send the model transform we have.
         SharingSessionTracker.Instance.SessionJoined += Instance_SessionJoined;
     }
 
@@ -117,7 +117,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 
     public void OnSelect()
     {
-        // Note that we have a tranform.
+        // Note that we have a transform.
         GotTransform = true;
 
         // And send it to our friends.
@@ -130,14 +130,14 @@ public class HologramPlacement : Singleton<HologramPlacement>
     /// <param name="msg"></param>
     void OnStageTransfrom(NetworkInMessage msg)
     {
-        // We read the user ID but we dont use it here.
+        // We read the user ID but we don't use it here.
         msg.ReadInt64();
 
         transform.localPosition = CustomMessages.Instance.ReadVector3(msg);
         transform.localRotation = CustomMessages.Instance.ReadQuaternion(msg);
 
-        // The first time, we'll want to send the message to the model to do it's animation and
-        // swapt it's materials.
+        // The first time, we'll want to send the message to the model to do its animation and
+        // swap its materials.
         if (disabledRenderers.Count == 0 && GotTransform == false)
         {
             GetComponent<EnergyHubBase>().SendMessage("OnSelect");

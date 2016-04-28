@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ExplodingBlob : MonoBehaviour
 {
@@ -99,7 +98,7 @@ public class ExplodingBlob : MonoBehaviour
         }
         else
         {
-            // Otherwise, we want to get more red and less and green as the dangerlevel increases.
+            // Otherwise, we want to get more red and less and green as the danger level increases.
             float r = SetDangerLevel / MaxDangerLevel;
             float g = (MaxDangerLevel - SetDangerLevel) / MaxDangerLevel;
 

@@ -145,7 +145,7 @@ public class SpatialMappingDeformation : Singleton<SpatialMappingDeformation>
     }
     
     /// <summary>
-    /// Spawns particles at the specified positins.
+    /// Spawns particles at the specified positions.
     /// </summary>
     /// <param name="Positions">Where to emit the particles.</param>
     public void EmitParticles(List<Vector3> Positions)
