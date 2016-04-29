@@ -1,14 +1,14 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using HoloToolkit.Sharing;
 using HoloToolkit.Unity;
-using HoloToolkit.Sharing;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class CustomMessages : Singleton<CustomMessages>
 {
     /// <summary>
     /// Message enum containing our information bytes to share.
-    /// The first message type has to start with UserMessageIDStart 
-    /// so as not to conflict with HoloToolkit internal messages.  
+    /// The first message type has to start with UserMessageIDStart
+    /// so as not to conflict with HoloToolkit internal messages.
     /// </summary>
     public enum TestMessageID : byte
     {
@@ -46,10 +46,10 @@ public class CustomMessages : Singleton<CustomMessages>
     }
 
     /// <summary>
-	/// Helper object that we use to route incoming message callbacks to the member
-	/// functions of this class
-	/// </summary>
-	NetworkConnectionAdapter connectionAdapter;
+    /// Helper object that we use to route incoming message callbacks to the member
+    /// functions of this class
+    /// </summary>
+    NetworkConnectionAdapter connectionAdapter;
 
     /// <summary>
     /// Cache the connection object for the sharing service
@@ -107,7 +107,7 @@ public class CustomMessages : Singleton<CustomMessages>
 
             msg.Write(HasAnchor);
 
-            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.  
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
             this.serverConnection.Broadcast(
                 msg,
                 MessagePriority.Immediate,
@@ -127,7 +127,7 @@ public class CustomMessages : Singleton<CustomMessages>
             AppendVector3(msg, position + (direction * 0.016f));
             AppendVector3(msg, direction);
 
-            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.  
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
             this.serverConnection.Broadcast(
                 msg,
                 MessagePriority.Immediate,
@@ -146,7 +146,7 @@ public class CustomMessages : Singleton<CustomMessages>
 
             msg.Write(UserAvatarID);
 
-            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.  
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
             this.serverConnection.Broadcast(
                 msg,
                 MessagePriority.Medium,
@@ -165,7 +165,7 @@ public class CustomMessages : Singleton<CustomMessages>
 
             msg.Write(HitUserID);
 
-            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.  
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
             this.serverConnection.Broadcast(
                 msg,
                 MessagePriority.Medium,
@@ -184,7 +184,7 @@ public class CustomMessages : Singleton<CustomMessages>
 
             AppendTransform(msg, position, rotation);
 
-            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.  
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
             this.serverConnection.Broadcast(
                 msg,
                 MessagePriority.Immediate,
@@ -201,7 +201,7 @@ public class CustomMessages : Singleton<CustomMessages>
             // Create an outgoing network message to contain all the info we want to send
             NetworkOutMessage msg = CreateMessage((byte)TestMessageID.ResetStage);
 
-            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.  
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
             this.serverConnection.Broadcast(
                 msg,
                 MessagePriority.Immediate,
@@ -218,7 +218,7 @@ public class CustomMessages : Singleton<CustomMessages>
             // Create an outgoing network message to contain all the info we want to send.
             NetworkOutMessage msg = CreateMessage((byte)TestMessageID.ExplodeTarget);
 
-            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.  
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
             this.serverConnection.Broadcast(
                 msg,
                 MessagePriority.Immediate,
@@ -250,6 +250,7 @@ public class CustomMessages : Singleton<CustomMessages>
     }
 
     #region HelperFunctionsForWriting
+
     void AppendTransform(NetworkOutMessage msg, Vector3 position, Quaternion rotation)
     {
         AppendVector3(msg, position);
@@ -270,9 +271,11 @@ public class CustomMessages : Singleton<CustomMessages>
         msg.Write(rotation.z);
         msg.Write(rotation.w);
     }
-    #endregion
 
-    #region HelperFunctionsForReading 
+    #endregion HelperFunctionsForWriting
+
+    #region HelperFunctionsForReading
+
     public Vector3 ReadVector3(NetworkInMessage msg)
     {
         return new Vector3(msg.ReadFloat(), msg.ReadFloat(), msg.ReadFloat());
@@ -282,5 +285,6 @@ public class CustomMessages : Singleton<CustomMessages>
     {
         return new Quaternion(msg.ReadFloat(), msg.ReadFloat(), msg.ReadFloat(), msg.ReadFloat());
     }
-    #endregion
+
+    #endregion HelperFunctionsForReading
 }

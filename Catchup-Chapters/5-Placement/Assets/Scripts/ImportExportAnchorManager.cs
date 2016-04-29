@@ -378,7 +378,7 @@ public class ImportExportAnchorManager : Singleton<ImportExportAnchorManager>
     }
 
     /// <summary>
-    /// Attempts to attach to an anchor by anchorName in the local store..
+    /// Attempts to attach to an anchor by anchorName in the local store.
     /// </summary>
     /// <returns>True if it attached, false if it could not attach</returns>
     bool AttachToCachedAnchor(string AnchorName)
