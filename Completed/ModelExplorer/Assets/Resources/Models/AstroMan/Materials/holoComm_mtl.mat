@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: holoComm_mtl
-  m_Shader: {fileID: 4800000, guid: ecabb61ab18b3d84598dc212c87c27d5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 11eafa1bdf8dea24d9e13d6b9231ec79, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: 2000

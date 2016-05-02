@@ -18,16 +18,6 @@ public class Interactible : MonoBehaviour
     {
         defaultMaterials = GetComponent<Renderer>().materials;
 
-        highlightMaterial = Resources.Load("Materials/AdditiveRimShader", typeof(Material)) as Material;
-
-        // Add highlightMaterial to materialsWithHighlight.
-        materialsWithHighlight = new Material[defaultMaterials.Length + 1];
-        for (int i = 0; i < defaultMaterials.Length; i++)
-        {
-            materialsWithHighlight[i] = defaultMaterials[i];
-        }
-        materialsWithHighlight[materialsWithHighlight.Length - 1] = highlightMaterial;
-
         // Add a BoxCollider if the interactible does not contain one.
         Collider collider = GetComponentInChildren<Collider>();
         if (collider == null)
@@ -56,36 +46,34 @@ public class Interactible : MonoBehaviour
         }
     }
 
-    void LateUpdate()
-    {
-        Debug.ClearDeveloperConsole();
-    }
-
     /* TODO: DEVELOPER CODING EXERCISE 2.d */
 
     void GazeEntered()
     {
-        if (materialsWithHighlight != null && highlightMaterial != null)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
-            // 2.d: Set GetComponent Renderer's materials to
-            // materialsWithHighlight when gazed at.
-            GetComponent<Renderer>().materials = materialsWithHighlight;
+            // 2.d: Uncomment the below line to highlight the material when gaze enters.
+            defaultMaterials[i].SetFloat("_Highlight", .25f);
         }
     }
 
     void GazeExited()
     {
-        if (defaultMaterials != null && highlightMaterial != null)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
-            // 2.d: Set GetComponent Renderer's materials to 
-            // defaultMaterials when gazed away.
-            GetComponent<Renderer>().materials = defaultMaterials;
+            // 2.d: Uncomment the below line to remove highlight on material when gaze exits.
+            defaultMaterials[i].SetFloat("_Highlight", 0f);
         }
     }
 
     void OnSelect()
     {
-        // Play the audioSource haptic feedback when we gaze and select a hologram.
+        for (int i = 0; i < defaultMaterials.Length; i++)
+        {
+            defaultMaterials[i].SetFloat("_Highlight", .5f);
+        }
+
+        // Play the audioSource feedback when we gaze and select a hologram.
         if (audioSource != null && !audioSource.isPlaying)
         {
             audioSource.Play();
