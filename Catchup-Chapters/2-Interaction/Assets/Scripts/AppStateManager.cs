@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using HoloToolkit;
+using HoloToolkit.Unity;
 using System.Collections;
 using System.Collections.Generic;
-using HoloToolkit;
-using HoloToolkit.Unity;
+using UnityEngine;
 
 /// <summary>
 /// Keeps track of the current state of the experience.
@@ -16,7 +16,6 @@ public class AppStateManager : Singleton<AppStateManager>
     {
         WaitingForAnchor = 0,
         WaitingForStageTransform,
-        PickingAvatar,
         Ready
     }
 
