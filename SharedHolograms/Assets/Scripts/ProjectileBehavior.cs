@@ -25,7 +25,7 @@ public class ProjectileBehavior : MonoBehaviour
     public Vector3 startDir { get; set; }
 
     /// <summary>
-    /// Keeps track of wheter or not this projectile hit something and should be 'destroyed'.
+    /// Keeps track of whether or not this projectile hit something and should be 'destroyed'.
     /// </summary>
     protected bool firstContact = false;
 

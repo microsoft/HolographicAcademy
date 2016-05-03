@@ -1,11 +1,11 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-using HoloToolkit.Sharing;
+﻿using HoloToolkit.Sharing;
 using HoloToolkit.Unity;
+using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// Adds and updates the head transforms of remote users.  
-/// Head transforms are sent and received in the local coordinate space of the gameobject
+/// Head transforms are sent and received in the local coordinate space of the GameObject
 /// this component is on.  
 /// </summary>
 public class RemotePlayerManager : Singleton<RemotePlayerManager>
@@ -175,7 +175,7 @@ public class RemotePlayerManager : Singleton<RemotePlayerManager>
 
         if (headInfo.HeadObject != null)
         {
-            // If we don't have our anchor established, dont draw the remote head.
+            // If we don't have our anchor established, don't draw the remote head.
             headInfo.HeadObject.SetActive(headInfo.Anchored);
 
             headInfo.HeadObject.transform.localPosition = headPos + headRot * headInfo.headObjectPositionOffset;

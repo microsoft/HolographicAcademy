@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using HoloToolkit.Unity;
+using UnityEngine;
 using UnityEngine.VR.WSA;
-using HoloToolkit.Unity;
 
 [RequireComponent(typeof(AudioSource))]
 public class EnergyHubBase : Singleton<EnergyHubBase>
@@ -67,7 +67,7 @@ public class EnergyHubBase : Singleton<EnergyHubBase>
         animator.Rebind();
         animator.speed = 0;
 
-        //Setup Placing Object
+        // Setup Placing Object
         foreach (Transform child in this.transform)
         {
             MaterialSwap(child, PlacedMaterial, PlacingMaterial);
@@ -113,5 +113,5 @@ public class EnergyHubBase : Singleton<EnergyHubBase>
                 mesh.gameObject.GetComponent<Renderer>().material = newMaterial;
             }
         }
-    }    
+    }
 }
