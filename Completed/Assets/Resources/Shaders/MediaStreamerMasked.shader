@@ -1,20 +1,23 @@
 ﻿// Simple additive shader.
 
-Shader "simpleAdditive" {
-Properties {
-    _MainTex ("Base (RGB)", 2D) = "black" {}
-	_Tint("Color Tint", Color) = (1.0,1.0,1.0,1.0)
-}
+Shader "simpleAdditive"
+{
+    Properties
+    {
+        _MainTex("Base (RGB)", 2D) = "black" {}
+        _Tint("Color Tint", Color) = (1.0,1.0,1.0,1.0)
+    }
+    SubShader
+    {
+        Tags {"Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent"}
+        LOD 100
+        ZWrite Off
+        Lighting Off
+        Blend One One
 
-SubShader {
-    Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
-    LOD 100
-    ZWrite Off
-	Lighting Off
-	Blend One One
-
-    Pass {  
-        CGPROGRAM
+        Pass
+        {
+            CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
@@ -31,22 +34,22 @@ SubShader {
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
-			float4  _Tint;
+            float4  _Tint;
 
-            v2f vert (appdata_t v)
+            v2f vert(appdata_t v)
             {
                 v2f o;
                 o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
                 o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
                 return o;
             }
-            
-            fixed4 frag (v2f i) : SV_Target
+
+            fixed4 frag(v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.texcoord);
                 return fixed4(col.r, col.g, col.b, col.a)*_Tint;
             }
-        ENDCG
+            ENDCG
+        }
     }
-}
 }

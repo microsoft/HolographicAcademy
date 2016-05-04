@@ -33,7 +33,7 @@ namespace HoloToolkit.Unity
         public const float DefaultUnityGainDistance = 1.0f;
 
         /// <summary>
-        /// The available Microsoft Spatial Sound Spatializer paramters.
+        /// The available Microsoft Spatial Sound Spatializer parameters.
         /// </summary>
         private enum SpatialSoundParameters
         {

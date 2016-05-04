@@ -35,7 +35,7 @@ public class CursorManager : Singleton<CursorManager>
     private static void SetLayerCollisions()
     {
         int maxLayers = 31;
-        // To protect apps that dont have an Interactible layer in their project.
+        // To protect apps that don't have an Interactible layer in their project.
         int interactibleLayer = LayerMask.NameToLayer("Default");
 
         if (interactibleLayer < 0 || interactibleLayer > maxLayers)
@@ -45,7 +45,7 @@ public class CursorManager : Singleton<CursorManager>
 
         // Ignore all collisions with UI except for Cursor collisions.
         // Unity has 31 possible layers.  There is no way to get this value in code.
-        
+
         for (int i = 0; i < maxLayers; i++)
         {
             // Ensure the Interactible objects do not collide with other layers.

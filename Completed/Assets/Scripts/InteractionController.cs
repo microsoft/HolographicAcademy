@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using HoloToolkit.Unity;
+using UnityEngine;
 using UnityEngine.VR.WSA.Input;
 using UnityEngine.Windows.Speech;
-using HoloToolkit.Unity;
 
 public class InteractionController : MonoBehaviour
 {
     [SerializeField]
     private bool playHandEmitter = false;
+
     [SerializeField]
     private Transform handEmitter;
 
@@ -23,15 +24,15 @@ public class InteractionController : MonoBehaviour
         InteractionManager.SourceLost += InteractionManager_SourceLost;
         InteractionManager.SourcePressed += InteractionManager_SourcePressed;
         InteractionManager.SourceReleased += InteractionManager_SourceReleased;
-        string[] myKeywords = new string[] {"Start", "Standard", "Spatial"};
+        string[] myKeywords = new string[] { "Start", "Standard", "Spatial" };
         this.keywords = new KeywordRecognizer(myKeywords);
         this.keywords.OnPhraseRecognized += OnKeywordRecognized;
         this.keywords.Start();
         this.astronaut = FindObjectOfType<MarcoPoloEmitter>();
         this.surround = FindObjectOfType<SurroundController>();
-	}
-	
-	private void Update()
+    }
+
+    private void Update()
     {
 #if UNITY_EDITOR
         UnityControls();
@@ -44,7 +45,7 @@ public class InteractionController : MonoBehaviour
         this.keywords = null;
     }
 
-    #endregion
+    #endregion Unity Functions
 
     #region Private Functions
 
@@ -115,7 +116,7 @@ public class InteractionController : MonoBehaviour
         this.surround.DoStandard();
     }
 
-    #endregion
+    #endregion Private Functions
 
     private void OnKeywordRecognized(PhraseRecognizedEventArgs args)
     {
@@ -171,5 +172,5 @@ public class InteractionController : MonoBehaviour
         }
     }
 
-    #endregion
+    #endregion Hand Messages
 }

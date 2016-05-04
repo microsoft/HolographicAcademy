@@ -17,7 +17,7 @@ namespace HoloToolkit.Unity
         [Tooltip("Color to shade the direction indicator.")]
         public Color DirectionIndicatorColor = Color.blue;
 
-        [Tooltip("Allowable percentage inside the fov to continue to show the direction indicator.")]
+        [Tooltip("Allowable percentage inside the holographic frame to continue to show the direction indicator.")]
         [Range(-0.3f, 0.3f)]
         public float TitleSafeFactor = 0.1f;
 

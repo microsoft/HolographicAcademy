@@ -578,7 +578,7 @@ namespace HoloToolkit.Unity
         /// <returns>The coroutine.</returns>
         private IEnumerator RecordEventInstanceCoroutine(ActiveEvent activeEvent)
         {
-            // Unity has no callback for an audioclip ending, so we have to estimate it ahead of time.
+            // Unity has no callback for an AudioClip ending, so we have to estimate it ahead of time.
             // Changing the pitch during playback will alter actual playback time.
             activeEvents.Add(activeEvent);
 
@@ -590,7 +590,7 @@ namespace HoloToolkit.Unity
                 // Mark this event so it no longer counts against the instance limit.
                 activeEvent.isActiveTimeComplete = true;
 
-                // Ssince the activeTime estimate may not be enough time to complete the clip (due to pitch changes during playback, or a negative instanceBuffer value, for example)
+                // Since the activeTime estimate may not be enough time to complete the clip (due to pitch changes during playback, or a negative instanceBuffer value, for example)
                 // wait here until it is finished, so that we don't cut off the end.
                 if (activeEvent.IsPlaying)
                 {

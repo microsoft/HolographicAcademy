@@ -142,7 +142,7 @@ namespace HoloToolkit.Unity
                 toPosition.x = ray.GetPoint(distanceOffset).x;
             }
 
-            // Similar logic follows below for for determining if and how the
+            // Similar logic follows below for determining if and how the
             // Tagalong would need to move up or down.
             bool moveDown = frustumPlanes[frustumTop].GetDistanceToPoint(fromPosition) < 0;
             bool moveUp = frustumPlanes[frustumBottom].GetDistanceToPoint(fromPosition) < 0;

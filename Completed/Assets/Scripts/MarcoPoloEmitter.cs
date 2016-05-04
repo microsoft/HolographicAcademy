@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using HoloToolkit.Unity;
 using System.Collections;
-using HoloToolkit.Unity;
+using UnityEngine;
 
 public class MarcoPoloEmitter : MonoBehaviour
 {
@@ -10,15 +10,16 @@ public class MarcoPoloEmitter : MonoBehaviour
     private float moveLength = 2;
     [SerializeField]
     private GameObject[] meshes;
+
     private Collider[] colliders;
     private Camera player;
     private Vector3 destination;
 
-	private void Start()
+    private void Start()
     {
         this.player = Camera.main;
         this.colliders = this.gameObject.GetComponents<Collider>();
-	}
+    }
 
     public void StartSounds()
     {
@@ -42,7 +43,7 @@ public class MarcoPoloEmitter : MonoBehaviour
         }
 
         // Disable colliders so the cursor won't react to them.
-        for(int i = 0; i < this.colliders.Length; i++)
+        for (int i = 0; i < this.colliders.Length; i++)
         {
             this.colliders[i].enabled = false;
         }

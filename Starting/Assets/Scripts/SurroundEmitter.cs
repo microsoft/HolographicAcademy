@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
+using UnityEngine;
 
 public class SurroundEmitter : MonoBehaviour
 {
@@ -25,7 +25,6 @@ public class SurroundEmitter : MonoBehaviour
     {
         UAudioManager.Instance.PlayEvent(this.eventName, this.emitter);
     }
-
 
     private void OnSelected()
     {

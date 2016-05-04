@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using HoloToolkit.Unity;
 
 public class ToggleEmitter : MonoBehaviour
 {
