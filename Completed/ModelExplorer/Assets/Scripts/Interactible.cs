@@ -11,8 +11,6 @@ public class Interactible : MonoBehaviour
     private AudioSource audioSource;
 
     private Material[] defaultMaterials;
-    private Material[] materialsWithHighlight;
-    private Material highlightMaterial;
 
     void Start()
     {
