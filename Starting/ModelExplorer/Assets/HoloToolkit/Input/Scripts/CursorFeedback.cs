@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// CursorStates class takes GameObjects to give cursor feedback
+/// CursorFeedback class takes GameObjects to give cursor feedback
 /// to users based on different states.
 /// </summary>
-public class CursorStates : MonoBehaviour
+public class CursorFeedback : MonoBehaviour
 {
     [Tooltip("Drag a prefab object to display when a hand is detected.")]
     public GameObject HandDetectedAsset;
