@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: astroMan_suit_mtl
-  m_Shader: {fileID: 4800000, guid: 11eafa1bdf8dea24d9e13d6b9231ec79, type: 3}
-  m_ShaderKeywords: _EMISSION _NORMALMAP
-  m_LightmapFlags: 1
-  m_CustomRenderQueue: -1
+  m_Shader: {fileID: 4800000, guid: f326278a838e87c499393f30a8e72127, type: 3}
+  m_ShaderKeywords: _EMISSION _GLOSSYREFLECTIONS_OFF _NORMALMAP _SPECULARHIGHLIGHTS_OFF
+  m_LightmapFlags: 0
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,6 +19,12 @@ Material:
         name: _BumpMap
       second:
         m_Texture: {fileID: 2800000, guid: 5e283f22e69ca004b8c4fc6cc3a53aca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Cube
+      second:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -47,6 +53,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: c4b3aecf7915fb048b59e237cb330436, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex1
       second:
         m_Texture: {fileID: 2800000, guid: c4b3aecf7915fb048b59e237cb330436, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -83,6 +95,9 @@ Material:
         name: _BumpScale
       second: 1
     - first:
+        name: _CubeContribution
+      second: 0.5
+    - first:
         name: _Cutoff
       second: 0.5
     - first:
@@ -92,8 +107,20 @@ Material:
         name: _DstBlend
       second: 0
     - first:
+        name: _FresnelPower
+      second: 0.5
+    - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
         name: _Glossiness
-      second: 0.363
+      second: 0.292
+    - first:
+        name: _GlossyReflections
+      second: 0
+    - first:
+        name: _Highlight
+      second: 0
     - first:
         name: _Metallic
       second: 0
@@ -106,6 +133,15 @@ Material:
     - first:
         name: _Parallax
       second: 0.005
+    - first:
+        name: _Shininess
+      second: 3
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 0
     - first:
         name: _SrcBlend
       second: 1
@@ -123,5 +159,14 @@ Material:
         name: _EmissionColor
       second: {r: 0.70042205, g: 0.8101271, b: 2, a: 1}
     - first:
+        name: _HighlightColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
         name: _SpecColor
       second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - first:
+        name: _Specular
+      second: {r: 0.13235295, g: 0.13235295, b: 0.13235295, a: 1}
+    - first:
+        name: _VelColor
+      second: {r: 1, g: 1, b: 1, a: 1}

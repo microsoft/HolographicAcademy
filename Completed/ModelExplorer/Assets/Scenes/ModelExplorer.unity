@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3071144, g: 0.29437888, b: 0.24407883, a: 1}
+  m_IndirectSpecularColor: {r: 0.30711442, g: 0.2943786, b: 0.24407867, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -175,14 +175,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013871314322, guid: db5d50d60b0863341be4ce64455775a8,
+        type: 2}
+      propertyPath: ExpandedModel
+      value: 
+      objectReference: {fileID: 1292247012}
     - target: {fileID: 11409080, guid: db5d50d60b0863341be4ce64455775a8, type: 2}
       propertyPath: Cursor
       value: 
       objectReference: {fileID: 2088344740}
-    - target: {fileID: 11499228, guid: db5d50d60b0863341be4ce64455775a8, type: 2}
-      propertyPath: ExpandedModel
-      value: 
-      objectReference: {fileID: 1292247012}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db5d50d60b0863341be4ce64455775a8, type: 2}
   m_IsPrefabParent: 0
@@ -314,6 +315,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044605505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,6 +446,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 154686, guid: 62adf19d62d644144bba4200d845566a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62adf19d62d644144bba4200d845566a, type: 2}
   m_IsPrefabParent: 0
@@ -493,6 +499,10 @@ Prefab:
     - target: {fileID: 1000012139293616, guid: e479168dfdfb19248a685bc98134692a, type: 2}
       propertyPath: m_Name
       value: SpaceBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012998499534, guid: e479168dfdfb19248a685bc98134692a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e479168dfdfb19248a685bc98134692a, type: 2}

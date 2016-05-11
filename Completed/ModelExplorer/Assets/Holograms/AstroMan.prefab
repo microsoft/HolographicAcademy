@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &106936
 GameObject:
   m_ObjectHideFlags: 1
@@ -1367,8 +1367,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 487370}
   - 95: {fileID: 9502782}
-  - 114: {fileID: 11499228}
-  - 114: {fileID: 11471476}
+  - 114: {fileID: 114000011581590588}
+  - 114: {fileID: 114000013871314322}
+  - 114: {fileID: 114000012389906688}
   m_Layer: 8
   m_Name: AstroMan
   m_TagString: Untagged
@@ -1657,7 +1658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &168244
 GameObject:
   m_ObjectHideFlags: 1
@@ -2000,7 +2001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &178998
 GameObject:
   m_ObjectHideFlags: 1
@@ -2221,7 +2222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &188818
 GameObject:
   m_ObjectHideFlags: 1
@@ -2253,7 +2254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &189892
 GameObject:
   m_ObjectHideFlags: 1
@@ -2482,6 +2483,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400378
 Transform:
   m_ObjectHideFlags: 1
@@ -2494,6 +2496,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442060}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400442
 Transform:
   m_ObjectHideFlags: 1
@@ -2506,6 +2509,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 497046}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400800
 Transform:
   m_ObjectHideFlags: 1
@@ -2523,6 +2527,7 @@ Transform:
   - {fileID: 438952}
   m_Father: {fileID: 413670}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &403694
 Transform:
   m_ObjectHideFlags: 1
@@ -2535,6 +2540,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &404792
 Transform:
   m_ObjectHideFlags: 1
@@ -2548,6 +2554,7 @@ Transform:
   - {fileID: 450184}
   m_Father: {fileID: 475868}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &406012
 Transform:
   m_ObjectHideFlags: 1
@@ -2560,6 +2567,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &406110
 Transform:
   m_ObjectHideFlags: 1
@@ -2572,6 +2580,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 438462}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &406124
 Transform:
   m_ObjectHideFlags: 1
@@ -2585,6 +2594,7 @@ Transform:
   - {fileID: 461608}
   m_Father: {fileID: 462508}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &406422
 Transform:
   m_ObjectHideFlags: 1
@@ -2599,6 +2609,7 @@ Transform:
   - {fileID: 499900}
   m_Father: {fileID: 449664}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &408310
 Transform:
   m_ObjectHideFlags: 1
@@ -2611,6 +2622,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &411300
 Transform:
   m_ObjectHideFlags: 1
@@ -2625,6 +2637,7 @@ Transform:
   - {fileID: 420646}
   m_Father: {fileID: 472048}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &411338
 Transform:
   m_ObjectHideFlags: 1
@@ -2638,6 +2651,7 @@ Transform:
   - {fileID: 413752}
   m_Father: {fileID: 495112}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &411630
 Transform:
   m_ObjectHideFlags: 1
@@ -2650,6 +2664,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400800}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &413634
 Transform:
   m_ObjectHideFlags: 1
@@ -2662,6 +2677,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467550}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &413670
 Transform:
   m_ObjectHideFlags: 1
@@ -2675,6 +2691,7 @@ Transform:
   - {fileID: 400800}
   m_Father: {fileID: 472048}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &413752
 Transform:
   m_ObjectHideFlags: 1
@@ -2687,6 +2704,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 411338}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &413826
 Transform:
   m_ObjectHideFlags: 1
@@ -2699,6 +2717,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464652}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &414140
 Transform:
   m_ObjectHideFlags: 1
@@ -2712,6 +2731,7 @@ Transform:
   - {fileID: 414674}
   m_Father: {fileID: 490698}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &414674
 Transform:
   m_ObjectHideFlags: 1
@@ -2724,6 +2744,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 414140}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &417696
 Transform:
   m_ObjectHideFlags: 1
@@ -2736,6 +2757,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418236}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &418236
 Transform:
   m_ObjectHideFlags: 1
@@ -2755,6 +2777,7 @@ Transform:
   - {fileID: 446300}
   m_Father: {fileID: 448412}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &419120
 Transform:
   m_ObjectHideFlags: 1
@@ -2767,6 +2790,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 487370}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &419310
 Transform:
   m_ObjectHideFlags: 1
@@ -2780,6 +2804,7 @@ Transform:
   - {fileID: 447488}
   m_Father: {fileID: 487370}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &419748
 Transform:
   m_ObjectHideFlags: 1
@@ -2793,6 +2818,7 @@ Transform:
   - {fileID: 462600}
   m_Father: {fileID: 452310}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &419800
 Transform:
   m_ObjectHideFlags: 1
@@ -2805,6 +2831,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464652}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &419996
 Transform:
   m_ObjectHideFlags: 1
@@ -2817,6 +2844,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464652}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &420494
 Transform:
   m_ObjectHideFlags: 1
@@ -2829,6 +2857,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &420646
 Transform:
   m_ObjectHideFlags: 1
@@ -2853,6 +2882,7 @@ Transform:
   - {fileID: 449636}
   m_Father: {fileID: 411300}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &420994
 Transform:
   m_ObjectHideFlags: 1
@@ -2865,6 +2895,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &421454
 Transform:
   m_ObjectHideFlags: 1
@@ -2877,6 +2908,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 429064}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &421604
 Transform:
   m_ObjectHideFlags: 1
@@ -2890,6 +2922,7 @@ Transform:
   - {fileID: 445624}
   m_Father: {fileID: 443268}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &423324
 Transform:
   m_ObjectHideFlags: 1
@@ -2902,6 +2935,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &424850
 Transform:
   m_ObjectHideFlags: 1
@@ -2915,6 +2949,7 @@ Transform:
   - {fileID: 454972}
   m_Father: {fileID: 495112}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &425612
 Transform:
   m_ObjectHideFlags: 1
@@ -2927,6 +2962,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418236}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &425682
 Transform:
   m_ObjectHideFlags: 1
@@ -2939,6 +2975,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &426004
 Transform:
   m_ObjectHideFlags: 1
@@ -2951,6 +2988,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400800}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &426122
 Transform:
   m_ObjectHideFlags: 1
@@ -2963,6 +3001,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &427370
 Transform:
   m_ObjectHideFlags: 1
@@ -2977,6 +3016,7 @@ Transform:
   - {fileID: 485324}
   m_Father: {fileID: 400800}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &427824
 Transform:
   m_ObjectHideFlags: 1
@@ -2989,6 +3029,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 472826}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &428734
 Transform:
   m_ObjectHideFlags: 1
@@ -3001,6 +3042,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 495112}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &429064
 Transform:
   m_ObjectHideFlags: 1
@@ -3015,6 +3057,7 @@ Transform:
   - {fileID: 421454}
   m_Father: {fileID: 430664}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &429166
 Transform:
   m_ObjectHideFlags: 1
@@ -3029,6 +3072,7 @@ Transform:
   - {fileID: 471712}
   m_Father: {fileID: 497046}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &429908
 Transform:
   m_ObjectHideFlags: 1
@@ -3042,6 +3086,7 @@ Transform:
   - {fileID: 444056}
   m_Father: {fileID: 472048}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &430382
 Transform:
   m_ObjectHideFlags: 1
@@ -3055,6 +3100,7 @@ Transform:
   - {fileID: 495914}
   m_Father: {fileID: 439208}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &430664
 Transform:
   m_ObjectHideFlags: 1
@@ -3069,6 +3115,7 @@ Transform:
   - {fileID: 465324}
   m_Father: {fileID: 429166}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &431922
 Transform:
   m_ObjectHideFlags: 1
@@ -3081,6 +3128,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &432174
 Transform:
   m_ObjectHideFlags: 1
@@ -3093,6 +3141,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464652}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &433124
 Transform:
   m_ObjectHideFlags: 1
@@ -3106,6 +3155,7 @@ Transform:
   - {fileID: 495112}
   m_Father: {fileID: 497220}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &434052
 Transform:
   m_ObjectHideFlags: 1
@@ -3118,6 +3168,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464652}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &434238
 Transform:
   m_ObjectHideFlags: 1
@@ -3130,6 +3181,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 436130}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &435704
 Transform:
   m_ObjectHideFlags: 1
@@ -3142,6 +3194,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418236}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &436130
 Transform:
   m_ObjectHideFlags: 1
@@ -3156,6 +3209,7 @@ Transform:
   - {fileID: 434238}
   m_Father: {fileID: 467550}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &437520
 Transform:
   m_ObjectHideFlags: 1
@@ -3168,6 +3222,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418236}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &438462
 Transform:
   m_ObjectHideFlags: 1
@@ -3185,6 +3240,7 @@ Transform:
   - {fileID: 406110}
   m_Father: {fileID: 462294}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &438952
 Transform:
   m_ObjectHideFlags: 1
@@ -3197,6 +3253,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400800}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &439208
 Transform:
   m_ObjectHideFlags: 1
@@ -3210,6 +3267,7 @@ Transform:
   - {fileID: 430382}
   m_Father: {fileID: 465624}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &440616
 Transform:
   m_ObjectHideFlags: 1
@@ -3222,6 +3280,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &441578
 Transform:
   m_ObjectHideFlags: 1
@@ -3237,6 +3296,7 @@ Transform:
   - {fileID: 476638}
   m_Father: {fileID: 447488}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &441994
 Transform:
   m_ObjectHideFlags: 1
@@ -3249,6 +3309,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 436130}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &442060
 Transform:
   m_ObjectHideFlags: 1
@@ -3263,6 +3324,7 @@ Transform:
   - {fileID: 400378}
   m_Father: {fileID: 472048}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &442366
 Transform:
   m_ObjectHideFlags: 1
@@ -3275,6 +3337,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &442746
 Transform:
   m_ObjectHideFlags: 1
@@ -3288,6 +3351,7 @@ Transform:
   - {fileID: 467200}
   m_Father: {fileID: 406422}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &443268
 Transform:
   m_ObjectHideFlags: 1
@@ -3302,6 +3366,7 @@ Transform:
   - {fileID: 467550}
   m_Father: {fileID: 429064}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &444056
 Transform:
   m_ObjectHideFlags: 1
@@ -3316,6 +3381,7 @@ Transform:
   - {fileID: 452310}
   m_Father: {fileID: 429908}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &444516
 Transform:
   m_ObjectHideFlags: 1
@@ -3328,6 +3394,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 444056}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &445398
 Transform:
   m_ObjectHideFlags: 1
@@ -3340,6 +3407,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 448670}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &445624
 Transform:
   m_ObjectHideFlags: 1
@@ -3352,6 +3420,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 421604}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &446300
 Transform:
   m_ObjectHideFlags: 1
@@ -3364,6 +3433,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418236}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &447488
 Transform:
   m_ObjectHideFlags: 1
@@ -3379,6 +3449,7 @@ Transform:
   - {fileID: 441578}
   m_Father: {fileID: 419310}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &447700
 Transform:
   m_ObjectHideFlags: 1
@@ -3391,6 +3462,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 441578}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &447984
 Transform:
   m_ObjectHideFlags: 1
@@ -3422,6 +3494,7 @@ Transform:
   - {fileID: 400138}
   m_Father: {fileID: 448412}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &448412
 Transform:
   m_ObjectHideFlags: 1
@@ -3437,6 +3510,7 @@ Transform:
   - {fileID: 464652}
   m_Father: {fileID: 487370}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &448670
 Transform:
   m_ObjectHideFlags: 1
@@ -3451,6 +3525,7 @@ Transform:
   - {fileID: 445398}
   m_Father: {fileID: 427370}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &449636
 Transform:
   m_ObjectHideFlags: 1
@@ -3463,6 +3538,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &449664
 Transform:
   m_ObjectHideFlags: 1
@@ -3477,6 +3553,7 @@ Transform:
   - {fileID: 471634}
   m_Father: {fileID: 448670}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &450184
 Transform:
   m_ObjectHideFlags: 1
@@ -3490,6 +3567,7 @@ Transform:
   - {fileID: 460554}
   m_Father: {fileID: 404792}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &450364
 Transform:
   m_ObjectHideFlags: 1
@@ -3502,19 +3580,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 441578}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &452310
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179560}
-  m_LocalRotation: {x: -0.002023323, y: 0.99169743, z: -0.12856644, w: -0.0016602732}
+  m_LocalRotation: {x: -0.0020233232, y: 0.9916975, z: -0.12856646, w: -0.0016602733}
   m_LocalPosition: {x: 0.00928322, y: 0.0031690523, z: 0.013505639}
   m_LocalScale: {x: 0.6666667, y: 0.6666666, z: 0.6666667}
   m_Children:
   - {fileID: 419748}
   m_Father: {fileID: 444056}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &454126
 Transform:
   m_ObjectHideFlags: 1
@@ -3528,6 +3608,7 @@ Transform:
   - {fileID: 472048}
   m_Father: {fileID: 490698}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &454330
 Transform:
   m_ObjectHideFlags: 1
@@ -3540,6 +3621,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 438462}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &454428
 Transform:
   m_ObjectHideFlags: 1
@@ -3552,6 +3634,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418236}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &454972
 Transform:
   m_ObjectHideFlags: 1
@@ -3564,6 +3647,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 424850}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &456576
 Transform:
   m_ObjectHideFlags: 1
@@ -3577,6 +3661,7 @@ Transform:
   - {fileID: 465624}
   m_Father: {fileID: 499922}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &457348
 Transform:
   m_ObjectHideFlags: 1
@@ -3589,6 +3674,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &457652
 Transform:
   m_ObjectHideFlags: 1
@@ -3602,6 +3688,7 @@ Transform:
   - {fileID: 490698}
   m_Father: {fileID: 476638}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &458084
 Transform:
   m_ObjectHideFlags: 1
@@ -3614,6 +3701,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &458516
 Transform:
   m_ObjectHideFlags: 1
@@ -3626,6 +3714,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 460554}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &460110
 Transform:
   m_ObjectHideFlags: 1
@@ -3638,6 +3727,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &460554
 Transform:
   m_ObjectHideFlags: 1
@@ -3651,6 +3741,7 @@ Transform:
   - {fileID: 458516}
   m_Father: {fileID: 450184}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &461608
 Transform:
   m_ObjectHideFlags: 1
@@ -3663,6 +3754,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 406124}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &461668
 Transform:
   m_ObjectHideFlags: 1
@@ -3675,6 +3767,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467550}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &462294
 Transform:
   m_ObjectHideFlags: 1
@@ -3688,6 +3781,7 @@ Transform:
   - {fileID: 438462}
   m_Father: {fileID: 472048}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &462508
 Transform:
   m_ObjectHideFlags: 1
@@ -3701,6 +3795,7 @@ Transform:
   - {fileID: 406124}
   m_Father: {fileID: 462600}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &462600
 Transform:
   m_ObjectHideFlags: 1
@@ -3714,6 +3809,7 @@ Transform:
   - {fileID: 462508}
   m_Father: {fileID: 419748}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &464652
 Transform:
   m_ObjectHideFlags: 1
@@ -3733,6 +3829,7 @@ Transform:
   - {fileID: 413826}
   m_Father: {fileID: 448412}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &464856
 Transform:
   m_ObjectHideFlags: 1
@@ -3746,6 +3843,7 @@ Transform:
   - {fileID: 465026}
   m_Father: {fileID: 447488}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &465026
 Transform:
   m_ObjectHideFlags: 1
@@ -3759,6 +3857,7 @@ Transform:
   - {fileID: 475868}
   m_Father: {fileID: 464856}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &465324
 Transform:
   m_ObjectHideFlags: 1
@@ -3771,6 +3870,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430664}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &465624
 Transform:
   m_ObjectHideFlags: 1
@@ -3784,6 +3884,7 @@ Transform:
   - {fileID: 439208}
   m_Father: {fileID: 456576}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &466324
 Transform:
   m_ObjectHideFlags: 1
@@ -3796,6 +3897,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442060}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &467200
 Transform:
   m_ObjectHideFlags: 1
@@ -3809,6 +3911,7 @@ Transform:
   - {fileID: 492502}
   m_Father: {fileID: 442746}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &467550
 Transform:
   m_ObjectHideFlags: 1
@@ -3825,6 +3928,7 @@ Transform:
   - {fileID: 413634}
   m_Father: {fileID: 443268}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &468004
 Transform:
   m_ObjectHideFlags: 1
@@ -3837,6 +3941,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 472826}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &469206
 Transform:
   m_ObjectHideFlags: 1
@@ -3849,6 +3954,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 485746}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &470666
 Transform:
   m_ObjectHideFlags: 1
@@ -3861,6 +3967,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 496472}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &471634
 Transform:
   m_ObjectHideFlags: 1
@@ -3873,6 +3980,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 449664}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &471712
 Transform:
   m_ObjectHideFlags: 1
@@ -3885,6 +3993,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 429166}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &471992
 Transform:
   m_ObjectHideFlags: 1
@@ -3897,6 +4006,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &472048
 Transform:
   m_ObjectHideFlags: 1
@@ -3915,6 +4025,7 @@ Transform:
   - {fileID: 413670}
   m_Father: {fileID: 454126}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &472138
 Transform:
   m_ObjectHideFlags: 1
@@ -3927,6 +4038,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464652}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &472510
 Transform:
   m_ObjectHideFlags: 1
@@ -3939,6 +4051,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &472560
 Transform:
   m_ObjectHideFlags: 1
@@ -3951,6 +4064,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400800}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &472826
 Transform:
   m_ObjectHideFlags: 1
@@ -3966,6 +4080,7 @@ Transform:
   - {fileID: 468004}
   m_Father: {fileID: 411300}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &473702
 Transform:
   m_ObjectHideFlags: 1
@@ -3978,6 +4093,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &475868
 Transform:
   m_ObjectHideFlags: 1
@@ -3991,6 +4107,7 @@ Transform:
   - {fileID: 404792}
   m_Father: {fileID: 465026}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &476638
 Transform:
   m_ObjectHideFlags: 1
@@ -4004,6 +4121,7 @@ Transform:
   - {fileID: 457652}
   m_Father: {fileID: 441578}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &477094
 Transform:
   m_ObjectHideFlags: 1
@@ -4016,6 +4134,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &477380
 Transform:
   m_ObjectHideFlags: 1
@@ -4029,6 +4148,7 @@ Transform:
   - {fileID: 499922}
   m_Father: {fileID: 447488}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &478708
 Transform:
   m_ObjectHideFlags: 1
@@ -4041,6 +4161,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 438462}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &479536
 Transform:
   m_ObjectHideFlags: 1
@@ -4053,6 +4174,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &480122
 Transform:
   m_ObjectHideFlags: 1
@@ -4066,6 +4188,7 @@ Transform:
   - {fileID: 497220}
   m_Father: {fileID: 472048}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &480320
 Transform:
   m_ObjectHideFlags: 1
@@ -4078,6 +4201,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &480780
 Transform:
   m_ObjectHideFlags: 1
@@ -4090,6 +4214,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &481050
 Transform:
   m_ObjectHideFlags: 1
@@ -4102,6 +4227,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 472826}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &481522
 Transform:
   m_ObjectHideFlags: 1
@@ -4109,11 +4235,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118538}
   m_LocalRotation: {x: -0.0053871055, y: -0.8238946, z: -0.047623497, w: 0.56471294}
-  m_LocalPosition: {x: 0.017780153, y: -0.0018100281, z: 0.0065003284}
+  m_LocalPosition: {x: 0.017780153, y: -0.0018100281, z: 0.006500328}
   m_LocalScale: {x: 0.014692079, y: -0.02162614, z: 0.01469208}
   m_Children: []
   m_Father: {fileID: 467550}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &481600
 Transform:
   m_ObjectHideFlags: 1
@@ -4126,6 +4253,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &484730
 Transform:
   m_ObjectHideFlags: 1
@@ -4138,6 +4266,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464652}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &484832
 Transform:
   m_ObjectHideFlags: 1
@@ -4150,6 +4279,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &485324
 Transform:
   m_ObjectHideFlags: 1
@@ -4162,6 +4292,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 427370}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &485746
 Transform:
   m_ObjectHideFlags: 1
@@ -4175,6 +4306,7 @@ Transform:
   - {fileID: 469206}
   m_Father: {fileID: 495112}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &486616
 Transform:
   m_ObjectHideFlags: 1
@@ -4187,6 +4319,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 438462}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &487370
 Transform:
   m_ObjectHideFlags: 1
@@ -4202,6 +4335,7 @@ Transform:
   - {fileID: 419120}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &488376
 Transform:
   m_ObjectHideFlags: 1
@@ -4214,6 +4348,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &490286
 Transform:
   m_ObjectHideFlags: 1
@@ -4226,6 +4361,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &490698
 Transform:
   m_ObjectHideFlags: 1
@@ -4241,6 +4377,7 @@ Transform:
   - {fileID: 454126}
   m_Father: {fileID: 457652}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &491862
 Transform:
   m_ObjectHideFlags: 1
@@ -4253,6 +4390,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &492502
 Transform:
   m_ObjectHideFlags: 1
@@ -4265,6 +4403,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467200}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &494542
 Transform:
   m_ObjectHideFlags: 1
@@ -4277,6 +4416,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418236}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &494602
 Transform:
   m_ObjectHideFlags: 1
@@ -4289,6 +4429,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &495112
 Transform:
   m_ObjectHideFlags: 1
@@ -4305,6 +4446,7 @@ Transform:
   - {fileID: 411338}
   m_Father: {fileID: 433124}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &495254
 Transform:
   m_ObjectHideFlags: 1
@@ -4317,6 +4459,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 447984}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &495914
 Transform:
   m_ObjectHideFlags: 1
@@ -4329,6 +4472,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430382}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &495936
 Transform:
   m_ObjectHideFlags: 1
@@ -4341,6 +4485,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420646}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &496472
 Transform:
   m_ObjectHideFlags: 1
@@ -4354,6 +4499,7 @@ Transform:
   - {fileID: 470666}
   m_Father: {fileID: 490698}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &497046
 Transform:
   m_ObjectHideFlags: 1
@@ -4368,6 +4514,7 @@ Transform:
   - {fileID: 400442}
   m_Father: {fileID: 438462}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &497220
 Transform:
   m_ObjectHideFlags: 1
@@ -4381,6 +4528,7 @@ Transform:
   - {fileID: 433124}
   m_Father: {fileID: 480122}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &499900
 Transform:
   m_ObjectHideFlags: 1
@@ -4393,6 +4541,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 406422}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &499922
 Transform:
   m_ObjectHideFlags: 1
@@ -4406,6 +4555,7 @@ Transform:
   - {fileID: 456576}
   m_Father: {fileID: 477380}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2300526
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -4415,6 +4565,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4442,6 +4593,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4469,6 +4621,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4496,6 +4649,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4523,6 +4677,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4550,6 +4705,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4577,6 +4733,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4604,6 +4761,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4631,6 +4789,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4658,6 +4817,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4685,6 +4845,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4712,6 +4873,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4739,6 +4901,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4766,6 +4929,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4793,6 +4957,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4820,6 +4985,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4847,6 +5013,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4874,6 +5041,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4901,6 +5069,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -4928,6 +5097,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -5337,9 +5507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11402050
 MonoBehaviour:
@@ -5352,9 +5519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11403326
 MonoBehaviour:
@@ -5367,9 +5531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11404572
 MonoBehaviour:
@@ -5382,9 +5543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11406450
 MonoBehaviour:
@@ -5397,9 +5555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11407614
 MonoBehaviour:
@@ -5412,9 +5567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11409080
 MonoBehaviour:
@@ -5443,9 +5595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11410574
 MonoBehaviour:
@@ -5458,9 +5607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11411706
 MonoBehaviour:
@@ -5473,9 +5619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11412732
 MonoBehaviour:
@@ -5488,9 +5631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11412766
 MonoBehaviour:
@@ -5503,9 +5643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11413952
 MonoBehaviour:
@@ -5518,9 +5655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11416244
 MonoBehaviour:
@@ -5533,9 +5667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11419742
 MonoBehaviour:
@@ -5548,9 +5679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11419830
 MonoBehaviour:
@@ -5575,9 +5703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11425742
 MonoBehaviour:
@@ -5590,9 +5715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11425936
 MonoBehaviour:
@@ -5605,9 +5727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11429678
 MonoBehaviour:
@@ -5620,9 +5739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11429770
 MonoBehaviour:
@@ -5635,9 +5751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11430448
 MonoBehaviour:
@@ -5650,9 +5763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11432132
 MonoBehaviour:
@@ -5665,9 +5775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11432440
 MonoBehaviour:
@@ -5680,9 +5787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11432830
 MonoBehaviour:
@@ -5695,9 +5799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11433748
 MonoBehaviour:
@@ -5710,9 +5811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11434536
 MonoBehaviour:
@@ -5725,9 +5823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11435106
 MonoBehaviour:
@@ -5740,9 +5835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11435156
 MonoBehaviour:
@@ -5755,9 +5847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11435894
 MonoBehaviour:
@@ -5770,9 +5859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11435944
 MonoBehaviour:
@@ -5785,9 +5871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11436132
 MonoBehaviour:
@@ -5800,9 +5883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11436184
 MonoBehaviour:
@@ -5815,9 +5895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11436724
 MonoBehaviour:
@@ -5830,9 +5907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11437666
 MonoBehaviour:
@@ -5845,9 +5919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11440538
 MonoBehaviour:
@@ -5860,9 +5931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11440642
 MonoBehaviour:
@@ -5875,9 +5943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11441520
 MonoBehaviour:
@@ -5890,9 +5955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11447600
 MonoBehaviour:
@@ -5905,9 +5967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11451406
 MonoBehaviour:
@@ -5920,9 +5979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11451444
 MonoBehaviour:
@@ -5935,9 +5991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11452108
 MonoBehaviour:
@@ -5950,9 +6003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11453888
 MonoBehaviour:
@@ -5965,9 +6015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11453938
 MonoBehaviour:
@@ -5980,9 +6027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11454562
 MonoBehaviour:
@@ -5995,9 +6039,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11455794
 MonoBehaviour:
@@ -6010,9 +6051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11457496
 MonoBehaviour:
@@ -6025,9 +6063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11458912
 MonoBehaviour:
@@ -6040,9 +6075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11461956
 MonoBehaviour:
@@ -6055,9 +6087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11466320
 MonoBehaviour:
@@ -6070,9 +6099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11466322
 MonoBehaviour:
@@ -6085,9 +6111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11470202
 MonoBehaviour:
@@ -6100,22 +6123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
---- !u!114 &11471476
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620d0af99a37487449bed787b0b9c231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotationSensitivity: 10
 --- !u!114 &11471782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6127,9 +6135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11472390
 MonoBehaviour:
@@ -6142,9 +6147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11476042
 MonoBehaviour:
@@ -6157,9 +6159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11477054
 MonoBehaviour:
@@ -6172,9 +6171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11478360
 MonoBehaviour:
@@ -6187,9 +6183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11485082
 MonoBehaviour:
@@ -6202,9 +6195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11489042
 MonoBehaviour:
@@ -6217,9 +6207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11490022
 MonoBehaviour:
@@ -6232,9 +6219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11492614
 MonoBehaviour:
@@ -6247,9 +6231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11493104
 MonoBehaviour:
@@ -6262,9 +6243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 0}
 --- !u!114 &11497524
 MonoBehaviour:
@@ -6277,23 +6255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1efafb4e5a9a346ab63a4e76d0a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractibleParameters:
-    Scrollable: 1
-    Placeable: 1
   TargetFeedbackSound: {fileID: 8300000, guid: 026ad6633e9b4e9408dfce89dfb4b16d, type: 3}
---- !u!114 &11499228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8935ace479d0326448a944043ae26665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ExpandedModel: {fileID: 0}
-  ExpandModelSound: {fileID: 8300000, guid: 0e92e0b0ba13e7943a4a4a1071841eb7, type: 3}
 --- !u!135 &13503420
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -7066,6 +7028,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7087,6 +7050,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300040, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 413670}
@@ -7107,6 +7071,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7128,6 +7093,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300042, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -7152,6 +7118,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7173,6 +7140,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300008, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -7203,6 +7171,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7224,6 +7193,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300018, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -7248,6 +7218,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7269,6 +7240,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300068, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -7292,6 +7264,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7313,6 +7286,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300010, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 441578}
@@ -7343,6 +7317,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7364,6 +7339,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300078, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 429064}
@@ -7384,6 +7360,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7405,6 +7382,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300050, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 413670}
@@ -7426,6 +7404,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7447,6 +7426,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300058, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 475868}
@@ -7466,6 +7446,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7487,6 +7468,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300094, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 465624}
@@ -7505,6 +7487,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7526,6 +7509,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300012, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -7550,6 +7534,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7571,6 +7556,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300054, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -7593,6 +7579,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7614,6 +7601,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300032, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -7637,6 +7625,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7658,6 +7647,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300066, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 404792}
@@ -7678,6 +7668,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7699,6 +7690,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300038, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 400800}
@@ -7721,6 +7713,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7742,6 +7735,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300044, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 427370}
@@ -7763,6 +7757,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7784,6 +7779,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300004, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 441578}
@@ -7807,6 +7803,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7828,6 +7825,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300090, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 456576}
@@ -7847,6 +7845,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7868,6 +7867,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300026, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -7892,6 +7892,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7913,6 +7914,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300076, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 430664}
@@ -7933,6 +7935,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7954,6 +7957,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300062, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 449664}
@@ -7974,6 +7978,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -7995,6 +8000,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300060, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 475868}
@@ -8014,6 +8020,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8035,6 +8042,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300022, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -8060,6 +8068,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8081,6 +8090,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300092, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 430664}
@@ -8101,6 +8111,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8122,6 +8133,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300016, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 442060}
@@ -8142,6 +8154,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8163,6 +8176,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300000, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 441578}
@@ -8184,6 +8198,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8205,6 +8220,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300028, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 442060}
@@ -8225,6 +8241,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8246,6 +8263,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300046, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 449664}
@@ -8266,6 +8284,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8287,6 +8306,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300006, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -8310,6 +8330,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8331,6 +8352,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300024, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -8356,6 +8378,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8377,6 +8400,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300048, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 406422}
@@ -8397,6 +8421,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8418,6 +8443,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300082, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -8442,6 +8468,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8463,6 +8490,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300084, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -8485,6 +8513,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8506,6 +8535,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300020, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -8529,6 +8559,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8550,6 +8581,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300086, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -8570,6 +8602,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8591,6 +8624,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300036, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -8616,6 +8650,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8637,6 +8672,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300014, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -8661,6 +8697,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8682,6 +8719,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300096, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 465624}
@@ -8702,6 +8740,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8723,6 +8762,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300064, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 404792}
@@ -8741,6 +8781,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8762,6 +8803,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300002, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 472048}
@@ -8783,6 +8825,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8804,6 +8847,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300088, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 456576}
@@ -8823,6 +8867,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8844,6 +8889,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300034, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -8869,6 +8915,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8890,6 +8937,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300074, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 497046}
@@ -8911,6 +8959,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8932,6 +8981,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300030, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -8956,6 +9006,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -8977,6 +9028,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300072, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 490698}
@@ -9001,6 +9053,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -9022,6 +9075,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300070, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 462294}
@@ -9042,6 +9096,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -9063,6 +9118,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300056, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -9083,6 +9139,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -9104,6 +9161,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300080, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 462294}
@@ -9125,6 +9183,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -9146,6 +9205,7 @@ SkinnedMeshRenderer:
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300052, guid: 82ac801e723c0d7488db324ad4aecd65, type: 3}
   m_Bones:
   - {fileID: 447488}
@@ -9285,6 +9345,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startColor:
+      serializedVersion: 2
       maxGradient:
         key0:
           serializedVersion: 2
@@ -9371,12 +9432,8 @@ ParticleSystem:
         atime7: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor:
-        serializedVersion: 2
-        rgba: 4294967295
-      maxColor:
-        serializedVersion: 2
-        rgba: 4293746771
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
       minMaxState: 0
     startSize:
       scalar: 0.05
@@ -9889,6 +9946,7 @@ ParticleSystem:
   ColorModule:
     enabled: 1
     gradient:
+      serializedVersion: 2
       maxGradient:
         key0:
           serializedVersion: 2
@@ -9975,17 +10033,13 @@ ParticleSystem:
         atime7: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor:
-        serializedVersion: 2
-        rgba: 4294967295
-      maxColor:
-        serializedVersion: 2
-        rgba: 4294967295
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 1
   UVModule:
     enabled: 0
     frameOverTime:
-      scalar: 1
+      scalar: 0.9999
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10019,11 +10073,47 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 1
+    startFrame:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minMaxState: 0
     tilesX: 1
     tilesY: 1
     animationType: 0
     rowIndex: 0
     cycles: 1
+    uvChannelMask: -1
     randomRow: 1
   VelocityModule:
     enabled: 0
@@ -10649,6 +10739,7 @@ ParticleSystem:
   ColorBySpeedModule:
     enabled: 0
     gradient:
+      serializedVersion: 2
       maxGradient:
         key0:
           serializedVersion: 2
@@ -10735,12 +10826,8 @@ ParticleSystem:
         atime7: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor:
-        serializedVersion: 2
-        rgba: 4294967295
-      maxColor:
-        serializedVersion: 2
-        rgba: 4294967295
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 1
     range: {x: 0, y: 1}
   CollisionModule:
@@ -10860,6 +10947,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     minKillSpeed: 0
+    maxKillSpeed: 10000
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
@@ -11015,6 +11103,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startColor:
+      serializedVersion: 2
       maxGradient:
         key0:
           serializedVersion: 2
@@ -11101,12 +11190,8 @@ ParticleSystem:
         atime7: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor:
-        serializedVersion: 2
-        rgba: 4294967295
-      maxColor:
-        serializedVersion: 2
-        rgba: 4294967295
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 0
     startSize:
       scalar: 0.01
@@ -11320,7 +11405,7 @@ ParticleSystem:
       minMaxState: 0
     randomizeRotationDirection: 0
     gravityModifier: 0
-    maxNumParticles: 1000
+    maxNumParticles: 100
     size3D: 0
     rotation3D: 0
   ShapeModule:
@@ -11609,6 +11694,7 @@ ParticleSystem:
   ColorModule:
     enabled: 1
     gradient:
+      serializedVersion: 2
       maxGradient:
         key0:
           serializedVersion: 2
@@ -11695,17 +11781,13 @@ ParticleSystem:
         atime7: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor:
-        serializedVersion: 2
-        rgba: 4294967295
-      maxColor:
-        serializedVersion: 2
-        rgba: 4294967295
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 1
   UVModule:
     enabled: 0
     frameOverTime:
-      scalar: 1
+      scalar: 0.9999
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11739,11 +11821,47 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 1
+    startFrame:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minMaxState: 0
     tilesX: 1
     tilesY: 1
     animationType: 0
     rowIndex: 0
     cycles: 1
+    uvChannelMask: -1
     randomRow: 1
   VelocityModule:
     enabled: 0
@@ -12369,6 +12487,7 @@ ParticleSystem:
   ColorBySpeedModule:
     enabled: 0
     gradient:
+      serializedVersion: 2
       maxGradient:
         key0:
           serializedVersion: 2
@@ -12455,12 +12574,8 @@ ParticleSystem:
         atime7: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor:
-        serializedVersion: 2
-        rgba: 4294967295
-      maxColor:
-        serializedVersion: 2
-        rgba: 4294967295
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 1
     range: {x: 0, y: 1}
   CollisionModule:
@@ -12580,6 +12695,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     minKillSpeed: 0
+    maxKillSpeed: 10000
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
@@ -12620,6 +12736,7 @@ ParticleSystemRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
@@ -12662,6 +12779,7 @@ ParticleSystemRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
@@ -12706,3 +12824,39 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 154460}
   m_IsPrefabParent: 1
+--- !u!114 &114000011581590588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8447ef6120bd5844abcea80ee98f4066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012389906688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620d0af99a37487449bed787b0b9c231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSensitivity: 10
+--- !u!114 &114000013871314322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8935ace479d0326448a944043ae26665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExpandedModel: {fileID: 0}
+  ExpandModelSound: {fileID: 8300000, guid: 0e92e0b0ba13e7943a4a4a1071841eb7, type: 3}

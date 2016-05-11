@@ -77,6 +77,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: -0.13929415, y: 0.13929415}
     - first:
+        name: _MainTex1
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _Mask
       second:
         m_Texture: {fileID: 0}
@@ -210,6 +216,9 @@ Material:
         name: _GlossyReflections
       second: 1
     - first:
+        name: _Highlight
+      second: 0
+    - first:
         name: _Metallic
       second: 0
     - first:
@@ -300,6 +309,9 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
+    - first:
+        name: _HighlightColor
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _IridDirectCol
       second: {r: 0, g: 1, b: 1, a: 1}

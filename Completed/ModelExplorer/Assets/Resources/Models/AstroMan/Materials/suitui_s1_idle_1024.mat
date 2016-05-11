@@ -164,6 +164,9 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
+        name: _Shininess
+      second: 0.078125
+    - first:
         name: _SrcBlend
       second: 1
     - first:
