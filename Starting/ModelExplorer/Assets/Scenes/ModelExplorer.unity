@@ -175,6 +175,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013871314322, guid: db5d50d60b0863341be4ce64455775a8,
+        type: 2}
+      propertyPath: ExpandedModel
+      value: 
+      objectReference: {fileID: 1292247012}
     - target: {fileID: 11409080, guid: db5d50d60b0863341be4ce64455775a8, type: 2}
       propertyPath: Cursor
       value: 
@@ -444,6 +449,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62adf19d62d644144bba4200d845566a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1292247012 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 154686, guid: 62adf19d62d644144bba4200d845566a, type: 2}
+  m_PrefabInternal: {fileID: 1292247011}
 --- !u!1001 &1456085195
 Prefab:
   m_ObjectHideFlags: 0
