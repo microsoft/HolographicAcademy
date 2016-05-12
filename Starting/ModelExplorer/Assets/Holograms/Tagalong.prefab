@@ -65,7 +65,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &184316
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 481208}
-  - 114: {fileID: 11497738}
   - 65: {fileID: 6529234}
   - 114: {fileID: 11446358}
   m_Layer: 0
@@ -99,6 +98,7 @@ Transform:
   - {fileID: 450546}
   m_Father: {fileID: 481208}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &422814
 Transform:
   m_ObjectHideFlags: 1
@@ -111,6 +111,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 404794}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &442242
 Transform:
   m_ObjectHideFlags: 1
@@ -123,6 +124,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 404794}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &450546
 Transform:
   m_ObjectHideFlags: 1
@@ -135,6 +137,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 404794}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &481208
 Transform:
   m_ObjectHideFlags: 1
@@ -148,6 +151,7 @@ Transform:
   - {fileID: 404794}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2357890
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -157,6 +161,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
@@ -184,6 +189,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
@@ -211,6 +217,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
@@ -274,21 +281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFeedbackSound: {fileID: 8300000, guid: 026ad6633e9b4e9408dfce89dfb4b16d, type: 3}
---- !u!114 &11497738
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41fc5ec6d3f26814485cbc6fc2a1b071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetMovie: vrt_expanded_ui_FG_MG_Combo_30fps_512x650.ogg
-  TargetRenderers:
-  - {fileID: 2357890}
-  - {fileID: 2380186}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: astroMan_head_mtl
-  m_Shader: {fileID: 4800000, guid: ecabb61ab18b3d84598dc212c87c27d5, type: 3}
+  m_Shader: {fileID: 4800000, guid: f326278a838e87c499393f30a8e72127, type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 1
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -47,6 +47,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 08098fc4a6a79ad40b62629aca76ec63, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex1
       second:
         m_Texture: {fileID: 2800000, guid: 08098fc4a6a79ad40b62629aca76ec63, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -98,6 +104,9 @@ Material:
         name: _GlossyReflections
       second: 1
     - first:
+        name: _Highlight
+      second: 0
+    - first:
         name: _Metallic
       second: 0.033
     - first:
@@ -109,6 +118,9 @@ Material:
     - first:
         name: _Parallax
       second: 0.02
+    - first:
+        name: _Shininess
+      second: 3
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -132,5 +144,11 @@ Material:
         name: _EmissionColor
       second: {r: 0.52531654, g: 0.6075953, b: 1.5, a: 1}
     - first:
+        name: _HighlightColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
         name: _SpecColor
       second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - first:
+        name: _Specular
+      second: {r: 0.27205884, g: 0.27205884, b: 0.27205884, a: 1}

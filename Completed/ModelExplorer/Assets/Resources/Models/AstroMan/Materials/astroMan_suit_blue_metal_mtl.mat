@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: astroMan_suit_blue_metal_mtl
-  m_Shader: {fileID: 4800000, guid: 11eafa1bdf8dea24d9e13d6b9231ec79, type: 3}
-  m_ShaderKeywords: _NORMALMAP
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
+  m_Shader: {fileID: 4800000, guid: f326278a838e87c499393f30a8e72127, type: 3}
+  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -49,6 +49,12 @@ Material:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex1
+      second:
+        m_Texture: {fileID: 2800000, guid: f87a2946053717d459cd7669b71065cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -92,8 +98,17 @@ Material:
         name: _DstBlend
       second: 0
     - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
         name: _Glossiness
       second: 0.462
+    - first:
+        name: _GlossyReflections
+      second: 1
+    - first:
+        name: _Highlight
+      second: 0
     - first:
         name: _Metallic
       second: 1
@@ -107,6 +122,15 @@ Material:
         name: _Parallax
       second: 0.005
     - first:
+        name: _Shininess
+      second: 1.15
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
         name: _SrcBlend
       second: 1
     - first:
@@ -118,10 +142,16 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
+      second: {r: 0.5441177, g: 0.7901063, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
+        name: _HighlightColor
+      second: {r: 1, g: 1, b: 1, a: 1}
+    - first:
         name: _SpecColor
       second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - first:
+        name: _Specular
+      second: {r: 0.04411763, g: 0.04411763, b: 0.04411763, a: 1}
