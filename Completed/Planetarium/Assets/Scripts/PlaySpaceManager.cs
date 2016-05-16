@@ -97,25 +97,25 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
     {
         /* TODO: 3.a DEVELOPER CODING EXERCISE 3.a */
 
-        // Collection of floor planes that we can use to set horizontal items on.
-        List<GameObject> floors = new List<GameObject>();
+        // Collection of floor and table planes that we can use to set horizontal items on.
+        List<GameObject> horizontal = new List<GameObject>();
 
         // Collection of wall planes that we can use to set vertical items on.
-        List<GameObject> walls = new List<GameObject>();
+        List<GameObject> vertical = new List<GameObject>();
 
-        // 3.a: Get all floor planes by calling
+        // 3.a: Get all floor and table planes by calling
         // SurfaceMeshesToPlanes.Instance.GetActivePlanes().
-        // Assign the result to the 'floors' list.
-        floors = SurfaceMeshesToPlanes.Instance.GetActivePlanes(PlaneTypes.Floor);
+        // Assign the result to the 'horizontal' list.
+        horizontal = SurfaceMeshesToPlanes.Instance.GetActivePlanes(PlaneTypes.Table | PlaneTypes.Floor);
 
         // 3.a: Get all wall planes by calling
         // SurfaceMeshesToPlanes.Instance.GetActivePlanes().
-        // Assign the result to the 'walls' list.
-        walls = SurfaceMeshesToPlanes.Instance.GetActivePlanes(PlaneTypes.Wall);
+        // Assign the result to the 'vertical' list.
+        vertical = SurfaceMeshesToPlanes.Instance.GetActivePlanes(PlaneTypes.Wall);
 
-        // Check to see if we have enough floors (minimumFloors)
-        // and walls (minimumWalls), to set holograms on in the world.
-        if (floors.Count >= minimumFloors && walls.Count >= minimumWalls)
+        // Check to see if we have enough horizontal planes (minimumFloors)
+        // and vertical planes (minimumWalls), to set holograms on in the world.
+        if (horizontal.Count >= minimumFloors && vertical.Count >= minimumWalls)
         {
             // We have enough floors and walls to place our holograms on...
 
@@ -133,10 +133,10 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 
             // 3.a: We are all done processing the mesh, so we can now
             // initialize a collection of Placeable holograms in the world
-            // and use floor/wall planes to set their starting positions.
+            // and use horizontal/vertical planes to set their starting positions.
             // Call SpaceCollectionManager.Instance.GenerateItemsInWorld().
-            // Pass in the lists of floors and walls that we found earlier.
-            SpaceCollectionManager.Instance.GenerateItemsInWorld(floors, walls);
+            // Pass in the lists of horizontal and vertical planes that we found earlier.
+            SpaceCollectionManager.Instance.GenerateItemsInWorld(horizontal, vertical);
         }
         else
         {

@@ -74,7 +74,7 @@ MonoBehaviour:
   SurfacePlanePrefab: {fileID: 169982, guid: 42b74bedbbfbbe64bbe5df849a1baca3, type: 2}
   MinArea: 0.025
   drawPlanesMask: -1
-  destroyPlanesMask: 24
+  destroyPlanesMask: 16
 --- !u!114 &114000012735412914
 MonoBehaviour:
   m_ObjectHideFlags: 1

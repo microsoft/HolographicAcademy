@@ -16,7 +16,7 @@ public class InteractibleManager : Singleton<InteractibleManager>
         FocusedGameObject = null;
     }
 
-    void Update()
+    void LateUpdate()
     {
         oldFocusedGameObject = FocusedGameObject;
 
