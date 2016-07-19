@@ -14,6 +14,6 @@ public class HitTarget : MonoBehaviour
         underworld.SetActive(true);
 
         // Disable Spatial Mapping to let the spheres enter the underworld.
-        SpatialMapping.Instance.SetMappingEnabled(false);
+        SpatialMapping.Instance.MappingEnabled = false;
     }
 }
