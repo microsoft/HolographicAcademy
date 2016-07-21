@@ -18,6 +18,6 @@ public class UnderworldReset : MonoBehaviour
         gameObject.SetActive(false);
 
         // Enable Spatial Mapping again.
-        SpatialMapping.Instance.SetMappingEnabled(true);
+        SpatialMapping.Instance.MappingEnabled = true;
     }
 }
