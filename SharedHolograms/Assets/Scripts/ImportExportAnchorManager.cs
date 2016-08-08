@@ -226,7 +226,7 @@ public class ImportExportAnchorManager : Singleton<ImportExportAnchorManager>
         // Otherwise we will wait for the room to be created.
         if (roomManager.GetRoomCount() == 0)
         {
-            if (LocalUserHasLowestUserId())
+            if (LocalUserHasLowestUserId() && Time.frameCount > 1500)
             {
                 Debug.Log("Creating room ");
                 // Keep the room open even when all users have left the shared session.
