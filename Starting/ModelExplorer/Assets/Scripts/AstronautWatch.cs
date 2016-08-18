@@ -10,7 +10,7 @@ public class AstronautWatch : Singleton<AstronautWatch>
 
     [Tooltip("Drag the Message Received prefab asset.")]
     public GameObject MessagePrefab;
-    GameObject messageGameObject;
+    private GameObject messageGameObject;
 
     [Tooltip("Drag the Voice Tooltip prefab asset.")]
     public GameObject OpenCommunicatorTooltip;

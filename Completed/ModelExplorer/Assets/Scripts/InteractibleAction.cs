@@ -13,22 +13,20 @@ public class InteractibleAction : MonoBehaviour
     {
         if (ObjectToTagAlong == null)
         {
+            Debug.LogError("Please add a TagAlong object on " + name + ".");
             return;
         }
 
         // Recommend having only one tagalong.
-        GameObject existingTagAlong = GameObject.FindGameObjectWithTag("TagAlong");
-        if (existingTagAlong != null)
+        if (GameObject.Find("/Tagalong(Clone)") != null || GameObject.Find("/SRGSToolbox(Clone)") != null || GameObject.Find("/Communicator(Clone)") != null)
         {
             return;
         }
 
-        GameObject instantiatedObjectToTagAlong = GameObject.Instantiate(ObjectToTagAlong);
+        GameObject instantiatedObjectToTagAlong = Instantiate(ObjectToTagAlong);
 
         instantiatedObjectToTagAlong.SetActive(true);
-
         instantiatedObjectToTagAlong.AddComponent<Billboard>();
-
         instantiatedObjectToTagAlong.AddComponent<SimpleTagalong>();
    }
 }

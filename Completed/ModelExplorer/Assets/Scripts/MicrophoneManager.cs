@@ -20,6 +20,9 @@ public class MicrophoneManager : MonoBehaviour
     private int samplingRate;
     private const int messageLength = 10;
 
+    // Use this to reset the UI once the Microphone is done recording after it was started.
+    private bool hasRecordingStarted;
+
     void Awake()
     {
         /* TODO: DEVELOPER CODING EXERCISE 3.a */
@@ -43,20 +46,25 @@ public class MicrophoneManager : MonoBehaviour
         // This event is fired when an error occurs.
         dictationRecognizer.DictationError += DictationRecognizer_DictationError;
 
-
         // Query the maximum frequency of the default microphone. Use 'unused' to ignore the minimum frequency.
         int unused;
         Microphone.GetDeviceCaps(deviceName, out unused, out samplingRate);
 
         // Use this string to cache the text currently displayed in the text box.
         textSoFar = new StringBuilder();
+
+        // Use this to reset the UI once the Microphone is done recording after it was started.
+        hasRecordingStarted = false;
     }
 
     void Update()
     {
         // 3.a: Add condition to check if dictationRecognizer.Status is Running
-        if (!Microphone.IsRecording(deviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
+        if (hasRecordingStarted && !Microphone.IsRecording(deviceName) && dictationRecognizer.Status == SpeechSystemStatus.Running)
         {
+            // Reset the flag now that we're cleaning up the UI.
+            hasRecordingStarted = false;
+
             // This acts like pressing the Stop button and sends the message to the Communicator.
             // If the microphone stops as a result of timing out, make sure to manually stop the dictation recognizer.
             // Look at the StopRecording function.
@@ -79,7 +87,10 @@ public class MicrophoneManager : MonoBehaviour
         // 3.a Uncomment this line
         DictationDisplay.text = "Dictation is starting. It may take time to display your text the first time, but begin speaking now...";
 
-        // Start recording from the microphone for 10 seconds
+        // Set the flag that we've started recording.
+        hasRecordingStarted = true;
+
+        // Start recording from the microphone for 10 seconds.
         return Microphone.Start(deviceName, false, messageLength, samplingRate);
     }
 

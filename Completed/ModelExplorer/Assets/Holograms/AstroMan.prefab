@@ -438,8 +438,8 @@ GameObject:
   - 33: {fileID: 3336672}
   - 64: {fileID: 6416630}
   - 23: {fileID: 2307110}
-  - 114: {fileID: 114000010764237016}
-  - 114: {fileID: 114000012234437980}
+  - 114: {fileID: 114000012676596954}
+  - 114: {fileID: 114000013648019048}
   m_Layer: 8
   m_Name: holoComm_screen_mesh
   m_TagString: VoiceCommand
@@ -622,9 +622,9 @@ GameObject:
   - 137: {fileID: 13702694}
   - 136: {fileID: 13672554}
   - 114: {fileID: 11458912}
-  - 114: {fileID: 114000011985162030}
+  - 114: {fileID: 114000013635624924}
   m_Layer: 8
-  m_Name: An_JetPack_Center
+  m_Name: JetPack_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1370,9 +1370,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 487370}
   - 95: {fileID: 9502782}
+  - 114: {fileID: 114000011581590588}
   - 114: {fileID: 114000013871314322}
   - 114: {fileID: 114000012389906688}
-  - 114: {fileID: 114000013411958614}
   m_Layer: 8
   m_Name: AstroMan
   m_TagString: Untagged
@@ -12899,7 +12899,30 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 154460}
   m_IsPrefabParent: 1
---- !u!114 &114000010764237016
+--- !u!114 &114000011581590588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8447ef6120bd5844abcea80ee98f4066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012389906688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620d0af99a37487449bed787b0b9c231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationSensitivity: 10
+--- !u!114 &114000012676596954
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -12916,7 +12939,7 @@ MonoBehaviour:
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114000012234437980}
+        - m_Target: {fileID: 114000013648019048}
           m_MethodName: OpenCommunicator
           m_Mode: 1
           m_Arguments:
@@ -12929,7 +12952,7 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
---- !u!114 &114000011985162030
+--- !u!114 &114000013635624924
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -12941,7 +12964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToTagAlong: {fileID: 194316, guid: 5483f30597d2db743960f654988cba05, type: 2}
---- !u!114 &114000012234437980
+--- !u!114 &114000013648019048
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -12957,29 +12980,6 @@ MonoBehaviour:
   OpenCommunicatorTooltip: {fileID: 174020, guid: 2e9904ce9ae786a4b8d1bf77ba612ac1,
     type: 2}
   DismissSound: {fileID: 8300000, guid: b1505ec226af73047837b44da2f44d30, type: 3}
---- !u!114 &114000012389906688
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620d0af99a37487449bed787b0b9c231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotationSensitivity: 10
---- !u!114 &114000013411958614
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8447ef6120bd5844abcea80ee98f4066, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000013871314322
 MonoBehaviour:
   m_ObjectHideFlags: 1
