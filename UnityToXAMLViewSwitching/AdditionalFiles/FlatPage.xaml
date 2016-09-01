@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="WeatherApp.FlatPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Testing2D3D"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    RequestedTheme="Dark"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Name="InfoText" Text="Click a day below to view the hologram" Margin="10,10,10,10" FontSize="40" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" TextAlignment="Center" />
+        <Button Name="Sunny" Background="Transparent" Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="WeatherBtn_Click">
+            <TextBlock Name="SunnyIcon" TextAlignment="Center">
+                <Run FontSize="40">Monday</Run>
+                <LineBreak/>
+                <Run FontSize="100">☀️</Run>
+                <LineBreak/>
+                <Run FontSize="50">80°</Run>
+                <LineBreak/>
+                <Run FontSize="35">Sunny</Run>
+            </TextBlock>
+        </Button>
+        <Button Name="Cloudy" Background="Transparent" Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="WeatherBtn_Click">
+            <TextBlock Name="CloudyIcon" TextAlignment="Center">
+                <Run FontSize="40">Tuesday</Run>
+                <LineBreak/>
+                <Run FontSize="100">☁️</Run>
+                <LineBreak/>
+                <Run FontSize="50">55°</Run>
+                <LineBreak/>
+                <Run FontSize="35">Cloudy</Run>
+            </TextBlock>
+        </Button>
+        <Button Name="PartlyCloudy" Background="Transparent" Grid.Row="1" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="WeatherBtn_Click">
+            <TextBlock Name="PartlyCloudyIcon" TextAlignment="Center">
+                <Run FontSize="40">Wednesday</Run>
+                <LineBreak/>
+                <Run FontSize="100">⛅️</Run>
+                <LineBreak/>
+                <Run FontSize="50">70°</Run>
+                <LineBreak/>
+                <Run FontSize="35">Partly Cloudy</Run>
+            </TextBlock>
+        </Button>
+    </Grid>
+</Page>
