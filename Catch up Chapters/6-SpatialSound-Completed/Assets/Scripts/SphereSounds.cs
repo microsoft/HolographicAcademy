@@ -16,7 +16,8 @@ public class SphereSounds : MonoBehaviour
         audioSource.spatialize = true;
         audioSource.spatialBlend = 1.0f;
         audioSource.dopplerLevel = 0.0f;
-        audioSource.rolloffMode = AudioRolloffMode.Custom;
+        audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        audioSource.maxDistance = 20f;
 
         // Load the Sphere sounds from the Resources folder
         impactClip = Resources.Load<AudioClip>("Impact");
