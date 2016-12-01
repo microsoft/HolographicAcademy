@@ -41,12 +41,12 @@ public class SpatialMapping : MonoBehaviour {
 
             if (drawVisualMeshes)
             {
-                spatialMappingRenderer.currentRenderSetting = SpatialMappingRenderer.RenderSetting.CustomMaterial;
-                spatialMappingRenderer.customMaterial = DrawMaterial;
+                spatialMappingRenderer.visualMaterial = DrawMaterial;
+                spatialMappingRenderer.renderState = SpatialMappingRenderer.RenderState.Visualization;
             }
             else
             {
-                spatialMappingRenderer.currentRenderSetting = SpatialMappingRenderer.RenderSetting.None;
+                spatialMappingRenderer.renderState = SpatialMappingRenderer.RenderState.None;
             }
         }
     }
