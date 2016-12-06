@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using HoloToolkit.Unity;
+using Academy.HoloToolkit.Unity;
 
 /// <summary>
 /// Determines when the occluded version of the planet should be visible.
