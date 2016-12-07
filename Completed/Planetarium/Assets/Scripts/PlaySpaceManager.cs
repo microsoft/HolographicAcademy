@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
-using HoloToolkit.Unity;
+using Academy.HoloToolkit.Unity;
 
 /// <summary>
 /// The SurfaceManager class allows applications to scan the environment for a specified amount of time 
@@ -72,7 +72,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 
                 // 3.a: Check if IsObserverRunning() is true on the
                 // SpatialMappingManager.Instance.
-                if(SpatialMappingManager.Instance.IsObserverRunning())
+                if (SpatialMappingManager.Instance.IsObserverRunning())
                 {
                     // 3.a: If running, Stop the observer by calling
                     // StopObserver() on the SpatialMappingManager.Instance.
