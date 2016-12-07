@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Academy.HoloToolkit.Unity;
+using UnityEngine;
 
 /// <summary>
 /// GestureAction performs custom actions based on 
