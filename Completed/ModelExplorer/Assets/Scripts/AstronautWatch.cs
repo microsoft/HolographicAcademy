@@ -1,4 +1,4 @@
-﻿using HoloToolkit;
+﻿using Academy.HoloToolkit.Unity;
 using UnityEngine;
 
 [RequireComponent(typeof(KeywordManager))]

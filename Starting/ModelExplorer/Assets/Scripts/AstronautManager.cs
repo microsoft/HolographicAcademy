@@ -1,4 +1,4 @@
-﻿using HoloToolkit;
+﻿using Academy.HoloToolkit.Unity;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
