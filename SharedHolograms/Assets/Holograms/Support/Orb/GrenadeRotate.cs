@@ -11,7 +11,8 @@ public class GrenadeRotate : MonoBehaviour
         GameObject childParticle = transform.Find("ParticleTrail").gameObject;
         if (childParticle != null)
         {
-            childParticle.GetComponent<ParticleSystem>().startColor = EmissiveColor;
+            ParticleSystem.MainModule main = childParticle.GetComponent<ParticleSystem>().main;
+            main.startColor = EmissiveColor;
         }
     }
 }

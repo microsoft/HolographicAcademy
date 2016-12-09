@@ -22,8 +22,9 @@ public class FriendlyDrone : MonoBehaviour
             ParticleSystem childParticleSystem = child.GetComponent<ParticleSystem>();
             if (childParticleSystem != null)
             {
-                childParticleSystem.startColor = EmissiveColor;
-                childParticleSystem.startSize = transform.parent.localScale.magnitude * childParticleSystem.startSize;
+                ParticleSystem.MainModule main = childParticleSystem.main;
+                main.startColor = EmissiveColor;
+                main.startSize = transform.parent.localScale.magnitude * main.startSize.constant;
             }
         }
 
@@ -36,8 +37,9 @@ public class FriendlyDrone : MonoBehaviour
             ParticleSystem childParticleSystem = child.GetComponent<ParticleSystem>();
             if (childParticleSystem != null)
             {
-                childParticleSystem.startColor = EmissiveColor;
-                childParticleSystem.startSize = transform.parent.localScale.magnitude * childParticleSystem.startSize;
+                ParticleSystem.MainModule main = childParticleSystem.main;
+                main.startColor = EmissiveColor;
+                main.startSize = transform.parent.localScale.magnitude * main.startSize.constant;
             }
         }
     }
