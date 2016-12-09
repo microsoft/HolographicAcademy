@@ -89,7 +89,7 @@ public class PlayerAvatarStore : Singleton<PlayerAvatarStore>
             audioSource.playOnAwake = false;
             audioSource.spatialize = true;
             audioSource.spatialBlend = 1.0f;
-            audioSource.rolloffMode = AudioRolloffMode.Custom;
+            audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
         }
 
         audioSource.loop = false;
