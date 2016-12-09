@@ -1,5 +1,12 @@
-﻿using System.Collections.Generic;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace HoloToolkit.Unity
 {
@@ -10,13 +17,16 @@ namespace HoloToolkit.Unity
     /// Calling StartObserver() clears the stored mesh and enables real-time SpatialMapping updates.
     /// </summary>
     [RequireComponent(typeof(SpatialMappingObserver))]
-    public class SpatialMappingManager : Singleton<SpatialMappingManager>
+    public partial class SpatialMappingManager : Singleton<SpatialMappingManager>
     {
         [Tooltip("The physics layer for spatial mapping objects to be set to.")]
         public int PhysicsLayer = 31;
 
         [Tooltip("The material to use for rendering spatial mapping data.")]
         public Material surfaceMaterial;
+
+        [Tooltip("Determines if the surface observer should be automatically started.")]
+        public bool autoStartObserver = true;
 
         [Tooltip("Determines if spatial mapping data will be rendered.")]
         public bool drawVisualMeshes = false;
@@ -30,16 +40,6 @@ namespace HoloToolkit.Unity
         private SpatialMappingObserver surfaceObserver;
 
         /// <summary>
-        /// Used for loading or saving spatial mapping data to disk.
-        /// </summary>
-        private FileSurfaceObserver fileSurfaceObserver;
-
-        /// <summary>
-        /// Used for sending meshes over the network and saving them to disk.
-        /// </summary>
-        private RemoteMeshTarget remoteMeshTarget;
-
-        /// <summary>
         /// Time when StartObserver() was called.
         /// </summary>
         [HideInInspector]
@@ -51,7 +51,7 @@ namespace HoloToolkit.Unity
         public SpatialMappingSource Source { get; private set; }
 
         // Called when the GameObject is first created.
-        private void Awake()
+        protected void Awake()
         {
             surfaceObserver = gameObject.GetComponent<SpatialMappingObserver>();
             Source = surfaceObserver;
@@ -60,55 +60,10 @@ namespace HoloToolkit.Unity
         // Use for initialization.
         private void Start()
         {
-            remoteMeshTarget = FindObjectOfType<RemoteMeshTarget>();
-
-#if !UNITY_EDITOR
-            StartObserver();
-#endif
-
-#if UNITY_EDITOR
-            fileSurfaceObserver = GetComponent<FileSurfaceObserver>();
-
-            if (fileSurfaceObserver != null)
+            if (autoStartObserver)
             {
-                // In the Unity editor, try loading a saved mesh.
-                fileSurfaceObserver.Load(fileSurfaceObserver.MeshFileName);
-
-                if (fileSurfaceObserver.GetMeshFilters().Count > 0)
-                {
-                    SetSpatialMappingSource(fileSurfaceObserver);
-                }
-                else if(remoteMeshTarget != null)
-                {
-                    SetSpatialMappingSource(remoteMeshTarget);
-                }
+                StartObserver();
             }
-#endif
-        }
-
-        // Called every frame.
-        private void Update()
-        {
-            // There are a few keyboard commands we will add when in the editor.
-#if UNITY_EDITOR
-            // F - to use the 'file' sourced mesh.
-            if (Input.GetKeyUp(KeyCode.F))
-            {
-                SpatialMappingManager.Instance.SetSpatialMappingSource(fileSurfaceObserver);
-            }
-
-            // S - saves the active mesh
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                MeshSaver.Save(fileSurfaceObserver.MeshFileName, SpatialMappingManager.Instance.GetMeshes());
-            }
-
-            // L - loads the previously saved mesh into the file source.
-            if (Input.GetKeyUp(KeyCode.L))
-            {
-                fileSurfaceObserver.Load(fileSurfaceObserver.MeshFileName);
-            }
-#endif
         }
 
         /// <summary>
@@ -130,7 +85,7 @@ namespace HoloToolkit.Unity
             }
             set
             {
-                if(value != surfaceMaterial)
+                if (value != surfaceMaterial)
                 {
                     surfaceMaterial = value;
                     SetSurfaceMaterial(surfaceMaterial);
@@ -229,6 +184,10 @@ namespace HoloToolkit.Unity
         /// </summary>
         public void StartObserver()
         {
+#if UNITY_EDITOR
+            // Allow observering if a device is present (Holographic Remoting)
+            if(!UnityEngine.VR.VRDevice.isPresent) return;
+#endif
             if (!IsObserverRunning())
             {
                 surfaceObserver.StartObserving();
@@ -237,14 +196,26 @@ namespace HoloToolkit.Unity
         }
 
         /// <summary>
-        /// Instructs the SurfacesurfaceObserver to stop updating the SpatialMapping mesh.
+        /// Instructs the SurfaceObserver to stop updating the SpatialMapping mesh.
         /// </summary>
         public void StopObserver()
         {
+#if UNITY_EDITOR
+            // Allow observering if a device is present (Holographic Remoting)
+            if(!UnityEngine.VR.VRDevice.isPresent) return;
+#endif
             if (IsObserverRunning())
             {
                 surfaceObserver.StopObserving();
-            }
+            } 
+        }
+
+        /// <summary>
+        /// Instructs the SurfaceObserver to stop and cleanup all meshes.
+        /// </summary>
+        public void CleanupObserver()
+        {
+            surfaceObserver.CleanupObserver();
         }
 
         /// <summary>
@@ -269,6 +240,15 @@ namespace HoloToolkit.Unity
         }
 
         /// <summary>
+        /// Gets all the surface objects associated with the Spatial Mapping mesh.
+        /// </summary>
+        /// <returns>Collection of SurfaceObjects.</returns>
+        public List<SpatialMappingSource.SurfaceObject> GetSurfaceObjects()
+        {
+            return Source.SurfaceObjects;
+        }
+
+        /// <summary>
         /// Gets all Mesh Filter objects associated with the Spatial Mapping mesh.
         /// </summary>
         /// <returns>Collection of Mesh Filter objects.</returns>
@@ -283,7 +263,7 @@ namespace HoloToolkit.Unity
         private void SetShadowCasting(bool castShadows)
         {
             CastShadows = castShadows;
-            foreach(Renderer renderer in Source.GetMeshRenderers())
+            foreach (Renderer renderer in Source.GetMeshRenderers())
             {
                 if (renderer != null)
                 {
@@ -309,10 +289,13 @@ namespace HoloToolkit.Unity
             List<MeshRenderer> renderers = Source.GetMeshRenderers();
             for (int index = 0; index < renderers.Count; index++)
             {
-                renderers[index].enabled = Enable;
-                if (Enable)
+                if (renderers[index] != null)
                 {
-                    renderers[index].sharedMaterial = SurfaceMaterial;
+                    renderers[index].enabled = Enable;
+                    if (Enable)
+                    {
+                        renderers[index].sharedMaterial = SurfaceMaterial;
+                    }
                 }
             }
         }

@@ -88,7 +88,8 @@ public class ProjectileLauncher : MonoBehaviour
             spawnedProjectile.GetComponentInChildren<Renderer>().materials[1].SetColor("_EmissionColor", drone.EmissiveColor);
             foreach(ParticleSystem particleSystem in spawnedProjectile.transform.GetComponentsInChildren<ParticleSystem>())
             {
-                particleSystem.startColor = drone.EmissiveColor;
+                ParticleSystem.MainModule main = particleSystem.main;
+                main.startColor = drone.EmissiveColor;
             }
         }
 
