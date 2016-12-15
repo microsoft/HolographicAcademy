@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using HoloToolkit;
 using System.Linq;
 using System.Collections;
-using HoloToolkit.Unity;
+using Academy.HoloToolkit.Unity;
 
 public class SpatialMappingDeformation : Singleton<SpatialMappingDeformation>
 {

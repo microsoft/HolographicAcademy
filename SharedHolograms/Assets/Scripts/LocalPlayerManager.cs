@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using HoloToolkit.Unity;
+using Academy.HoloToolkit.Unity;
 
 /// <summary>
 /// Manages local player state.
