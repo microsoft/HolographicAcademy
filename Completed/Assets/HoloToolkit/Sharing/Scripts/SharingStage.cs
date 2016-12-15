@@ -66,16 +66,12 @@ namespace HoloToolkit.Sharing
             {
                 AutoDiscoverInit();
             }
-
-            networkConnectionAdapter = new NetworkConnectionAdapter();
-        }
-
-        private void Start()
-        {
-            if (!AutoDiscoverServer)
+            else
             {
                 Connect();
             }
+
+            networkConnectionAdapter = new NetworkConnectionAdapter();
         }
 
         protected void OnDestroy()
