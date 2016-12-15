@@ -14,7 +14,7 @@ public class Interactible : MonoBehaviour
 
     void Start()
     {
-        defaultMaterials = GetComponent<Renderer>().materials;
+        defaultMaterials = GetComponent<Renderer>()?.materials;
 
         // Add a BoxCollider if the interactible does not contain one.
         Collider collider = GetComponentInChildren<Collider>();
