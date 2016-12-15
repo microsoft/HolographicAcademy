@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using HoloToolkit.Sharing;
+using Academy.HoloToolkit.Sharing;
 
 public class ProjectileLauncher : MonoBehaviour
 {

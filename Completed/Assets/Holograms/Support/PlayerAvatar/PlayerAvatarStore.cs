@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using HoloToolkit.Unity;
+using Academy.HoloToolkit.Unity;
 
 /// <summary>
 /// Keeps a list of possible avatars that the user can pick from.

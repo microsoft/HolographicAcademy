@@ -1,4 +1,4 @@
-﻿using HoloToolkit.Unity;
+﻿using Academy.HoloToolkit.Unity;
 using UnityEngine;
 using UnityEngine.VR.WSA;
 

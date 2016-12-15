@@ -1,5 +1,5 @@
-﻿using HoloToolkit.Sharing;
-using HoloToolkit.Unity;
+﻿using Academy.HoloToolkit.Sharing;
+using Academy.HoloToolkit.Unity;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows.Speech;

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using HoloToolkit.Unity;
+using Academy.HoloToolkit.Unity;
 
 /// <summary>
 /// Script to handle the user selecting the avatar to represent themself.

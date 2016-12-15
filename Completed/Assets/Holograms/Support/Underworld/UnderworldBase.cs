@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using HoloToolkit.Unity;
-using HoloToolkit.Sharing;
+using Academy.HoloToolkit.Unity;
+using Academy.HoloToolkit.Sharing;
 
 public class UnderworldBase : Singleton<UnderworldBase>
 {
