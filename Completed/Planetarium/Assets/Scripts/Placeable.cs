@@ -507,15 +507,20 @@ public class Placeable : MonoBehaviour
                             Vector3 surfaceNormal,
                             bool canBePlaced)
     {
-        // Rotate the shadow so that it is displayed on the correct surface and matches the object.
+        // Rotate and scale the shadow so that it is displayed on the correct surface and matches the object.
         float rotationX = 0.0f;
+
         if (PlacementSurface == PlacementSurfaces.Horizontal)
         {
             rotationX = 90.0f;
+            shadowAsset.transform.localScale = new Vector3(boxCollider.size.x, boxCollider.size.z, 1);
         }
-        Quaternion rotation = Quaternion.Euler(rotationX, gameObject.transform.rotation.eulerAngles.y, 0);
+        else
+        {
+            shadowAsset.transform.localScale = boxCollider.size;
+        }
 
-        shadowAsset.transform.localScale = boxCollider.size;
+        Quaternion rotation = Quaternion.Euler(rotationX, gameObject.transform.rotation.eulerAngles.y, 0);
         shadowAsset.transform.rotation = rotation;
 
         // Apply the appropriate material.
