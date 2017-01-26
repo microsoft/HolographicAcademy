@@ -31,6 +31,9 @@ namespace Academy.HoloToolkit.Unity
         [Tooltip("Determines if spatial mapping data will cast shadows.")]
         public bool castShadows = false;
 
+        [Tooltip("Determines if the surface observer should be automatically started.")]
+        public bool autoStartObserver = true;
+
         /// <summary>
         /// Used for gathering real-time Spatial Mapping data on the HoloLens.
         /// </summary>
@@ -52,6 +55,14 @@ namespace Academy.HoloToolkit.Unity
         {
             surfaceObserver = gameObject.GetComponent<SpatialMappingObserver>();
             Source = surfaceObserver;
+        }
+
+        private void Start()
+        {
+            if(autoStartObserver)
+            {
+                StartObserver();
+            }
         }
 
         /// <summary>

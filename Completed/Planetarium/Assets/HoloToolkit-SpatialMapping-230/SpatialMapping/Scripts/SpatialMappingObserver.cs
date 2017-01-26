@@ -38,6 +38,9 @@ namespace Academy.HoloToolkit.Unity
         [Tooltip("How long to wait (in sec) between Spatial Mapping updates.")]
         public float TimeBetweenUpdates = 3.5f;
 
+        [Tooltip("Recalculates normals whenever a mesh is updated.")]
+        public bool RecalculateNormals = false;
+
         /// <summary>
         /// Event for hooking when surfaces are changed.
         /// </summary>
@@ -240,6 +243,15 @@ namespace Academy.HoloToolkit.Unity
                 MeshRenderer renderer = surface.GetComponent<MeshRenderer>();
                 renderer.sharedMaterial = SpatialMappingManager.Instance.SurfaceMaterial;
                 renderer.enabled = SpatialMappingManager.Instance.DrawVisualMeshes;
+
+                if (RecalculateNormals)
+                {
+                    MeshFilter filter = surface.GetComponent<MeshFilter>();
+                    if(filter != null && filter.sharedMesh != null)
+                    {
+                        filter.sharedMesh.RecalculateNormals();
+                    }
+                }
 
                 if (SpatialMappingManager.Instance.CastShadows == false)
                 {
