@@ -33,7 +33,7 @@ Shader "Surface Reconstruction/Debug Normals"
             v2f vert(appdata v)
             {
                 v2f o;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+                o.pos = UnityObjectToClipPos(v.vertex);
                 o.color.rgb = v.normal * 0.5 + 0.5;
                 o.color.a = 1.0;
                 return o;
