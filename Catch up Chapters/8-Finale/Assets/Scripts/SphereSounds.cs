@@ -2,26 +2,34 @@
 
 public class SphereSounds : MonoBehaviour
 {
-    AudioSource audioSource = null;
-    AudioClip impactClip = null;
-    AudioClip rollingClip = null;
+    AudioSource impactAudioSource = null;
+    AudioSource rollingAudioSource = null;
 
     bool rolling = false;
 
     void Start()
     {
         // Add an AudioSource component and set up some defaults
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
-        audioSource.spatialize = true;
-        audioSource.spatialBlend = 1.0f;
-        audioSource.dopplerLevel = 0.0f;
-        audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
-        audioSource.maxDistance = 20f;
+        impactAudioSource = gameObject.AddComponent<AudioSource>();
+        impactAudioSource.playOnAwake = false;
+        impactAudioSource.spatialize = true;
+        impactAudioSource.spatialBlend = 1.0f;
+        impactAudioSource.dopplerLevel = 0.0f;
+        impactAudioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        impactAudioSource.maxDistance = 20f;
+
+        rollingAudioSource = gameObject.AddComponent<AudioSource>();
+        rollingAudioSource.playOnAwake = false;
+        rollingAudioSource.spatialize = true;
+        rollingAudioSource.spatialBlend = 1.0f;
+        rollingAudioSource.dopplerLevel = 0.0f;
+        rollingAudioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        rollingAudioSource.maxDistance = 20f;
+        rollingAudioSource.loop = true;
 
         // Load the Sphere sounds from the Resources folder
-        impactClip = Resources.Load<AudioClip>("Impact");
-        rollingClip = Resources.Load<AudioClip>("Rolling");
+        impactAudioSource.clip = Resources.Load<AudioClip>("Impact");
+        rollingAudioSource.clip = Resources.Load<AudioClip>("Rolling");
     }
 
     // Occurs when this object starts colliding with another object
@@ -30,28 +38,26 @@ public class SphereSounds : MonoBehaviour
         // Play an impact sound if the sphere impacts strongly enough.
         if (collision.relativeVelocity.magnitude >= 0.1f)
         {
-            audioSource.clip = impactClip;
-            audioSource.Play();
+            impactAudioSource.Play();
         }
     }
 
     // Occurs each frame that this object continues to collide with another object
     void OnCollisionStay(Collision collision)
     {
-        Rigidbody rigid = this.gameObject.GetComponent<Rigidbody>();
+        Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
 
         // Play a rolling sound if the sphere is rolling fast enough.
         if (!rolling && rigid.velocity.magnitude >= 0.01f)
         {
             rolling = true;
-            audioSource.clip = rollingClip;
-            audioSource.Play();
+            rollingAudioSource.Play();
         }
         // Stop the rolling sound if rolling slows down.
         else if (rolling && rigid.velocity.magnitude < 0.01f)
         {
             rolling = false;
-            audioSource.Stop();
+            rollingAudioSource.Stop();
         }
     }
 
@@ -62,7 +68,8 @@ public class SphereSounds : MonoBehaviour
         if (rolling)
         {
             rolling = false;
-            audioSource.Stop();
+            impactAudioSource.Stop();
+            rollingAudioSource.Stop();
         }
     }
 }

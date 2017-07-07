@@ -38,7 +38,7 @@ Shader "Surface Reconstruction/Wireframe"
             v2g vert(appdata_base v)
             {
                 v2g o;
-                o.viewPos = mul(UNITY_MATRIX_MVP, v.vertex);
+                o.viewPos = UnityObjectToClipPos(v.vertex);
                 return o;
             }
 
