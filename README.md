@@ -1,6 +1,6 @@
 # HolographicAcademy
 This will be the home of all code assets necessary for the Holographic Academy.
-All of the courses can be found in their own branches. This is so developers can download zip folders for these tutorials from the [Academy documentation](https://developer.microsoft.com/en-us/windows/holographic/academy).
+All of the courses can be found in their own branches. This is so developers can download zip folders for these tutorials from the [Academy documentation](https://developer.microsoft.com/en-us/windows/mixed-reality/academy).
 
 1. [Holograms-101 branch](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-101)
 2. [Holograms-210-Gaze branch](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze)
