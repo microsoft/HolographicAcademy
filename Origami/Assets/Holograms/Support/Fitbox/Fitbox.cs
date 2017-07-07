@@ -30,7 +30,7 @@ public class Fitbox : MonoBehaviour
         // If we are running inside Unity's Editor, disable the Fitbox script
         // as there is no easy way to dismiss it to see our actual holograms.
         enabled = false;
-#else // UNITY_EDITOR
+#else // !UNITY_EDITOR
 
         // These are the holograms to show when the Fitbox is dismissed
         if (HologramCollection)
