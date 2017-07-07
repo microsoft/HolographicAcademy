@@ -29,7 +29,8 @@ public class SphereCommands : MonoBehaviour
         var rigidbody = this.GetComponent<Rigidbody>();
         if (rigidbody != null)
         {
-            DestroyImmediate(rigidbody);
+            rigidbody.isKinematic = true;
+            Destroy(rigidbody);
         }
 
         // Put the sphere back into its original local position.
