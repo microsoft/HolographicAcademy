@@ -14,7 +14,7 @@ public class SpeechManager : MonoBehaviour
         keywords.Add("Reset world", () =>
         {
             // Call the OnReset method on every descendant object.
-            this.BroadcastMessage("OnReset");
+            this.BroadcastMessage("OnReset", SendMessageOptions.DontRequireReceiver);
         });
 
         keywords.Add("Drop Sphere", () =>
@@ -23,7 +23,7 @@ public class SpeechManager : MonoBehaviour
             if (focusObject != null)
             {
                 // Call the OnDrop method on just the focused object.
-                focusObject.SendMessage("OnDrop");
+                focusObject.SendMessage("OnDrop", SendMessageOptions.DontRequireReceiver);
             }
         });
 
