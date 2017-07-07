@@ -1,4 +1,5 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
 /// <summary>
@@ -22,7 +23,7 @@ public class InteractibleManager : Singleton<InteractibleManager>
 
         oldFocusedGameObject = FocusedGameObject;
 
-        if (GazeManager.Instance.Hit)
+        if (GazeManager.Instance.IsGazingAtObject)
         {
             RaycastHit hitInfo = GazeManager.Instance.HitInfo;
             if (hitInfo.collider != null)
