@@ -1,6 +1,7 @@
 ﻿using Academy.HoloToolkit.Unity;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Video;
 
 /// <summary>
 /// This keeps track of the various parts of the recording and text display process.
@@ -32,7 +33,7 @@ public class Communicator : MonoBehaviour
     [Tooltip("The waveform animation to be played while the microphone is recording.")]
     public Transform Waveform;
     [Tooltip("The meter animation to be played while the microphone is recording.")]
-    public MovieTexturePlayer SoundMeter;
+    public VideoPlayer SoundMeter;
 
     private AudioSource dictationAudio;
     private AudioSource startAudio;
@@ -159,7 +160,14 @@ public class Communicator : MonoBehaviour
     private void SetUI(bool enabled, Message newMessage, AudioSource soundToPlay)
     {
         animateWaveform = enabled;
-        SoundMeter.gameObject.SetActive(enabled);
+        if (enabled)
+        {
+            SoundMeter.Play();
+        }
+        else
+        {
+            SoundMeter.Stop();
+        }
         MicIcon.SetActive(enabled);
 
         StartCoroutine(ChangeLabel(newMessage));
