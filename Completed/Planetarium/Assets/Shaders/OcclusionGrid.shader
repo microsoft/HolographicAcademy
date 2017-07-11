@@ -38,7 +38,7 @@ Shader "Custom/OcclusionGrid"
 			v2f vert(appdata_base v)
 			{
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex); // Converts from model to screen space.
+				o.pos = UnityObjectToClipPos(v.vertex); // Converts from model to screen space.
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex); // Finds the texture coordinates which map to this vertex.
 				return o;
 			}

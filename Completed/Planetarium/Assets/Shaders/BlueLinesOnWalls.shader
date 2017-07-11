@@ -38,7 +38,7 @@
 				VertToFrag o;
 
 				// Calculate where the vertex is in view space.
-				o.viewPos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.viewPos = UnityObjectToClipPos(v.vertex);
 
 				// Calculate the normal in WorldSpace.
 				o.normal = UnityObjectToWorldNormal(v.normal);

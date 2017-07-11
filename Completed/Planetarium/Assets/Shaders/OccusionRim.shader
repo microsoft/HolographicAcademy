@@ -82,7 +82,7 @@ Shader "Custom/OccusionRim"
 				v2f vert(appdata_tan v)
 				{
 					v2f o;
-					o.viewPos = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.viewPos = UnityObjectToClipPos(v.vertex);
 					o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 					o.normal = UnityObjectToWorldNormal(v.normal);
 					o.viewDir = normalize(WorldSpaceViewDir(v.vertex));
