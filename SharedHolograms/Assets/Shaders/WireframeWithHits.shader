@@ -70,7 +70,7 @@ Shader "Holographic/WireframeWithHits"
             v2g vert(appdata_base v)
             {
                 v2g o;
-                o.viewPos = mul(UNITY_MATRIX_MVP, v.vertex);
+                o.viewPos = UnityObjectToClipPos(v.vertex);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex);
                 return o;
             }

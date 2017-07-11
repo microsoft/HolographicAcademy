@@ -38,7 +38,7 @@
             v2f vert(appdata v)
             {
                 v2f o;
-                o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+                o.vertex = UnityObjectToClipPos(v.vertex);
                 o.color = v.color;//saturate(float4(ShadeVertexLights(o.vertex, v.Normal), 1) * v.color);;
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex);
                 return o;

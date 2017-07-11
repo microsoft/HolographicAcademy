@@ -45,7 +45,7 @@
             v2g vert(appdata v)
             {
                 v2g OUT;
-                OUT.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+                OUT.pos = UnityObjectToClipPos(v.vertex);
                 OUT.uv = v.texcoord; // The UVs aren't used in this shader but are included in case you want to use them.
                 return OUT;
             }

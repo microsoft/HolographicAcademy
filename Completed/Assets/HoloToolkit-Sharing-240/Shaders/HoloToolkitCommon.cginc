@@ -6,7 +6,7 @@ float4 _NearPlaneFadeDistance;
 
 float ComputeNearPlaneFadeLinear(float4 vertex)
 {
-	float distToCamera = -(mul(UNITY_MATRIX_MV, vertex).z);
+	float distToCamera = -(UnityObjectToViewPos(vertex).z);
 	return saturate(mad(distToCamera, _NearPlaneFadeDistance.y, _NearPlaneFadeDistance.x));
 }
 
