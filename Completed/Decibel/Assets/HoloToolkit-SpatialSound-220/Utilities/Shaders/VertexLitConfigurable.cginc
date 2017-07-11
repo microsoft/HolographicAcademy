@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 #include "HLSLSupport.cginc"
 #include "UnityCG.cginc"
 #include "Lighting.cginc"
@@ -64,7 +66,7 @@ v2f_surf vert(appdata_t v)
         o.pos = mul(UNITY_MATRIX_MVP_STEREO[v.instId], v.vertex);
         o.renderTargetIndex = v.instId;
     #else
-        o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+        o.pos = UnityObjectToClipPos(v.vertex);
     #endif
 
     #if _USEMAINTEX_ON || _USEEMISSIONTEX_ON

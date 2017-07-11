@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 #include "UnityCG.cginc"
 
 #if _USEMAINTEX_ON
@@ -39,7 +41,7 @@ v2f vert(appdata_t v)
         o.vertex = mul(UNITY_MATRIX_MVP_STEREO[v.instId], v.vertex);
         o.renderTargetIndex = v.instId;
     #else
-        o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+        o.vertex = UnityObjectToClipPos(v.vertex);
     #endif
 
     #if _USEMAINTEX_ON

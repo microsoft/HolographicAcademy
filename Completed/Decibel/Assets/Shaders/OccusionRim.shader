@@ -1,4 +1,6 @@
-﻿//Very fast shader that uses the Unity lighting model
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+//Very fast shader that uses the Unity lighting model
 //Compiles down to only performing the operations you're actually using
 //Does not currently support stereo instancing
 //Creates a blue rim effect when the hologram is occluded.
@@ -82,7 +84,7 @@ Shader "Custom/OccusionRim"
 				v2f vert(appdata_tan v)
 				{
 					v2f o;
-					o.viewPos = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.viewPos = UnityObjectToClipPos(v.vertex);
 					o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 					o.normal = normalize(v.normal);
 					o.viewDir = normalize(WorldSpaceViewDir(v.vertex));

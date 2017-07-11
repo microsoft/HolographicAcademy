@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 ///
 /// Basic occlusion shader that can be used with spatial mapping meshes.
 /// No pixels will be rendered at the object's location.
@@ -38,7 +40,7 @@ Shader "HoloToolkit/Occlusion"
 			v2f vert (appdata_base v)
 			{
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				return o;
 			}
 
