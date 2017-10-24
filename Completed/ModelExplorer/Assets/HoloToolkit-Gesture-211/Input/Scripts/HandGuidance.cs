@@ -16,7 +16,7 @@ namespace Academy.HoloToolkit.Unity
         public GameObject IndicatorParent;
 
         // Hand guidance score to start showing a hand indicator.
-        // As the guidance score approaches 0, the hand is closer to being out of view.
+        // As the guidance score approaches 1, the hand is closer to being out of view.
         [Range(0.0f, 1.0f)]
         [Tooltip("When to start showing the Hand Guidance Indicator. 1 is out of view, 0 is centered in view.")]
         public float HandGuidanceThreshold = 0.5f;
