@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -34,16 +34,17 @@ namespace Academy.HoloToolkit.Unity
                 GestureSettings.Tap |
                 GestureSettings.NavigationX);
 
-            // 2.b: Register for the TappedEvent with the NavigationRecognizer_TappedEvent function.
-            NavigationRecognizer.TappedEvent += NavigationRecognizer_TappedEvent;
-            // 2.b: Register for the NavigationStartedEvent with the NavigationRecognizer_NavigationStartedEvent function.
-            NavigationRecognizer.NavigationStartedEvent += NavigationRecognizer_NavigationStartedEvent;
-            // 2.b: Register for the NavigationUpdatedEvent with the NavigationRecognizer_NavigationUpdatedEvent function.
-            NavigationRecognizer.NavigationUpdatedEvent += NavigationRecognizer_NavigationUpdatedEvent;
-            // 2.b: Register for the NavigationCompletedEvent with the NavigationRecognizer_NavigationCompletedEvent function. 
-            NavigationRecognizer.NavigationCompletedEvent += NavigationRecognizer_NavigationCompletedEvent;
-            // 2.b: Register for the NavigationCanceledEvent with the NavigationRecognizer_NavigationCanceledEvent function. 
-            NavigationRecognizer.NavigationCanceledEvent += NavigationRecognizer_NavigationCanceledEvent;
+
+            // 2.b: Register for the Tapped with the NavigationRecognizer_Tapped function.
+            NavigationRecognizer.Tapped += NavigationRecognizer_Tapped;
+            // 2.b: Register for the NavigationStarted with the NavigationRecognizer_NavigationStarted function.
+            NavigationRecognizer.NavigationStarted += NavigationRecognizer_NavigationStarted;
+            // 2.b: Register for the NavigationUpdated with the NavigationRecognizer_NavigationUpdated function.
+            NavigationRecognizer.NavigationUpdated += NavigationRecognizer_NavigationUpdated;
+            // 2.b: Register for the NavigationCompleted with the NavigationRecognizer_NavigationCompleted function. 
+            NavigationRecognizer.NavigationCompleted += NavigationRecognizer_NavigationCompleted;
+            // 2.b: Register for the NavigationCanceled with the NavigationRecognizer_NavigationCanceled function. 
+            NavigationRecognizer.NavigationCanceled += NavigationRecognizer_NavigationCanceled;
 
             // Instantiate the ManipulationRecognizer.
             ManipulationRecognizer = new GestureRecognizer();
@@ -53,10 +54,10 @@ namespace Academy.HoloToolkit.Unity
                 GestureSettings.ManipulationTranslate);
 
             // Register for the Manipulation events on the ManipulationRecognizer.
-            ManipulationRecognizer.ManipulationStartedEvent += ManipulationRecognizer_ManipulationStartedEvent;
-            ManipulationRecognizer.ManipulationUpdatedEvent += ManipulationRecognizer_ManipulationUpdatedEvent;
-            ManipulationRecognizer.ManipulationCompletedEvent += ManipulationRecognizer_ManipulationCompletedEvent;
-            ManipulationRecognizer.ManipulationCanceledEvent += ManipulationRecognizer_ManipulationCanceledEvent;
+            ManipulationRecognizer.ManipulationStarted += ManipulationRecognizer_ManipulationStarted;
+            ManipulationRecognizer.ManipulationUpdated += ManipulationRecognizer_ManipulationUpdated;
+            ManipulationRecognizer.ManipulationCompleted += ManipulationRecognizer_ManipulationCompleted;
+            ManipulationRecognizer.ManipulationCanceled += ManipulationRecognizer_ManipulationCanceled;
 
             ResetGestureRecognizers();
         }
@@ -64,18 +65,19 @@ namespace Academy.HoloToolkit.Unity
         void OnDestroy()
         {
             // 2.b: Unregister the Tapped and Navigation events on the NavigationRecognizer.
-            NavigationRecognizer.TappedEvent -= NavigationRecognizer_TappedEvent;
+            NavigationRecognizer.Tapped -= NavigationRecognizer_Tapped;
 
-            NavigationRecognizer.NavigationStartedEvent -= NavigationRecognizer_NavigationStartedEvent;
-            NavigationRecognizer.NavigationUpdatedEvent -= NavigationRecognizer_NavigationUpdatedEvent;
-            NavigationRecognizer.NavigationCompletedEvent -= NavigationRecognizer_NavigationCompletedEvent;
-            NavigationRecognizer.NavigationCanceledEvent -= NavigationRecognizer_NavigationCanceledEvent;
+            NavigationRecognizer.NavigationStarted -= NavigationRecognizer_NavigationStarted;
+            NavigationRecognizer.NavigationUpdated -= NavigationRecognizer_NavigationUpdated;
+            NavigationRecognizer.NavigationCompleted -= NavigationRecognizer_NavigationCompleted;
+            NavigationRecognizer.NavigationCanceled -= NavigationRecognizer_NavigationCanceled;
+
 
             // Unregister the Manipulation events on the ManipulationRecognizer.
-            ManipulationRecognizer.ManipulationStartedEvent -= ManipulationRecognizer_ManipulationStartedEvent;
-            ManipulationRecognizer.ManipulationUpdatedEvent -= ManipulationRecognizer_ManipulationUpdatedEvent;
-            ManipulationRecognizer.ManipulationCompletedEvent -= ManipulationRecognizer_ManipulationCompletedEvent;
-            ManipulationRecognizer.ManipulationCanceledEvent -= ManipulationRecognizer_ManipulationCanceledEvent;
+            ManipulationRecognizer.ManipulationStarted -= ManipulationRecognizer_ManipulationStarted;
+            ManipulationRecognizer.ManipulationUpdated -= ManipulationRecognizer_ManipulationUpdated;
+            ManipulationRecognizer.ManipulationCompleted -= ManipulationRecognizer_ManipulationCompleted;
+            ManipulationRecognizer.ManipulationCanceled -= ManipulationRecognizer_ManipulationCanceled;
         }
 
         /// <summary>
@@ -113,71 +115,71 @@ namespace Academy.HoloToolkit.Unity
             ActiveRecognizer = newRecognizer;
         }
 
-        private void NavigationRecognizer_NavigationStartedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+        private void NavigationRecognizer_NavigationStarted(NavigationStartedEventArgs obj)
         {
             // 2.b: Set IsNavigating to be true.
             IsNavigating = true;
 
-            // 2.b: Set NavigationPosition to be relativePosition.
-            NavigationPosition = relativePosition;
+            // 2.b: Set NavigationPosition to be Vector3.zero.
+            NavigationPosition = Vector3.zero;
         }
 
-        private void NavigationRecognizer_NavigationUpdatedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+		private void NavigationRecognizer_NavigationUpdated(NavigationUpdatedEventArgs obj)
         {
             // 2.b: Set IsNavigating to be true.
             IsNavigating = true;
 
-            // 2.b: Set NavigationPosition to be relativePosition.
-            NavigationPosition = relativePosition;
+            // 2.b: Set NavigationPosition to be obj.normalizedOffset.
+            NavigationPosition = obj.normalizedOffset;
         }
 
-        private void NavigationRecognizer_NavigationCompletedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+		private void NavigationRecognizer_NavigationCompleted(NavigationCompletedEventArgs obj)
         {
             // 2.b: Set IsNavigating to be false.
             IsNavigating = false;
         }
 
-        private void NavigationRecognizer_NavigationCanceledEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+        private void NavigationRecognizer_NavigationCanceled(NavigationCanceledEventArgs obj)
         {
             // 2.b: Set IsNavigating to be false.
             IsNavigating = false;
         }
 
-        private void ManipulationRecognizer_ManipulationStartedEvent(InteractionSourceKind source, Vector3 position, Ray ray)
+        private void ManipulationRecognizer_ManipulationStarted(ManipulationStartedEventArgs obj)
         {
             if (HandsManager.Instance.FocusedGameObject != null)
             {
                 IsManipulating = true;
 
-                ManipulationPosition = position;
+                ManipulationPosition = Vector3.zero;
 
-                HandsManager.Instance.FocusedGameObject.SendMessageUpwards("PerformManipulationStart", position);
+                HandsManager.Instance.FocusedGameObject.SendMessageUpwards("PerformManipulationStart", ManipulationPosition);
             }
         }
 
-        private void ManipulationRecognizer_ManipulationUpdatedEvent(InteractionSourceKind source, Vector3 position, Ray ray)
+        private void ManipulationRecognizer_ManipulationUpdated(ManipulationUpdatedEventArgs obj)
         {
             if (HandsManager.Instance.FocusedGameObject != null)
             {
                 IsManipulating = true;
 
-                ManipulationPosition = position;
+                ManipulationPosition = obj.cumulativeDelta;
 
-                HandsManager.Instance.FocusedGameObject.SendMessageUpwards("PerformManipulationUpdate", position);
+                HandsManager.Instance.FocusedGameObject.SendMessageUpwards("PerformManipulationUpdate", ManipulationPosition);
             }
         }
 
-        private void ManipulationRecognizer_ManipulationCompletedEvent(InteractionSourceKind source, Vector3 position, Ray ray)
+        private void ManipulationRecognizer_ManipulationCompleted(ManipulationCompletedEventArgs obj)
         {
             IsManipulating = false;
         }
 
-        private void ManipulationRecognizer_ManipulationCanceledEvent(InteractionSourceKind source, Vector3 position, Ray ray)
+        private void ManipulationRecognizer_ManipulationCanceled(ManipulationCanceledEventArgs obj)
         {
             IsManipulating = false;
         }
 
-        private void NavigationRecognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray ray)
+        private void NavigationRecognizer_Tapped(TappedEventArgs obj)
         {
             GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
 

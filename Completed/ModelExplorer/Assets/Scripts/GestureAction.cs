@@ -48,8 +48,10 @@ public class GestureAction : MonoBehaviour
             /* TODO: DEVELOPER CODING EXERCISE 4.a */
 
             Vector3 moveVector = Vector3.zero;
+
             // 4.a: Calculate the moveVector as position - manipulationPreviousPosition.
             moveVector = position - manipulationPreviousPosition;
+
             // 4.a: Update the manipulationPreviousPosition with the current position.
             manipulationPreviousPosition = position;
 

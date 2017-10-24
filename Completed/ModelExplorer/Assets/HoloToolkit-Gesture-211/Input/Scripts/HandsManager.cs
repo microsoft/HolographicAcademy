@@ -1,5 +1,5 @@
-﻿using UnityEngine.VR.WSA.Input;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -28,16 +28,16 @@ namespace Academy.HoloToolkit.Unity
         {
             EnableAudioHapticFeedback();
 
-            InteractionManager.SourceDetected += InteractionManager_SourceDetected;
-            InteractionManager.SourceLost += InteractionManager_SourceLost;
+            InteractionManager.InteractionSourceDetected += InteractionManager_InteractionSourceDetected;
+            InteractionManager.InteractionSourceLost += InteractionManager_InteractionSourceLost;
 
             /* TODO: DEVELOPER CODE ALONG 2.a */
 
             // 2.a: Register for SourceManager.SourcePressed event.
-            InteractionManager.SourcePressed += InteractionManager_SourcePressed;
+            InteractionManager.InteractionSourcePressed += InteractionManager_InteractionSourcePressed;
 
             // 2.a: Register for SourceManager.SourceReleased event.
-            InteractionManager.SourceReleased += InteractionManager_SourceReleased;
+            InteractionManager.InteractionSourceReleased += InteractionManager_InteractionSourceReleased;
 
             // 2.a: Initialize FocusedGameObject as null.
             FocusedGameObject = null;
@@ -61,12 +61,12 @@ namespace Academy.HoloToolkit.Unity
             }
         }
 
-        private void InteractionManager_SourceDetected(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceDetected(InteractionSourceDetectedEventArgs obj)
         {
             HandDetected = true;
         }
 
-        private void InteractionManager_SourceLost(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceLost(InteractionSourceLostEventArgs obj)
         {
             HandDetected = false;
 
@@ -74,7 +74,7 @@ namespace Academy.HoloToolkit.Unity
             ResetFocusedGameObject();
         }
 
-        private void InteractionManager_SourcePressed(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs hand)
         {
             if (InteractibleManager.Instance.FocusedGameObject != null)
             {
@@ -91,7 +91,7 @@ namespace Academy.HoloToolkit.Unity
             }
         }
 
-        private void InteractionManager_SourceReleased(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceReleased(InteractionSourceReleasedEventArgs hand)
         {
             // 2.a: Reset FocusedGameObject.
             ResetFocusedGameObject();
@@ -109,14 +109,14 @@ namespace Academy.HoloToolkit.Unity
 
         void OnDestroy()
         {
-            InteractionManager.SourceDetected -= InteractionManager_SourceDetected;
-            InteractionManager.SourceLost -= InteractionManager_SourceLost;
+            InteractionManager.InteractionSourceDetected -= InteractionManager_InteractionSourceDetected;
+            InteractionManager.InteractionSourceLost -= InteractionManager_InteractionSourceLost;
 
             // 2.a: Unregister the SourceManager.SourceReleased event.
-            InteractionManager.SourceReleased -= InteractionManager_SourceReleased;
+            InteractionManager.InteractionSourceReleased -= InteractionManager_InteractionSourceReleased;
 
             // 2.a: Unregister for SourceManager.SourcePressed event.
-            InteractionManager.SourcePressed -= InteractionManager_SourcePressed;
+            InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSourcePressed;
         }
     }
 }
