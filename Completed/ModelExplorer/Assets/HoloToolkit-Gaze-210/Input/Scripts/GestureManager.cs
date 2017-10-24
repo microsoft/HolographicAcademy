@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -15,7 +15,7 @@ namespace Academy.HoloToolkit.Unity
             gestureRecognizer = new GestureRecognizer();
             gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
 
-            gestureRecognizer.TappedEvent += (source, tapCount, ray) =>
+            gestureRecognizer.Tapped += (args) =>
             {
                 GameObject focusedObject = InteractibleManager.Instance.FocusedGameObject;
 
