@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+using UnityEngine.XR.WSA.Input;
 
 public class GazeGestureManager : MonoBehaviour
 {
@@ -17,7 +17,7 @@ public class GazeGestureManager : MonoBehaviour
 
         // Set up a GestureRecognizer to detect Select gestures.
         recognizer = new GestureRecognizer();
-        recognizer.TappedEvent += (source, tapCount, ray) =>
+        recognizer.Tapped += (args) =>
         {
             // Send an OnSelect message to the focused object and its ancestors.
             if (FocusedObject != null)
