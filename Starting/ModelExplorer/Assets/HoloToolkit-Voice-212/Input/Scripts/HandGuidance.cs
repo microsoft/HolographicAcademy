@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -29,9 +29,9 @@ namespace Academy.HoloToolkit.Unity
         {
             // Register for hand and finger events to know where your hand
             // is being tracked and what state it is in.
-            InteractionManager.SourceLost += InteractionManager_SourceLost;
-            InteractionManager.SourceUpdated += InteractionManager_SourceUpdated;
-            InteractionManager.SourceReleased += InteractionManager_SourceReleased;
+            InteractionManager.InteractionSourceLost += InteractionManager_InteractionSourceLost;
+            InteractionManager.InteractionSourceUpdated += InteractionManager_InteractionSourceUpdated;
+            InteractionManager.InteractionSourceReleased += InteractionManager_InteractionSourceReleased;
 
             if (HandGuidanceIndicator != null)
             {
@@ -96,10 +96,10 @@ namespace Academy.HoloToolkit.Unity
         }
 
         // Call these events from HandsManager. This fires when the hand is moved.
-        private void InteractionManager_SourceUpdated(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
         {
             // Only display hand indicators when we have targeted an interactible and the hand is in a pressed state.
-            if (!hand.pressed ||
+            if (!obj.state.selectPressed ||
                 HandsManager.Instance.FocusedGameObject == null ||
                 (HandsManager.Instance.FocusedGameObject != null &&
                 HandsManager.Instance.FocusedGameObject.GetComponent<Interactible>() == null))
@@ -110,40 +110,40 @@ namespace Academy.HoloToolkit.Unity
             // Only track a new hand if are not currently tracking a hand.
             if (!currentlyTrackedHand.HasValue)
             {
-                currentlyTrackedHand = hand.source.id;
+                currentlyTrackedHand = obj.state.source.id;
             }
-            else if (currentlyTrackedHand.Value != hand.source.id)
+            else if (currentlyTrackedHand.Value != obj.state.source.id)
             {
                 // This hand is not the currently tracked hand, do not drawn a guidance indicator for this hand.
                 return;
             }
 
             // Start showing an indicator to move your hand toward the center of the view.
-            if (hand.properties.sourceLossRisk > HandGuidanceThreshold)
+            if (obj.state.properties.sourceLossRisk > HandGuidanceThreshold)
             {
-                ShowHandGuidanceIndicator(hand);
+                ShowHandGuidanceIndicator(obj.state);
             }
             else
             {
-                HideHandGuidanceIndicator(hand);
+                HideHandGuidanceIndicator(obj.state);
             }
         }
 
         // This fires when the finger is released.
-        private void InteractionManager_SourceReleased(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceReleased(InteractionSourceReleasedEventArgs obj)
         {
-            RemoveTrackedHand(hand);
+            RemoveTrackedHand(obj.state);
         }
 
         // This fires when the hand is lost.
-        private void InteractionManager_SourceLost(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceLost(InteractionSourceLostEventArgs obj)
         {
-            if (!currentlyTrackedHand.HasValue || currentlyTrackedHand.Value != hand.source.id)
+            if (!currentlyTrackedHand.HasValue || currentlyTrackedHand.Value != obj.state.source.id)
             {
                 return;
             }
 
-            RemoveTrackedHand(hand);
+            RemoveTrackedHand(obj.state);
         }
 
         private void RemoveTrackedHand(InteractionSourceState hand)
@@ -157,9 +157,9 @@ namespace Academy.HoloToolkit.Unity
 
         void OnDestroy()
         {
-            InteractionManager.SourceLost -= InteractionManager_SourceLost;
-            InteractionManager.SourceUpdated -= InteractionManager_SourceUpdated;
-            InteractionManager.SourceReleased -= InteractionManager_SourceReleased;
+            InteractionManager.InteractionSourceLost -= InteractionManager_InteractionSourceLost;
+            InteractionManager.InteractionSourceUpdated -= InteractionManager_InteractionSourceUpdated;
+            InteractionManager.InteractionSourceReleased -= InteractionManager_InteractionSourceReleased;
         }
     }
 }

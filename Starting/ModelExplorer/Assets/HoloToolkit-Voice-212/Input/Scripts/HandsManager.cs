@@ -1,5 +1,5 @@
-﻿using UnityEngine.VR.WSA.Input;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -28,11 +28,11 @@ namespace Academy.HoloToolkit.Unity
         {
             EnableAudioHapticFeedback();
 
-            InteractionManager.SourceDetected += InteractionManager_SourceDetected;
-            InteractionManager.SourceLost += InteractionManager_SourceLost;
+            InteractionManager.InteractionSourceDetected += InteractionManager_InteractionSourceDetected;
+            InteractionManager.InteractionSourceLost += InteractionManager_InteractionSourceLost;
 
-            InteractionManager.SourcePressed += InteractionManager_SourcePressed;
-            InteractionManager.SourceReleased += InteractionManager_SourceReleased;
+            InteractionManager.InteractionSourcePressed += InteractionManager_InteractionSourcePressed;
+            InteractionManager.InteractionSourceReleased += InteractionManager_InteractionSourceReleased;
 
             FocusedGameObject = null;
         }
@@ -55,19 +55,19 @@ namespace Academy.HoloToolkit.Unity
             }
         }
 
-        private void InteractionManager_SourceDetected(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceDetected(InteractionSourceDetectedEventArgs obj)
         {
             HandDetected = true;
         }
 
-        private void InteractionManager_SourceLost(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceLost(InteractionSourceLostEventArgs obj)
         {
             HandDetected = false;
 
             ResetFocusedGameObject();
         }
 
-        private void InteractionManager_SourcePressed(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs hand)
         {
             if (InteractibleManager.Instance.FocusedGameObject != null)
             {
@@ -79,11 +79,12 @@ namespace Academy.HoloToolkit.Unity
                     audioSource.Play();
                 }
 
+                // Cache InteractibleManager's FocusedGameObject in FocusedGameObject.
                 FocusedGameObject = InteractibleManager.Instance.FocusedGameObject;
             }
         }
 
-        private void InteractionManager_SourceReleased(InteractionSourceState hand)
+        private void InteractionManager_InteractionSourceReleased(InteractionSourceReleasedEventArgs hand)
         {
             ResetFocusedGameObject();
         }
@@ -92,16 +93,17 @@ namespace Academy.HoloToolkit.Unity
         {
             FocusedGameObject = null;
 
+            // Call ResetGestureRecognizers to complete any currently active gestures.
             GestureManager.Instance.ResetGestureRecognizers();
         }
 
         void OnDestroy()
         {
-            InteractionManager.SourceDetected -= InteractionManager_SourceDetected;
-            InteractionManager.SourceLost -= InteractionManager_SourceLost;
+            InteractionManager.InteractionSourceDetected -= InteractionManager_InteractionSourceDetected;
+            InteractionManager.InteractionSourceLost -= InteractionManager_InteractionSourceLost;
 
-            InteractionManager.SourceReleased -= InteractionManager_SourceReleased;
-            InteractionManager.SourcePressed -= InteractionManager_SourcePressed;
+            InteractionManager.InteractionSourceReleased -= InteractionManager_InteractionSourceReleased;
+            InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSourcePressed;
         }
     }
 }
