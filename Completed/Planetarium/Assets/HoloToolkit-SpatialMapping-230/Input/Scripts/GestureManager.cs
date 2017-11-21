@@ -2,7 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -41,13 +41,13 @@ namespace Academy.HoloToolkit.Unity
             gestureRecognizer = new GestureRecognizer();
             gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
 
-            gestureRecognizer.TappedEvent += GestureRecognizer_TappedEvent;
+            gestureRecognizer.Tapped += GestureRecognizer_Tapped;
 
             // Start looking for gestures.
             gestureRecognizer.StartCapturingGestures();
         }
 
-        private void GestureRecognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+        private void GestureRecognizer_Tapped(TappedEventArgs args)
         {
             if (focusedObject != null)
             {
@@ -85,7 +85,7 @@ namespace Academy.HoloToolkit.Unity
         void OnDestroy()
         {
             gestureRecognizer.StopCapturingGestures();
-            gestureRecognizer.TappedEvent -= GestureRecognizer_TappedEvent;
+            gestureRecognizer.Tapped -= GestureRecognizer_Tapped;
         }
     }
 }
