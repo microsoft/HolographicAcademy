@@ -2,7 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using System.Collections.Generic;
-using UnityEngine.VR.WSA.Input;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -24,39 +24,39 @@ namespace Academy.HoloToolkit.Unity
 
         void Awake()
         {
-            InteractionManager.SourceDetected += InteractionManager_SourceDetected;
-            InteractionManager.SourceLost += InteractionManager_SourceLost;
+            InteractionManager.InteractionSourceDetected += InteractionManager_InteractionSourceDetected;
+            InteractionManager.InteractionSourceLost += InteractionManager_InteractionSourceLost;
         }
 
-        private void InteractionManager_SourceDetected(InteractionSourceState state)
+        private void InteractionManager_InteractionSourceDetected(InteractionSourceDetectedEventArgs args)
         {
             // Check to see that the source is a hand.
-            if (state.source.kind != InteractionSourceKind.Hand)
+            if (args.state.source.kind != InteractionSourceKind.Hand)
             {
                 return;
             }
 
-            trackedHands.Add(state.source.id);
+            trackedHands.Add(args.state.source.id);
         }
 
-        private void InteractionManager_SourceLost(InteractionSourceState state)
+        private void InteractionManager_InteractionSourceLost(InteractionSourceLostEventArgs args)
         {
             // Check to see that the source is a hand.
-            if (state.source.kind != InteractionSourceKind.Hand)
+            if (args.state.source.kind != InteractionSourceKind.Hand)
             {
                 return;
             }
 
-            if (trackedHands.Contains(state.source.id))
+            if (trackedHands.Contains(args.state.source.id))
             {
-                trackedHands.Remove(state.source.id);
+                trackedHands.Remove(args.state.source.id);
             }
         }
 
         void OnDestroy()
         {
-            InteractionManager.SourceDetected -= InteractionManager_SourceDetected;
-            InteractionManager.SourceLost -= InteractionManager_SourceLost;
+            InteractionManager.InteractionSourceDetected -= InteractionManager_InteractionSourceDetected;
+            InteractionManager.InteractionSourceLost -= InteractionManager_InteractionSourceLost;
         }
     }
 }

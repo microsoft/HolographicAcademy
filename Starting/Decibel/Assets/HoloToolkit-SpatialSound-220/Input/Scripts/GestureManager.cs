@@ -2,7 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using UnityEngine;
-using UnityEngine.VR.WSA.Input;
+using UnityEngine.XR.WSA.Input;
 
 namespace Academy.HoloToolkit.Unity
 {
@@ -48,21 +48,21 @@ namespace Academy.HoloToolkit.Unity
             gestureRecognizer = new GestureRecognizer();
             gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.NavigationX);
 
-            gestureRecognizer.TappedEvent += GestureRecognizer_TappedEvent;
+            gestureRecognizer.Tapped += GestureRecognizer_Tapped;
 
-            gestureRecognizer.NavigationStartedEvent += GestureRecognizer_NavigationStartedEvent;
+            gestureRecognizer.NavigationStarted += GestureRecognizer_NavigationStarted;
 
-            gestureRecognizer.NavigationUpdatedEvent += GestureRecognizer_NavigationUpdatedEvent;
+            gestureRecognizer.NavigationUpdated += GestureRecognizer_NavigationUpdated;
 
-            gestureRecognizer.NavigationCompletedEvent += GestureRecognizer_NavigationCompletedEvent;
+            gestureRecognizer.NavigationCompleted += GestureRecognizer_NavigationCompleted;
 
-            gestureRecognizer.NavigationCanceledEvent += GestureRecognizer_NavigationCanceledEvent;
+            gestureRecognizer.NavigationCanceled += GestureRecognizer_NavigationCanceled;
 
             // Start looking for gestures.
             gestureRecognizer.StartCapturingGestures();
         }
 
-        private void GestureRecognizer_TappedEvent(InteractionSourceKind source, int tapCount, Ray headRay)
+        private void GestureRecognizer_Tapped(TappedEventArgs args)
         {
             if (focusedObject != null)
             {
@@ -70,37 +70,37 @@ namespace Academy.HoloToolkit.Unity
             }
         }
 
-        private void GestureRecognizer_NavigationStartedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+        private void GestureRecognizer_NavigationStarted(NavigationStartedEventArgs args)
         {
             if (focusedObject != null)
             {
                 IsNavigating = true;
 
-                NavigationPosition = relativePosition;
+                NavigationPosition = Vector3.zero;
                 gestureSoundManager.OnGesture(GestureSoundManager.GestureTypes.NavigationStarted, focusedObject);
                 focusedObject.SendMessageUpwards("OnNavigationStarted");
             }
         }
 
-        private void GestureRecognizer_NavigationUpdatedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+        private void GestureRecognizer_NavigationUpdated(NavigationUpdatedEventArgs args)
         {
             if (focusedObject != null)
             {
                 IsNavigating = true;
 
-                NavigationPosition = relativePosition;
+                NavigationPosition = args.normalizedOffset;
                 gestureSoundManager.OnGesture(GestureSoundManager.GestureTypes.NavigationUpdated, focusedObject);
                 focusedObject.SendMessageUpwards("OnNavigationUpdated");
             }
         }
 
-        private void GestureRecognizer_NavigationCompletedEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+        private void GestureRecognizer_NavigationCompleted(NavigationCompletedEventArgs args)
         {
             IsNavigating = false;
             gestureSoundManager.OnGesture(GestureSoundManager.GestureTypes.NavigationCompleted, null);
         }
 
-        private void GestureRecognizer_NavigationCanceledEvent(InteractionSourceKind source, Vector3 relativePosition, Ray ray)
+        private void GestureRecognizer_NavigationCanceled(NavigationCanceledEventArgs args)
         {
             IsNavigating = false;
             gestureSoundManager.OnGesture(GestureSoundManager.GestureTypes.NavigationCancelled, null);
@@ -136,7 +136,11 @@ namespace Academy.HoloToolkit.Unity
         void OnDestroy()
         {
             gestureRecognizer.StopCapturingGestures();
-            gestureRecognizer.TappedEvent -= GestureRecognizer_TappedEvent;
+            gestureRecognizer.Tapped -= GestureRecognizer_Tapped;
+            gestureRecognizer.NavigationStarted -= GestureRecognizer_NavigationStarted;
+            gestureRecognizer.NavigationUpdated -= GestureRecognizer_NavigationUpdated;
+            gestureRecognizer.NavigationCompleted -= GestureRecognizer_NavigationCompleted;
+            gestureRecognizer.NavigationCanceled -= GestureRecognizer_NavigationCanceled;
         }
     }
 }
