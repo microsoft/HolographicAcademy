@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
 using Academy.HoloToolkit.Unity;
-using Academy.HoloToolkit.Sharing;
+using UnityEngine;
+using UnityEngine.XR.WSA;
 
 public class UnderworldBase : Singleton<UnderworldBase>
 {
@@ -46,7 +49,7 @@ public class UnderworldBase : Singleton<UnderworldBase>
     {
         if (gameObject.activeSelf && IsTargetVisible())
         {
-            UnityEngine.VR.WSA.HolographicSettings.SetFocusPointForFrame(GazeManager.Instance.HitInfo.point, -Camera.main.transform.forward);
+            HolographicSettings.SetFocusPointForFrame(GazeManager.Instance.HitInfo.point, -Camera.main.transform.forward);
         }
     }
 

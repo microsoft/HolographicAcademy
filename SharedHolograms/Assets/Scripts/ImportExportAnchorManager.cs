@@ -1,11 +1,14 @@
-﻿using Academy.HoloToolkit.Sharing;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using Academy.HoloToolkit.Sharing;
 using Academy.HoloToolkit.Unity;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VR.WSA;
-using UnityEngine.VR.WSA.Persistence;
-using UnityEngine.VR.WSA.Sharing;
+using UnityEngine.XR.WSA;
+using UnityEngine.XR.WSA.Persistence;
+using UnityEngine.XR.WSA.Sharing;
 
 /// <summary>
 /// Manages creating anchors and sharing the anchors with other clients.
