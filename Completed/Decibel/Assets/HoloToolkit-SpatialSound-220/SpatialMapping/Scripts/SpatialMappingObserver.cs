@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VR.WSA;
+using UnityEngine.XR.WSA;
 
 namespace Academy.HoloToolkit.Unity
 {
