@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using HoloToolkit.Unity.InputModule;
+using UnityEngine;
 
 /// <summary>
 /// The Interactible class flags a Game Object as being "Interactible".
 /// Determines what happens when an Interactible is being gazed at.
 /// </summary>
-public class Interactible : MonoBehaviour
+public class Interactible : MonoBehaviour, IFocusable, IInputClickHandler
 {
     [Tooltip("Audio clip to play when interacting with this hologram.")]
     public AudioClip TargetFeedbackSound;
@@ -12,7 +13,10 @@ public class Interactible : MonoBehaviour
 
     private Material[] defaultMaterials;
 
-    void Start()
+    [SerializeField]
+    private InteractibleAction interactibleAction;
+
+    private void Start()
     {
         defaultMaterials = GetComponent<Renderer>().materials;
 
@@ -46,7 +50,7 @@ public class Interactible : MonoBehaviour
 
     /* TODO: DEVELOPER CODING EXERCISE 2.d */
 
-    void GazeEntered()
+    void IFocusable.OnFocusEnter()
     {
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
@@ -55,7 +59,7 @@ public class Interactible : MonoBehaviour
         }
     }
 
-    void GazeExited()
+    void IFocusable.OnFocusExit()
     {
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
@@ -64,7 +68,7 @@ public class Interactible : MonoBehaviour
         }
     }
 
-    void OnSelect()
+    void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
     {
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
@@ -78,7 +82,18 @@ public class Interactible : MonoBehaviour
         }
 
         /* TODO: DEVELOPER CODING EXERCISE 6.a */
-        // 6.a: Handle the OnSelect by sending a PerformTagAlong message.
-        this.SendMessage("PerformTagAlong");
+        // 6.a: Uncomment the lines below to perform a Tagalong action.
+        if (interactibleAction != null)
+        {
+            interactibleAction.PerformAction();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        foreach (Material material in defaultMaterials)
+        {
+            Destroy(material);
+        }
     }
 }

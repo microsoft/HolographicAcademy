@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
-using System.Collections;
 
 public class SetRendererSettings : MonoBehaviour
 {

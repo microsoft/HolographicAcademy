@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using HoloToolkit.Unity;
+using UnityEngine;
 using UnityEngine.XR.WSA.Input;
 
 public class Fitbox : MonoBehaviour
@@ -30,7 +31,7 @@ public class Fitbox : MonoBehaviour
         {
             // If we are running inside Unity's Editor, disable the Fitbox script
             // as there is no easy way to dismiss it to see our actual holograms.
-            enabled = false;
+            DestroyImmediate(gameObject);
         }
         else
         {
