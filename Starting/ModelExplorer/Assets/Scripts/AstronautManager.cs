@@ -1,76 +1,43 @@
-﻿using Academy.HoloToolkit.Unity;
-using System.Collections.Generic;
-using System.Linq;
+﻿using HoloToolkit.Unity;
 using UnityEngine;
-using UnityEngine.Windows.Speech;
 
 public class AstronautManager : Singleton<AstronautManager>
 {
-    float expandAnimationCompletionTime;
+    private float expandAnimationCompletionTime;
+
     // Store a bool for whether our astronaut model is expanded or not.
-    bool isModelExpanding = false;
+    private bool isModelExpanding = false;
 
-    // KeywordRecognizer object.
-    KeywordRecognizer keywordRecognizer;
-
-    // Defines which function to call when a keyword is recognized.
-    delegate void KeywordAction(PhraseRecognizedEventArgs args);
-    Dictionary<string, KeywordAction> keywordCollection;
-
-    void Start()
+    private void Update()
     {
-        keywordCollection = new Dictionary<string, KeywordAction>();
-
-        // Add keyword to start manipulation.
-        keywordCollection.Add("Move Astronaut", MoveAstronautCommand);
-
-        /* TODO: DEVELOPER CODING EXERCISE 5.a */
-
-        // 5.a: Add keyword Expand Model to call the ExpandModelCommand function.
-
-
-        // 5.a: Add keyword Reset Model to call the ResetModelCommand function.
-
-
-        // Initialize KeywordRecognizer with the previously added keywords.
-        keywordRecognizer = new KeywordRecognizer(keywordCollection.Keys.ToArray());
-        keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
-        keywordRecognizer.Start();
-    }
-
-    void OnDestroy()
-    {
-        keywordRecognizer.Dispose();
-    }
-
-    private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
-    {
-        KeywordAction keywordAction;
-
-        if (keywordCollection.TryGetValue(args.text, out keywordAction))
+        if (isModelExpanding && Time.realtimeSinceStartup >= expandAnimationCompletionTime)
         {
-            keywordAction.Invoke(args);
+            isModelExpanding = false;
+
+            Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren<Animator>();
+            foreach (Animator animator in expandedAnimators)
+            {
+                animator.enabled = false;
+            }
         }
     }
 
-    private void MoveAstronautCommand(PhraseRecognizedEventArgs args)
-    {
-        GestureManager.Instance.Transition(GestureManager.Instance.ManipulationRecognizer);
-    }
-
-    private void ResetModelCommand(PhraseRecognizedEventArgs args)
+    public void ResetModelCommand()
     {
         // Reset local variables.
         isModelExpanding = false;
 
+        GameObject currentModel = ExpandModel.Instance.gameObject;
+        GameObject expandedModel = ExpandModel.Instance.ExpandedModel;
+
         // Disable the expanded model.
-        ExpandModel.Instance.ExpandedModel.SetActive(false);
+        expandedModel.SetActive(false);
 
         // Enable the idle model.
-        ExpandModel.Instance.gameObject.SetActive(true);
+        currentModel.SetActive(true);
 
         // Enable the animators for the next time the model is expanded.
-        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren<Animator>();
+        Animator[] expandedAnimators = expandedModel.GetComponentsInChildren<Animator>();
         foreach (Animator animator in expandedAnimators)
         {
             animator.enabled = true;
@@ -79,20 +46,21 @@ public class AstronautManager : Singleton<AstronautManager>
         ExpandModel.Instance.Reset();
     }
 
-    private void ExpandModelCommand(PhraseRecognizedEventArgs args)
+    public void ExpandModelCommand()
     {
         // Swap out the current model for the expanded model.
         GameObject currentModel = ExpandModel.Instance.gameObject;
+        GameObject expandedModel = ExpandModel.Instance.ExpandedModel;
 
-        ExpandModel.Instance.ExpandedModel.transform.position = currentModel.transform.position;
-        ExpandModel.Instance.ExpandedModel.transform.rotation = currentModel.transform.rotation;
-        ExpandModel.Instance.ExpandedModel.transform.localScale = currentModel.transform.localScale;
+        expandedModel.transform.position = currentModel.transform.position;
+        expandedModel.transform.rotation = currentModel.transform.rotation;
+        expandedModel.transform.localScale = currentModel.transform.localScale;
 
         currentModel.SetActive(false);
-        ExpandModel.Instance.ExpandedModel.SetActive(true);
+        expandedModel.SetActive(true);
 
         // Play animation.  Ensure the Loop Time check box is disabled in the inspector for this animation to play it once.
-        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren<Animator>();
+        Animator[] expandedAnimators = expandedModel.GetComponentsInChildren<Animator>();
         // Set local variables for disabling the animation.
         if (expandedAnimators.Length > 0)
         {
@@ -103,20 +71,5 @@ public class AstronautManager : Singleton<AstronautManager>
         isModelExpanding = true;
 
         ExpandModel.Instance.Expand();
-    }
-
-    public void Update()
-    {
-        if (isModelExpanding && Time.realtimeSinceStartup >= expandAnimationCompletionTime)
-        {
-            isModelExpanding = false;
-
-            Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren<Animator>();
-
-            foreach (Animator animator in expandedAnimators)
-            {
-                animator.enabled = false;
-            }
-        }
     }
 }
