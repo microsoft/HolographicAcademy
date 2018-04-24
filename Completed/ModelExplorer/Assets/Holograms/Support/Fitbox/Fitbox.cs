@@ -1,5 +1,6 @@
 ﻿using HoloToolkit.Unity;
 using UnityEngine;
+using UnityEngine.XR;
 using UnityEngine.XR.WSA.Input;
 
 public class Fitbox : MonoBehaviour
@@ -27,7 +28,7 @@ public class Fitbox : MonoBehaviour
 
     private void Awake()
     {
-        if (Application.isEditor)
+        if (Application.isEditor && !XRDevice.isPresent)
         {
             // If we are running inside Unity's Editor, disable the Fitbox script
             // as there is no easy way to dismiss it to see our actual holograms.
