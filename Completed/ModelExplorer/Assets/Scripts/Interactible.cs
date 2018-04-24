@@ -55,7 +55,7 @@ public class Interactible : MonoBehaviour, IFocusable, IInputClickHandler
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
             // 2.d: Uncomment the below line to highlight the material when gaze enters.
-            defaultMaterials[i].SetFloat("_Highlight", .25f);
+            defaultMaterials[i].EnableKeyword("_ENVIRONMENT_COLORING");
         }
     }
 
@@ -64,17 +64,12 @@ public class Interactible : MonoBehaviour, IFocusable, IInputClickHandler
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
             // 2.d: Uncomment the below line to remove highlight on material when gaze exits.
-            defaultMaterials[i].SetFloat("_Highlight", 0f);
+            defaultMaterials[i].DisableKeyword("_ENVIRONMENT_COLORING");
         }
     }
 
     void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
     {
-        for (int i = 0; i < defaultMaterials.Length; i++)
-        {
-            defaultMaterials[i].SetFloat("_Highlight", .5f);
-        }
-
         // Play the audioSource feedback when we gaze and select a hologram.
         if (audioSource != null && !audioSource.isPlaying)
         {
