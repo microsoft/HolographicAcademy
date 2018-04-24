@@ -29,6 +29,7 @@ namespace HoloToolkit.Unity
         /// The axis about which the object will rotate.
         /// </summary>
         [Tooltip("Specifies the axis about which the object will rotate.")]
+        [SerializeField]
         private PivotAxis pivotAxis = PivotAxis.XY;
         public PivotAxis PivotAxis
         {
