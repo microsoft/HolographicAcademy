@@ -16508,8 +16508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8935ace479d0326448a944043ae26665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpandedModel: {fileID: 0}
-  ExpandModelSound: {fileID: 8300000, guid: 0e92e0b0ba13e7943a4a4a1071841eb7, type: 3}
+  expandedModel: {fileID: 0}
+  expandModelSound: {fileID: 8300000, guid: 0e92e0b0ba13e7943a4a4a1071841eb7, type: 3}
 --- !u!114 &114929552618566590
 MonoBehaviour:
   m_ObjectHideFlags: 1
