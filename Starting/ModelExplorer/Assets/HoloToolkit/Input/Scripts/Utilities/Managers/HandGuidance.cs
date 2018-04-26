@@ -18,9 +18,6 @@ namespace HoloToolkit.Unity.InputModule
     /// </summary>
     public class HandGuidance : Singleton<HandGuidance>
     {
-        [Tooltip("The Cursor object the HandGuidanceIndicator will be positioned around.")]
-        public GameObject Cursor;
-
         [Tooltip("GameObject to display when your hand is about to lose tracking.")]
         public GameObject HandGuidanceIndicator;
 
@@ -37,6 +34,9 @@ namespace HoloToolkit.Unity.InputModule
 
         private uint? currentlyTrackedHand;
 
+        // The Cursor object the HandGuidanceIndicator will be positioned around.
+        private GameObject cursor;
+
         protected override void Awake()
         {
             base.Awake();
@@ -45,7 +45,9 @@ namespace HoloToolkit.Unity.InputModule
                 Debug.LogError("Please include a GameObject for the Hand Guidance Indicator.");
             }
 
-            if (Cursor == null)
+            cursor = gameObject;
+
+            if (cursor == null)
             {
                 Debug.LogError("Please include a GameObject for the Cursor to display the indicator around.");
             }
@@ -115,7 +117,7 @@ namespace HoloToolkit.Unity.InputModule
             float distanceFromCenter = (float)(hand.properties.sourceLossRisk * maxDistanceFromCenter);
 
             // Subtract direction from origin so that the indicator is between the hand and the origin.
-            position = Cursor.transform.position - hand.properties.sourceLossMitigationDirection * distanceFromCenter;
+            position = cursor.transform.position - hand.properties.sourceLossMitigationDirection * distanceFromCenter;
             rotation = Quaternion.LookRotation(CameraCache.Main.transform.forward, hand.properties.sourceLossMitigationDirection);
         }
 

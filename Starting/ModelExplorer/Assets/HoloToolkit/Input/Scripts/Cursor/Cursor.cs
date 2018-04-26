@@ -475,5 +475,10 @@ namespace HoloToolkit.Unity.InputModule
         {
             cursorState = state;
         }
+
+        public GameObject GetTargetedObject()
+        {
+            return TargetedObject;
+        }
     }
 }
