@@ -1,4 +1,4 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
 using UnityEngine;
 
 /// <summary>
@@ -8,27 +8,42 @@ public class ExpandModel : Singleton<ExpandModel>
 {
     // We are using a different model for the expanded view.  Set it here so we can swap it out when we expand.
     [Tooltip("Game object for the exploded model.")]
-    public GameObject ExpandedModel;
+    [SerializeField]
+    private GameObject expandedModel;
+
+    public GameObject ExpandedModel
+    {
+        get { return expandedModel; }
+        set { expandedModel = value; }
+    }
 
     [Tooltip("Audio clip to play when expanding the model.")]
-    public AudioClip ExpandModelSound;
+    [SerializeField]
+    private AudioClip expandModelSound;
+
     private AudioSource audioSource;
-    private GameObject audioGameObject;
 
     public bool IsModelExpanded { get; private set; }
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         IsModelExpanded = false;
+
+        EnableAudioHapticFeedback();
     }
 
     public void Expand()
     {
-        EnableAudioHapticFeedback();
-
-        if (audioGameObject != null)
+        if (IsModelExpanded)
         {
-            Destroy(audioGameObject, audioSource.clip.length);
+            return;
+        }
+
+        if (audioSource != null)
+        {
+            audioSource.Play();
         }
 
         IsModelExpanded = true;
@@ -42,23 +57,20 @@ public class ExpandModel : Singleton<ExpandModel>
     private void EnableAudioHapticFeedback()
     {
         // If this hologram has an audio clip, add an AudioSource with this clip.
-        if (ExpandModelSound != null)
+        if (expandModelSound != null)
         {
-            audioGameObject = new GameObject();
+            GameObject audioGameObject = new GameObject
+            {
+                name = "ExpandModelSoundEffect"
+            };
             audioGameObject.transform.position = gameObject.transform.position;
 
-            audioSource = audioGameObject.GetComponent<AudioSource>();
-            if (audioSource == null)
-            {
-                audioSource = audioGameObject.AddComponent<AudioSource>();
-            }
+            audioSource = audioGameObject.AddComponent<AudioSource>();
 
-            audioSource.clip = ExpandModelSound;
+            audioSource.clip = expandModelSound;
             audioSource.playOnAwake = false;
             audioSource.spatialBlend = 1;
             audioSource.dopplerLevel = 0;
-
-            audioSource.Play();
         }
     }
 }

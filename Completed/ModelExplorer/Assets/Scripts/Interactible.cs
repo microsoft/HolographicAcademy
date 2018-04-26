@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using HoloToolkit.Unity.InputModule;
+using UnityEngine;
 
 /// <summary>
 /// The Interactible class flags a Game Object as being "Interactible".
 /// Determines what happens when an Interactible is being gazed at.
 /// </summary>
-public class Interactible : MonoBehaviour
+public class Interactible : MonoBehaviour, IFocusable, IInputClickHandler
 {
     [Tooltip("Audio clip to play when interacting with this hologram.")]
     public AudioClip TargetFeedbackSound;
@@ -12,7 +16,10 @@ public class Interactible : MonoBehaviour
 
     private Material[] defaultMaterials;
 
-    void Start()
+    [SerializeField]
+    private InteractibleAction interactibleAction;
+
+    private void Start()
     {
         defaultMaterials = GetComponent<Renderer>().materials;
 
@@ -44,35 +51,44 @@ public class Interactible : MonoBehaviour
         }
     }
 
-    void GazeEntered()
+    void IFocusable.OnFocusEnter()
     {
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
-            defaultMaterials[i].SetFloat("_Highlight", .25f);
+            // Highlight the material when gaze enters.
+            defaultMaterials[i].EnableKeyword("_ENVIRONMENT_COLORING");
         }
     }
 
-    void GazeExited()
+    void IFocusable.OnFocusExit()
     {
         for (int i = 0; i < defaultMaterials.Length; i++)
         {
-            defaultMaterials[i].SetFloat("_Highlight", 0f);
+            // Remove highlight on material when gaze exits.
+            defaultMaterials[i].DisableKeyword("_ENVIRONMENT_COLORING");
         }
     }
 
-    void OnSelect()
+    void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
     {
-        for (int i = 0; i < defaultMaterials.Length; i++)
-        {
-            defaultMaterials[i].SetFloat("_Highlight", .5f);
-        }
-
         // Play the audioSource feedback when we gaze and select a hologram.
         if (audioSource != null && !audioSource.isPlaying)
         {
             audioSource.Play();
         }
 
-        this.SendMessage("PerformTagAlong");
+        // Perform a Tagalong action.
+        if (interactibleAction != null)
+        {
+            interactibleAction.PerformAction();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        foreach (Material material in defaultMaterials)
+        {
+            Destroy(material);
+        }
     }
 }
