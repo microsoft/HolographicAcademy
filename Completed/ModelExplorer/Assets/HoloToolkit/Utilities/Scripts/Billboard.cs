@@ -77,12 +77,12 @@ namespace HoloToolkit.Unity
             {
                 case PivotAxis.X:
                     directionToTarget.x = 0.0f;
-                    targetUpVector = Vector3.up;
+                    targetUpVector = transform.up;
                     break;
 
                 case PivotAxis.Y:
                     directionToTarget.y = 0.0f;
-                    targetUpVector = Vector3.up;
+                    targetUpVector = transform.up;
                     break;
 
                 case PivotAxis.Z:
@@ -91,7 +91,7 @@ namespace HoloToolkit.Unity
                     break;
 
                 case PivotAxis.XY:
-                    targetUpVector = Vector3.up;
+                    targetUpVector = transform.up;
                     break;
 
                 case PivotAxis.XZ:
