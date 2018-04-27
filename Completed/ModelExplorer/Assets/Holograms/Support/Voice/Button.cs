@@ -1,19 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using HoloToolkit.Unity.InputModule;
 
 /// <summary>
 /// Button keeps track of various methods and textures for each media button on the communicator.
 /// </summary>
-
 [RequireComponent(typeof(AudioSource))]
-public class Button : MonoBehaviour
+public class Button : MonoBehaviour, IFocusable, IInputClickHandler
 {
     [Tooltip("The GameObject to be displayed to 'highlight' the button on gaze.")]
-    public GameObject Highlight;
+    [SerializeField]
+    private GameObject highlight;
+
     [Tooltip("Set the initial state of the button.")]
-    public State StartingState;
+    [SerializeField]
+    private State startingState;
+
     [Tooltip("The method to be called on click.")]
-    public UnityEvent Method;
+    [SerializeField]
+    private UnityEvent method;
 
     private Renderer buttonRenderer;
     private State currentState = State.Inactive;
@@ -26,7 +31,7 @@ public class Button : MonoBehaviour
         buttonRenderer = GetComponent<Renderer>();
         clickAudio = GetComponent<AudioSource>();
 
-        ChangeButtonState(StartingState);
+        ChangeButtonState(startingState);
     }
 
     public bool IsOn()
@@ -43,36 +48,36 @@ public class Button : MonoBehaviour
         else
         {
             ChangeButtonState(State.Inactive);
-            Highlight.SetActive(false);
+            highlight.SetActive(false);
         }
     }
 
-    void GazeEntered()
+    void IFocusable.OnFocusEnter()
     {
         if (IsOn())
         {
             ChangeButtonState(State.Gazed);
-            Highlight.SetActive(true);
+            highlight.SetActive(true);
         }
     }
 
-    void GazeExited()
+    void IFocusable.OnFocusExit()
     {
         if (IsOn())
         {
             ChangeButtonState(State.Active);
-            Highlight.SetActive(false);
+            highlight.SetActive(false);
         }
     }
 
-    void OnSelect()
+    void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
     {
         if (IsOn())
         {
             ChangeButtonState(State.Selected);
             clickAudio.Play();
             ChangeButtonState(State.Active);
-            Method.Invoke();
+            method.Invoke();
         }
     }
 
@@ -96,4 +101,5 @@ public class Button : MonoBehaviour
             }
         }
     }
+
 }

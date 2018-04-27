@@ -1,4 +1,4 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity.InputModule;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
@@ -7,7 +7,7 @@ using UnityEngine.Video;
 /// This keeps track of the various parts of the recording and text display process.
 /// </summary>
 
-[RequireComponent(typeof(AudioSource), typeof(MicrophoneManager), typeof(KeywordManager))]
+[RequireComponent(typeof(AudioSource), typeof(MicrophoneManager), typeof(SpeechInputSource))]
 public class Communicator : MonoBehaviour
 {
     [Tooltip("The button to be selected when the user wants to record audio and dictation.")]
@@ -42,7 +42,9 @@ public class Communicator : MonoBehaviour
     private float origLocalScale;
     private bool animateWaveform;
 
-    public enum Message
+    private SpeechInputSource speechInputSource;
+
+    private enum Message
     {
         PressMic,
         PressStop,
@@ -51,7 +53,7 @@ public class Communicator : MonoBehaviour
 
     private MicrophoneManager microphoneManager;
 
-    void Start()
+    private void Start()
     {
         dictationAudio = gameObject.GetComponent<AudioSource>();
 
@@ -67,9 +69,11 @@ public class Communicator : MonoBehaviour
 
         origLocalScale = Waveform.localScale.y;
         animateWaveform = false;
+
+        speechInputSource = GetComponent<SpeechInputSource>();
     }
 
-    void Update()
+    private void Update()
     {
         if (animateWaveform)
         {
@@ -104,10 +108,8 @@ public class Communicator : MonoBehaviour
     {
         if (RecordStopButton.IsOn())
         {
-            // Turn off the microphone.
-            microphoneManager.StopRecording();
             // Restart the PhraseRecognitionSystem and KeywordRecognizer
-            microphoneManager.StartCoroutine("RestartSpeechSystem", GetComponent<KeywordManager>());
+            StartCoroutine(RestartSpeechSystem());
 
             // Set proper UI state and play a sound.
             SetUI(false, Message.SendMessage, stopAudio);
@@ -144,7 +146,7 @@ public class Communicator : MonoBehaviour
         AstronautWatch.Instance.CloseCommunicator();
     }
 
-    void ResetAfterTimeout()
+    private void ResetAfterTimeout()
     {
         // Set proper UI state and play a sound.
         SetUI(false, Message.PressMic, stopAudio);
@@ -169,6 +171,18 @@ public class Communicator : MonoBehaviour
         StartCoroutine(ChangeLabel(newMessage));
 
         soundToPlay.Play();
+    }
+
+    private IEnumerator RestartSpeechSystem()
+    {
+        // Turn off the microphone and dictation recognizer.
+        microphoneManager.StopRecording();
+
+        // Wait for the dictation recognizer to fully shut down.
+        yield return StartCoroutine(microphoneManager.WaitForDictationToStop());
+
+        // Start the keyword recognizer.
+        speechInputSource.StartKeywordRecognizer();
     }
 
     private IEnumerator ChangeLabel(Message newMessage)

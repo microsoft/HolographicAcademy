@@ -1,4 +1,5 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
 using System.Collections;
 using System.Text;
 using UnityEngine;
@@ -8,7 +9,8 @@ using UnityEngine.Windows.Speech;
 public class MicrophoneManager : MonoBehaviour
 {
     [Tooltip("A text area for the recognizer to display the recognized strings.")]
-    public Text DictationDisplay;
+    [SerializeField]
+    private Text dictationDisplay;
 
     private DictationRecognizer dictationRecognizer;
 
@@ -85,7 +87,7 @@ public class MicrophoneManager : MonoBehaviour
         dictationRecognizer.Start();
 
         // 3.a Uncomment this line
-        DictationDisplay.text = "Dictation is starting. It may take time to display your text the first time, but begin speaking now...";
+        dictationDisplay.text = "Dictation is starting. It may take time to display your text the first time, but begin speaking now...";
 
         // Set the flag that we've started recording.
         hasRecordingStarted = true;
@@ -116,7 +118,7 @@ public class MicrophoneManager : MonoBehaviour
     {
         // 3.a: Set DictationDisplay text to be textSoFar and new hypothesized text
         // We don't want to append to textSoFar yet, because the hypothesis may have changed on the next event
-        DictationDisplay.text = textSoFar.ToString() + " " + text + "...";
+        dictationDisplay.text = textSoFar.ToString() + " " + text + "...";
     }
 
     /// <summary>
@@ -130,7 +132,7 @@ public class MicrophoneManager : MonoBehaviour
         textSoFar.Append(text + ". ");
 
         // 3.a: Set DictationDisplay text to be textSoFar
-        DictationDisplay.text = textSoFar.ToString();
+        dictationDisplay.text = textSoFar.ToString();
     }
 
     /// <summary>
@@ -147,7 +149,7 @@ public class MicrophoneManager : MonoBehaviour
         {
             Microphone.End(deviceName);
 
-            DictationDisplay.text = "Dictation has timed out. Please press the record button again.";
+            dictationDisplay.text = "Dictation has timed out. Please press the record button again.";
             SendMessage("ResetAfterTimeout");
         }
     }
@@ -160,16 +162,18 @@ public class MicrophoneManager : MonoBehaviour
     private void DictationRecognizer_DictationError(string error, int hresult)
     {
         // 3.a: Set DictationDisplay text to be the error string
-        DictationDisplay.text = error + "\nHRESULT: " + hresult;
+        dictationDisplay.text = error + "\nHRESULT: " + hresult;
     }
 
-    private IEnumerator RestartSpeechSystem(KeywordManager keywordToStart)
+    /// <summary>
+    /// The dictation recognizer may not turn off immediately, so this call blocks on
+    /// the recognizer reporting that it has actually stopped.
+    /// </summary>
+    public IEnumerator WaitForDictationToStop()
     {
         while (dictationRecognizer != null && dictationRecognizer.Status == SpeechSystemStatus.Running)
         {
             yield return null;
         }
-
-        keywordToStart.StartKeywordRecognizer();
     }
 }

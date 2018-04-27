@@ -1,7 +1,8 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
-[RequireComponent(typeof(KeywordManager))]
+[RequireComponent(typeof(SpeechInputSource))]
 public class AstronautWatch : Singleton<AstronautWatch>
 {
     [Tooltip("Drag the Communicator prefab asset.")]
@@ -20,10 +21,12 @@ public class AstronautWatch : Singleton<AstronautWatch>
 
     public bool CommunicatorOpen { get; private set; }
 
-    private KeywordManager keywordManager;
+    private SpeechInputSource speechInputSource;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         CommunicatorOpen = false;
 
         openCommunicatorTooltipGameObject = Instantiate(OpenCommunicatorTooltip);
@@ -36,7 +39,7 @@ public class AstronautWatch : Singleton<AstronautWatch>
         openCommunicatorTooltipGameObject.transform.parent = gameObject.transform;
         openCommunicatorTooltipGameObject.SetActive(false);
 
-        keywordManager = GetComponent<KeywordManager>();
+        speechInputSource = GetComponent<SpeechInputSource>();
     }
 
     public void OpenCommunicator()
@@ -62,7 +65,7 @@ public class AstronautWatch : Singleton<AstronautWatch>
         soundSource.clip = DismissSound;
         soundSource.Play();
 
-        messageGameObject = (GameObject)Instantiate(MessagePrefab, communicatorGameObject.transform.position, MessagePrefab.transform.rotation);
+        messageGameObject = Instantiate(MessagePrefab, communicatorGameObject.transform.position, MessagePrefab.transform.rotation);
 
         Destroy(communicatorGameObject);
         Destroy(messageGameObject, 1.0f);
@@ -72,11 +75,11 @@ public class AstronautWatch : Singleton<AstronautWatch>
     void GazeEntered()
     {
         // If communicator is not open, show the voice command tooltip.
-        if(!CommunicatorOpen)
+        if (!CommunicatorOpen)
         {
             openCommunicatorTooltipGameObject.SetActive(true);
 
-            keywordManager.StartKeywordRecognizer();
+            speechInputSource.StartKeywordRecognizer();
         }
     }
 
@@ -85,7 +88,7 @@ public class AstronautWatch : Singleton<AstronautWatch>
         // Hide tooltip when user looks away.
         openCommunicatorTooltipGameObject.SetActive(false);
 
-        keywordManager.StopKeywordRecognizer();
+        speechInputSource.StopKeywordRecognizer();
 
         // Reset tooltip to its original state.
         openCommunicatorTooltipGameObject.GetComponent<VoiceTooltip>().ResetTooltip();
