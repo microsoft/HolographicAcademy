@@ -1,7 +1,9 @@
-﻿using HoloToolkit.Unity.InputModule;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
 using UnityEngine;
 
-namespace HoloToolkit.Unity
+namespace Academy
 {
     /// <summary>
     /// CursorFeedback class takes GameObjects to give cursor feedback
@@ -17,7 +19,7 @@ namespace HoloToolkit.Unity
         [SerializeField]
         private GameObject pathingDetectedGameObject;
 
-        private InputModule.Cursor cursor;
+        private HoloToolkit.Unity.InputModule.Cursor cursor;
 
         private bool IsNavigationFocused
         {
@@ -73,7 +75,7 @@ namespace HoloToolkit.Unity
 
         private void Awake()
         {
-            cursor = GetComponent<InputModule.Cursor>();
+            cursor = GetComponent<HoloToolkit.Unity.InputModule.Cursor>();
         }
 
         private void Update()

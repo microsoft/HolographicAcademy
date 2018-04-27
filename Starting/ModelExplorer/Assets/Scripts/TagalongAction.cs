@@ -4,39 +4,42 @@
 using HoloToolkit.Unity;
 using UnityEngine;
 
-public class TagalongAction : InteractibleAction
+namespace Academy
 {
-    [SerializeField]
-    [Tooltip("Drag the Tagalong prefab asset you want to display.")]
-    private GameObject objectToTagalong;
-
-    private void Awake()
+    public class TagalongAction : InteractibleAction
     {
-        if (objectToTagalong != null)
+        [SerializeField]
+        [Tooltip("Drag the Tagalong prefab asset you want to display.")]
+        private GameObject objectToTagalong;
+
+        private void Awake()
         {
-            objectToTagalong = Instantiate(objectToTagalong);
-            objectToTagalong.SetActive(false);
+            if (objectToTagalong != null)
+            {
+                objectToTagalong = Instantiate(objectToTagalong);
+                objectToTagalong.SetActive(false);
 
-            // AddComponent Billboard to objectToTagAlong,
-            // so it's always facing the user as they move.
-            Billboard billboard = objectToTagalong.AddComponent<Billboard>();
+                // AddComponent Billboard to objectToTagAlong,
+                // so it's always facing the user as they move.
+                Billboard billboard = objectToTagalong.AddComponent<Billboard>();
 
-            // AddComponent SimpleTagalong to objectToTagAlong,
-            // so it's always following the user as they move.
-            objectToTagalong.AddComponent<SimpleTagalong>();
+                // AddComponent SimpleTagalong to objectToTagAlong,
+                // so it's always following the user as they move.
+                objectToTagalong.AddComponent<SimpleTagalong>();
 
-            billboard.PivotAxis = PivotAxis.XY;
-        }
-    }
-
-    public override void PerformAction()
-    {
-        // Recommend having only one tagalong.
-        if (objectToTagalong == null || objectToTagalong.activeSelf)
-        {
-            return;
+                billboard.PivotAxis = PivotAxis.XY;
+            }
         }
 
-        objectToTagalong.SetActive(true);
+        public override void PerformAction()
+        {
+            // Recommend having only one tagalong.
+            if (objectToTagalong == null || objectToTagalong.activeSelf)
+            {
+                return;
+            }
+
+            objectToTagalong.SetActive(true);
+        }
     }
 }
