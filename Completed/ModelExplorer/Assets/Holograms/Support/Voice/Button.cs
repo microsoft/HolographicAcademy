@@ -1,105 +1,110 @@
-﻿using UnityEngine;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using UnityEngine;
 using UnityEngine.Events;
 using HoloToolkit.Unity.InputModule;
 
-/// <summary>
-/// Button keeps track of various methods and textures for each media button on the communicator.
-/// </summary>
-[RequireComponent(typeof(AudioSource))]
-public class Button : MonoBehaviour, IFocusable, IInputClickHandler
+namespace Academy
 {
-    [Tooltip("The GameObject to be displayed to 'highlight' the button on gaze.")]
-    [SerializeField]
-    private GameObject highlight;
-
-    [Tooltip("Set the initial state of the button.")]
-    [SerializeField]
-    private State startingState;
-
-    [Tooltip("The method to be called on click.")]
-    [SerializeField]
-    private UnityEvent method;
-
-    private Renderer buttonRenderer;
-    private State currentState = State.Inactive;
-    private AudioSource clickAudio;
-
-    public enum State { Inactive, Active, Gazed, Selected };
-
-    void Awake()
+    /// <summary>
+    /// Button keeps track of various methods and textures for each media button on the communicator.
+    /// </summary>
+    [RequireComponent(typeof(AudioSource))]
+    public class Button : MonoBehaviour, IFocusable, IInputClickHandler
     {
-        buttonRenderer = GetComponent<Renderer>();
-        clickAudio = GetComponent<AudioSource>();
+        [Tooltip("The GameObject to be displayed to 'highlight' the button on gaze.")]
+        [SerializeField]
+        private GameObject highlight;
 
-        ChangeButtonState(startingState);
-    }
+        [Tooltip("Set the initial state of the button.")]
+        [SerializeField]
+        private State startingState;
 
-    public bool IsOn()
-    {
-        return currentState != State.Inactive;
-    }
+        [Tooltip("The method to be called on click.")]
+        [SerializeField]
+        private UnityEvent method;
 
-    public void SetActive(bool setOn)
-    {
-        if (setOn)
+        private Renderer buttonRenderer;
+        private State currentState = State.Inactive;
+        private AudioSource clickAudio;
+
+        public enum State { Inactive, Active, Gazed, Selected };
+
+        void Awake()
         {
-            ChangeButtonState(State.Active);
+            buttonRenderer = GetComponent<Renderer>();
+            clickAudio = GetComponent<AudioSource>();
+
+            ChangeButtonState(startingState);
         }
-        else
+
+        public bool IsOn()
         {
-            ChangeButtonState(State.Inactive);
-            highlight.SetActive(false);
+            return currentState != State.Inactive;
         }
-    }
 
-    void IFocusable.OnFocusEnter()
-    {
-        if (IsOn())
+        public void SetActive(bool setOn)
         {
-            ChangeButtonState(State.Gazed);
-            highlight.SetActive(true);
-        }
-    }
-
-    void IFocusable.OnFocusExit()
-    {
-        if (IsOn())
-        {
-            ChangeButtonState(State.Active);
-            highlight.SetActive(false);
-        }
-    }
-
-    void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
-    {
-        if (IsOn())
-        {
-            ChangeButtonState(State.Selected);
-            clickAudio.Play();
-            ChangeButtonState(State.Active);
-            method.Invoke();
-        }
-    }
-
-    private void ChangeButtonState(State newState)
-    {
-        State oldState = currentState;
-        currentState = newState;
-
-        if (newState > oldState)
-        {
-            for (int j = (int)newState; j > (int)oldState; j--)
+            if (setOn)
             {
-                buttonRenderer.material.SetFloat("_BlendTex0" + j, 1.0f);
+                ChangeButtonState(State.Active);
+            }
+            else
+            {
+                ChangeButtonState(State.Inactive);
+                highlight.SetActive(false);
             }
         }
-        else
+
+        void IFocusable.OnFocusEnter()
         {
-            for (int j = (int)oldState; j > (int)newState; j--)
+            if (IsOn())
             {
-                buttonRenderer.material.SetFloat("_BlendTex0" + j, 0.0f);
+                ChangeButtonState(State.Gazed);
+                highlight.SetActive(true);
+            }
+        }
+
+        void IFocusable.OnFocusExit()
+        {
+            if (IsOn())
+            {
+                ChangeButtonState(State.Active);
+                highlight.SetActive(false);
+            }
+        }
+
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            if (IsOn())
+            {
+                ChangeButtonState(State.Selected);
+                clickAudio.Play();
+                ChangeButtonState(State.Active);
+                method.Invoke();
+            }
+        }
+
+        private void ChangeButtonState(State newState)
+        {
+            State oldState = currentState;
+            currentState = newState;
+
+            if (newState > oldState)
+            {
+                for (int j = (int)newState; j > (int)oldState; j--)
+                {
+                    buttonRenderer.material.SetFloat("_BlendTex0" + j, 1.0f);
+                }
+            }
+            else
+            {
+                for (int j = (int)oldState; j > (int)newState; j--)
+                {
+                    buttonRenderer.material.SetFloat("_BlendTex0" + j, 0.0f);
+                }
             }
         }
     }
-
 }
