@@ -12,6 +12,7 @@ namespace Academy
     /// This keeps track of the various parts of the recording and text display process.
     /// </summary>
     [RequireComponent(typeof(AudioSource), typeof(MicrophoneManager), typeof(SpeechInputSource))]
+    [RequireComponent(typeof(SpeechInputHandler))]
     public class Communicator : MonoBehaviour
     {
         [Tooltip("The button to be selected when the user wants to record audio and dictation.")]

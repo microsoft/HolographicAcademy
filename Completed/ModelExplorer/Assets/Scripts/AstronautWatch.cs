@@ -8,7 +8,7 @@ using UnityEngine;
 namespace Academy
 {
     [RequireComponent(typeof(SpeechInputSource))]
-    public class AstronautWatch : Singleton<AstronautWatch>
+    public class AstronautWatch : Singleton<AstronautWatch>, IFocusable
     {
         [Tooltip("Drag the Communicator prefab asset.")]
         public GameObject CommunicatorPrefab;
@@ -26,8 +26,6 @@ namespace Academy
 
         public bool CommunicatorOpen { get; private set; }
 
-        private SpeechInputSource speechInputSource;
-
         protected override void Awake()
         {
             base.Awake();
@@ -43,8 +41,6 @@ namespace Academy
 
             openCommunicatorTooltipGameObject.transform.parent = gameObject.transform;
             openCommunicatorTooltipGameObject.SetActive(false);
-
-            speechInputSource = GetComponent<SpeechInputSource>();
         }
 
         public void OpenCommunicator()
@@ -77,23 +73,19 @@ namespace Academy
             Destroy(soundPlayer, DismissSound.length);
         }
 
-        void GazeEntered()
+        void IFocusable.OnFocusEnter()
         {
             // If communicator is not open, show the voice command tooltip.
             if (!CommunicatorOpen)
             {
                 openCommunicatorTooltipGameObject.SetActive(true);
-
-                speechInputSource.StartKeywordRecognizer();
             }
         }
 
-        void GazeExited()
+        void IFocusable.OnFocusExit()
         {
             // Hide tooltip when user looks away.
             openCommunicatorTooltipGameObject.SetActive(false);
-
-            speechInputSource.StopKeywordRecognizer();
 
             // Reset tooltip to its original state.
             openCommunicatorTooltipGameObject.GetComponent<VoiceTooltip>().ResetTooltip();

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
 namespace Academy
@@ -18,6 +19,10 @@ namespace Academy
         [Tooltip("Drag the GameObject to display when a pathing enabled Interactible is detected.")]
         [SerializeField]
         private GameObject pathingDetectedGameObject;
+
+        [Tooltip("Drag the GameObject to display when a voice command is detected.")]
+        [SerializeField]
+        private GameObject voiceCommandDetectedGameObject;
 
         private HoloToolkit.Unity.InputModule.Cursor cursor;
 
@@ -73,6 +78,32 @@ namespace Academy
             }
         }
 
+        private bool IsVoiceCommandFocused
+        {
+            get
+            {
+                GameObject targeted = cursor.GetTargetedObject();
+                if (targeted != null)
+                {
+                    SpeechInputHandler speechInputHandler = targeted.GetComponent<SpeechInputHandler>();
+                    if (speechInputHandler != null)
+                    {
+                        return !speechInputHandler.IsGlobalListener;
+                    }
+                    else
+                    {
+                        speechInputHandler = targeted.transform.root.GetComponent<SpeechInputHandler>();
+                        if (speechInputHandler != null)
+                        {
+                            return !speechInputHandler.IsGlobalListener;
+                        }
+                    }
+                }
+
+                return false;
+            }
+        }
+
         private void Awake()
         {
             cursor = GetComponent<HoloToolkit.Unity.InputModule.Cursor>();
@@ -83,6 +114,8 @@ namespace Academy
             UpdatePathDetectedState();
 
             UpdateScrollDetectedState();
+
+            UpdateVoiceCommandDetectedState();
         }
 
         private void UpdatePathDetectedState()
@@ -115,6 +148,22 @@ namespace Academy
             }
 
             scrollDetectedGameObject.SetActive(true);
+        }
+
+        private void UpdateVoiceCommandDetectedState()
+        {
+            if (voiceCommandDetectedGameObject == null)
+            {
+                return;
+            }
+
+            if (!IsVoiceCommandFocused)
+            {
+                voiceCommandDetectedGameObject.SetActive(false);
+                return;
+            }
+
+            voiceCommandDetectedGameObject.SetActive(true);
         }
     }
 }
