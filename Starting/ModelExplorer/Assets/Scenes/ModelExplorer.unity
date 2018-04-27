@@ -6129,7 +6129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9c9272366811643a9a60fce3978273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToTagalong: {fileID: 194316, guid: 5483f30597d2db743960f654988cba05, type: 2}
+  objectToTagalong: {fileID: 0}
 --- !u!114 &521844539
 MonoBehaviour:
   m_ObjectHideFlags: 0
