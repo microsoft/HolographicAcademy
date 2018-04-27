@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: astroMan_visor_glass_mtl
+  m_Name: material_highlight3
   m_Shader: {fileID: 4800000, guid: d45c0efca53019e43891b0f610f8146e, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON _BORDER_LIGHT_USES_HOVER_COLOR
-    _DIRECTIONAL_LIGHT _DISABLE_ALBEDO_MAP _HOVER_LIGHT _SPECULAR_HIGHLIGHTS
+    _DIRECTIONAL_LIGHT _DISABLE_ALBEDO_MAP _ENVIRONMENT_COLORING _HOVER_LIGHT _SPECULAR_HIGHLIGHTS
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -95,7 +95,7 @@ Material:
     - _EnableNormalMap: 0
     - _EnvironmentColorIntensity: 0.5
     - _EnvironmentColorThreshold: 1.5
-    - _EnvironmentColoring: 0
+    - _EnvironmentColoring: 1
     - _FadeBeginDistance: 0.85
     - _FadeCompleteDistance: 0.5
     - _GlossMapScale: 1

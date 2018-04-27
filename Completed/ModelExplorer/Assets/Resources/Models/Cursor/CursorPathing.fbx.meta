@@ -1,23 +1,21 @@
 fileFormatVersion: 2
-guid: f1338cf550277a245b9dd139937ba4f0
-timeCreated: 1455660204
+guid: 8ec567ab5cc989b42a735dc6ad894bf0
+timeCreated: 1455759023
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: StarCards
     400000: //RootNode
-    400002: StarCards
-    2300000: StarCards
-    3300000: StarCards
-    4300000: StarCards
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: js_scroll_i
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: StarMat
-    second: {fileID: 2100000, guid: 6b87d8e618432384596704b9472a8b50, type: 2}
+      name: whiteTexture
+    second: {fileID: 2100000, guid: 5aeebc4b37f320a42a3ae51c1e560487, type: 2}
   materials:
     importMaterials: 0
     materialName: 0
