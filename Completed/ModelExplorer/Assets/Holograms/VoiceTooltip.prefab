@@ -5,11 +5,11 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 22448996}
-  - 222: {fileID: 22254962}
-  - 114: {fileID: 11449952}
+  - component: {fileID: 22448996}
+  - component: {fileID: 22254962}
+  - component: {fileID: 11449952}
   m_Layer: 0
   m_Name: tooltip_bg
   m_TagString: Untagged
@@ -22,11 +22,11 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 22441646}
-  - 222: {fileID: 22205486}
-  - 114: {fileID: 11444448}
+  - component: {fileID: 22441646}
+  - component: {fileID: 22205486}
+  - component: {fileID: 11444448}
   m_Layer: 0
   m_Name: tooltip_txt
   m_TagString: Untagged
@@ -39,11 +39,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 495950}
-  - 114: {fileID: 11473878}
-  - 114: {fileID: 11428098}
+  - component: {fileID: 495950}
+  - component: {fileID: 114736458951750420}
+  - component: {fileID: 11428098}
   m_Layer: 1
   m_Name: VoiceTooltip
   m_TagString: Untagged
@@ -56,13 +56,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 22497192}
-  - 223: {fileID: 22330044}
-  - 114: {fileID: 11421030}
-  - 114: {fileID: 11472810}
-  - 222: {fileID: 22288440}
+  - component: {fileID: 22497192}
+  - component: {fileID: 22330044}
+  - component: {fileID: 11421030}
+  - component: {fileID: 11472810}
+  - component: {fileID: 22288440}
   m_Layer: 0
   m_Name: tooltip_canvas
   m_TagString: Untagged
@@ -83,6 +83,7 @@ Transform:
   - {fileID: 22497192}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11421030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,18 +193,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &11473878
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204c79f10449a0e4cb82484fdd5d8ae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PivotAxis: 2
 --- !u!222 &22205486
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -229,7 +218,7 @@ Canvas:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194500}
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
@@ -238,6 +227,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -253,6 +243,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22497192}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6.6, y: 5.2}
@@ -270,6 +261,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22497192}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1.4, y: 0}
@@ -289,6 +281,7 @@ RectTransform:
   - {fileID: 22448996}
   m_Father: {fileID: 495950}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -313,3 +306,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 174020}
   m_IsPrefabParent: 1
+--- !u!114 &114736458951750420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8d5b128a1d8204fb76c86f47b75912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivotAxis: 1
