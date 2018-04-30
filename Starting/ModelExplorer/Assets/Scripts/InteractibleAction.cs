@@ -1,34 +1,15 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
 using UnityEngine;
 
-/// <summary>
-/// InteractibleAction performs custom actions when you gaze at the holograms.
-/// </summary>
-public class InteractibleAction : MonoBehaviour
+namespace Academy
 {
-    [Tooltip("Drag the Tagalong prefab asset you want to display.")]
-    public GameObject ObjectToTagAlong;
-
-    void PerformTagAlong()
+    /// <summary>
+    /// InteractibleAction performs custom actions when you tap on the holograms.
+    /// </summary>
+    public abstract class InteractibleAction : MonoBehaviour
     {
-        if (ObjectToTagAlong == null)
-        {
-            return;
-        }
-
-        // Recommend having only one tagalong.
-        GameObject existingTagAlong = GameObject.FindGameObjectWithTag("TagAlong");
-        if (existingTagAlong != null)
-        {
-            return;
-        }
-
-        GameObject instantiatedObjectToTagAlong = GameObject.Instantiate(ObjectToTagAlong);
-
-        instantiatedObjectToTagAlong.SetActive(true);
-
-        instantiatedObjectToTagAlong.AddComponent<Billboard>();
-
-        instantiatedObjectToTagAlong.AddComponent<SimpleTagalong>();
-   }
+        public abstract void PerformAction();
+    }
 }

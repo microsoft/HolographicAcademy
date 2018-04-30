@@ -7,178 +7,158 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: expanded_ui_fg
-  m_Shader: {fileID: 4800000, guid: 6e34930bbea53654585432248eeeb464, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: d45c0efca53019e43891b0f610f8146e, type: 3}
+  m_ShaderKeywords: _ALPHABLEND_ON _BORDER_LIGHT_USES_HOVER_COLOR _SPECULAR_HIGHLIGHTS
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _BackgroundTex
-      second:
+    - _BackgroundTex:
         m_Texture: {fileID: 2800000, guid: b9d24a961e24a5d4aba36abdc88d47af, type: 3}
         m_Scale: {x: 1, y: 0.5}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _BumpMap
-      second:
+    - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DecalTex
-      second:
+    - _DecalTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 58bcba0ca60ea8a42b837bcad838f4ad, type: 3}
         m_Scale: {x: 1, y: 0.5}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ParallaxMap
-      second:
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txAlbedo
-      second:
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _txAlbedo:
         m_Texture: {fileID: 15200000, guid: 1e4526f98bf7603429c9d31e60e76ffd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txAlpha
-      second:
+    - _txAlpha:
         m_Texture: {fileID: 15200000, guid: 1e4526f98bf7603429c9d31e60e76ffd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txAmbient
-      second:
+    - _txAmbient:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txEmission
-      second:
+    - _txEmission:
         m_Texture: {fileID: 15200000, guid: 1e4526f98bf7603429c9d31e60e76ffd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txNormal
-      second:
+    - _txNormal:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txOcclusion
-      second:
+    - _txOcclusion:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txReflection
-      second:
+    - _txReflection:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _txSpecular
-      second:
+    - _txSpecular:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _BlendMode
-      second: 0
-    - first:
-        name: _Brightness
-      second: 1
-    - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _LuminanceBlendOpaqueAlphaPoint
-      second: 0.4
-    - first:
-        name: _Opacity
-      second: 1
-    - first:
-        name: _Parallax
-      second: 0.02
-    - first:
-        name: _Shininess
-      second: 0.078125
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 0
-    - first:
-        name: _StencilWriteMask
-      second: 0
-    - first:
-        name: _bEnableAlphaFresnel
-      second: 0
-    - first:
-        name: _bEnableFresnel
-      second: 0
-    - first:
-        name: _bEnableHalfLambert
-      second: 1
-    - first:
-        name: _fAlphaScale
-      second: 2
-    - first:
-        name: _fDiffuseIntensity
-      second: 5
-    - first:
-        name: _fFresnelExp
-      second: 1
-    - first:
-        name: _fFresnelMin
-      second: 1
-    - first:
-        name: _fHalfLambertExp
-      second: 1
-    - first:
-        name: _fSpecularPower
-      second: 1
+    - _AlbedoAlphaMode: 0
+    - _BlendMode: 0
+    - _BlendOp: 0
+    - _BorderLight: 0
+    - _BorderLightOpaque: 0
+    - _BorderLightUsesHoverColor: 1
+    - _BorderMinValue: 0.1
+    - _BorderWidth: 0.1
+    - _Brightness: 1
+    - _ClippingPlane: 0
+    - _ClippingPlaneBorder: 0
+    - _ClippingPlaneBorderWidth: 0.025
+    - _ColorMask: 15
+    - _ColorWriteMask: 15
+    - _CullMode: 2
+    - _CustomMode: 2
+    - _Cutoff: 0.5
+    - _DirectionalLight: 0
+    - _DstBlend: 1
+    - _EdgeSmoothingValue: 0.002
+    - _EnableEmission: 0
+    - _EnableHoverColorOpaqueOverride: 0
+    - _EnableHoverColorOverride: 0
+    - _EnableNormalMap: 0
+    - _EnvironmentColorIntensity: 0.5
+    - _EnvironmentColorThreshold: 1.5
+    - _EnvironmentColoring: 0
+    - _FadeBeginDistance: 0.85
+    - _FadeCompleteDistance: 0.5
+    - _HoverLight: 0
+    - _HoverLightOpaque: 0
+    - _InnerGlow: 0
+    - _LuminanceBlendOpaqueAlphaPoint: 0.4
+    - _Metallic: 0
+    - _Mode: 4
+    - _NearPlaneFade: 0
+    - _Opacity: 1
+    - _Parallax: 0.02
+    - _Reflections: 0
+    - _Refraction: 0
+    - _RefractiveIndex: 0
+    - _RenderQueueOverride: -1
+    - _RimLight: 0
+    - _RimPower: 0.25
+    - _RoundCornerMargin: 0
+    - _RoundCornerRadius: 0.25
+    - _RoundCorners: 0
+    - _Shininess: 0.078125
+    - _Smoothness: 0.5
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 0
+    - _StencilWriteMask: 0
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _bEnableAlphaFresnel: 0
+    - _bEnableFresnel: 0
+    - _bEnableHalfLambert: 1
+    - _fAlphaScale: 2
+    - _fDiffuseIntensity: 5
+    - _fFresnelExp: 1
+    - _fFresnelMin: 1
+    - _fHalfLambertExp: 1
+    - _fSpecularPower: 1
     m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _SpecColor
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - first:
-        name: _Tint
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _cAlbedo
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _cAmbient
-      second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _cEmission
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _cReflection
-      second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _cSpecular
-      second: {r: 0, g: 0, b: 0, a: 1}
+    - _ClipPlane: {r: 0, g: 1, b: 0, a: 0}
+    - _ClippingPlaneBorderColor: {r: 1, g: 0.2, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EnvironmentColorX: {r: 1, g: 0, b: 0, a: 1}
+    - _EnvironmentColorY: {r: 0, g: 1, b: 0, a: 1}
+    - _EnvironmentColorZ: {r: 0, g: 0, b: 1, a: 1}
+    - _HoverColorOpaqueOverride: {r: 1, g: 1, b: 1, a: 1}
+    - _HoverColorOverride: {r: 1, g: 1, b: 1, a: 1}
+    - _InnerGlowColor: {r: 1, g: 1, b: 1, a: 0.75}
+    - _RimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _cAlbedo: {r: 1, g: 1, b: 1, a: 1}
+    - _cAmbient: {r: 0, g: 0, b: 0, a: 1}
+    - _cEmission: {r: 1, g: 1, b: 1, a: 1}
+    - _cReflection: {r: 0, g: 0, b: 0, a: 1}
+    - _cSpecular: {r: 0, g: 0, b: 0, a: 1}
