@@ -7,344 +7,222 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: torus_mtl
-  m_Shader: {fileID: 4800000, guid: 11eafa1bdf8dea24d9e13d6b9231ec79, type: 3}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION _USEMAINTEX_ON
+  m_Shader: {fileID: 4800000, guid: d45c0efca53019e43891b0f610f8146e, type: 3}
+  m_ShaderKeywords: _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON _BORDER_LIGHT_USES_HOVER_COLOR
+    _DIRECTIONAL_LIGHT _DISABLE_ALBEDO_MAP _EMISSION _HOVER_LIGHT _SPECULAR_HIGHLIGHTS
+    _USEMAINTEX_ON
   m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _BumpMap
-      second:
+    - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DetailAlbedoMap
-      second:
+    - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 2, y: 2}
         m_Offset: {x: 4.5, y: 0}
-    - first:
-        name: _DetailMask
-      second:
+    - _DetailMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DetailNormalMap
-      second:
+    - _DetailNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DetailTex
-      second:
+    - _DetailTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _EmissionMap
-      second:
+    - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 3, y: 3}
         m_Offset: {x: -0.13929415, y: 0.13929415}
-    - first:
-        name: _EmissionTex
-      second:
+    - _EmissionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Illum
-      second:
+    - _Illum:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainBump
-      second:
+    - _MainBump:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: -0.13929415, y: 0.13929415}
-    - first:
-        name: _MainTex1
-      second:
+    - _MainTex1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Mask
-      second:
+    - _Mask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MetallicGlossMap
-      second:
+    - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _NoiseTex
-      second:
+    - _NoiseTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _OcclusionMap
-      second:
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ParallaxMap
-      second:
+    - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SpecGlossMap
-      second:
+    - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _SphereMap
-      second:
+    - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Texture02
-      second:
+    - _SphereMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Texture03
-      second:
+    - _Texture02:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Texture04
-      second:
+    - _Texture03:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture04:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    - first:
-        name: _BackFaceCullingMode
-      second: 1
-    - first:
-        name: _BlendTex01
-      second: 1
-    - first:
-        name: _BlendTex02
-      second: 1
-    - first:
-        name: _BlendTex03
-      second: 0
-    - first:
-        name: _Brightness
-      second: 6
-    - first:
-        name: _BumpScale
-      second: 3
-    - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _ColorWriteMask
-      second: 15
-    - first:
-        name: _Cull
-      second: 2
-    - first:
-        name: _Cutoff
-      second: 0.5
-    - first:
-        name: _DetailNormalMapScale
-      second: 1
-    - first:
-        name: _Dist
-      second: 1
-    - first:
-        name: _DstBlend
-      second: 10
-    - first:
-        name: _EmissionLM
-      second: 0
-    - first:
-        name: _FadeBack
-      second: 30
-    - first:
-        name: _FadeVert
-      second: 30
-    - first:
-        name: _FadeVertPower
-      second: 2
-    - first:
-        name: _Focus
-      second: -100
-    - first:
-        name: _Fresnelness
-      second: 1
-    - first:
-        name: _Gloss
-      second: 0.909
-    - first:
-        name: _GlossMapScale
-      second: 1
-    - first:
-        name: _Glossiness
-      second: 0
-    - first:
-        name: _GlossyReflections
-      second: 1
-    - first:
-        name: _Highlight
-      second: 0
-    - first:
-        name: _Metallic
-      second: 0
-    - first:
-        name: _Mode
-      second: 3
-    - first:
-        name: _OcclusionStrength
-      second: 1
-    - first:
-        name: _Opacity
-      second: 1
-    - first:
-        name: _Parallax
-      second: 0.02
-    - first:
-        name: _PixelsPerWorldUnit
-      second: 72
-    - first:
-        name: _Shininess
-      second: 0.01
-    - first:
-        name: _SmoothnessTextureChannel
-      second: 0
-    - first:
-        name: _Softening
-      second: 1
-    - first:
-        name: _SpecularHighlights
-      second: 1
-    - first:
-        name: _SrcBlend
-      second: 1
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _Strength
-      second: 0.2
-    - first:
-        name: _UVSec
-      second: 0
-    - first:
-        name: _UseBumpMap
-      second: 0
-    - first:
-        name: _UseColor
-      second: 0
-    - first:
-        name: _UseEmissionTex
-      second: 0
-    - first:
-        name: _UseMainTex
-      second: 1
-    - first:
-        name: _WireThickness
-      second: 100
-    - first:
-        name: _ZTest
-      second: 4
-    - first:
-        name: _ZWrite
-      second: 0
+    - PixelSnap: 0
+    - _AlbedoAlphaMode: 0
+    - _BackFaceCullingMode: 1
+    - _BlendOp: 0
+    - _BlendTex01: 1
+    - _BlendTex02: 1
+    - _BlendTex03: 0
+    - _BorderLight: 0
+    - _BorderLightOpaque: 0
+    - _BorderLightUsesHoverColor: 1
+    - _BorderMinValue: 0.1
+    - _BorderWidth: 0.1
+    - _Brightness: 6
+    - _BumpScale: 3
+    - _ClippingPlane: 0
+    - _ClippingPlaneBorder: 0
+    - _ClippingPlaneBorderWidth: 0.025
+    - _ColorMask: 15
+    - _ColorWriteMask: 15
+    - _Cull: 2
+    - _CullMode: 2
+    - _CustomMode: 2
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DirectionalLight: 1
+    - _Dist: 1
+    - _DstBlend: 10
+    - _EdgeSmoothingValue: 0.002
+    - _EmissionLM: 0
+    - _EnableEmission: 1
+    - _EnableHoverColorOpaqueOverride: 0
+    - _EnableHoverColorOverride: 0
+    - _EnableNormalMap: 0
+    - _EnvironmentColorIntensity: 0.5
+    - _EnvironmentColorThreshold: 1.5
+    - _EnvironmentColoring: 0
+    - _FadeBack: 30
+    - _FadeBeginDistance: 0.85
+    - _FadeCompleteDistance: 0.5
+    - _FadeVert: 30
+    - _FadeVertPower: 2
+    - _Focus: -100
+    - _Fresnelness: 1
+    - _Gloss: 0.909
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _Highlight: 0
+    - _HoverLight: 1
+    - _HoverLightOpaque: 0
+    - _InnerGlow: 0
+    - _Metallic: 0
+    - _Mode: 3
+    - _NearPlaneFade: 0
+    - _OcclusionStrength: 1
+    - _Opacity: 1
+    - _Parallax: 0.02
+    - _PixelsPerWorldUnit: 72
+    - _Reflections: 0
+    - _Refraction: 0
+    - _RefractiveIndex: 0
+    - _RenderQueueOverride: -1
+    - _RimLight: 0
+    - _RimPower: 0.25
+    - _RoundCornerMargin: 0
+    - _RoundCornerRadius: 0.25
+    - _RoundCorners: 0
+    - _Shininess: 0.01
+    - _Smoothness: 0
+    - _SmoothnessTextureChannel: 0
+    - _Softening: 1
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Strength: 0.2
+    - _UVSec: 0
+    - _UseBumpMap: 0
+    - _UseColor: 0
+    - _UseEmissionTex: 0
+    - _UseMainTex: 1
+    - _WireThickness: 100
+    - _ZTest: 4
+    - _ZWrite: 0
     m_Colors:
-    - first:
-        name: _BaseColor
-      second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _Color
-      second: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
-    - first:
-        name: _Color1
-      second: {r: 0, g: 0, b: 1, a: 1}
-    - first:
-        name: _Color2
-      second: {r: 1, g: 0, b: 0, a: 1}
-    - first:
-        name: _EmissionColor
-      second: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
-    - first:
-        name: _HighlightColor
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _IridDirectCol
-      second: {r: 0, g: 1, b: 1, a: 1}
-    - first:
-        name: _IridGlancingCol
-      second: {r: 0.4, g: 0.5, b: 0.4, a: 1}
-    - first:
-        name: _QuadScale
-      second: {r: 1, g: 1, b: 0, a: 0}
-    - first:
-        name: _SpecColor
-      second: {r: 0.3602941, g: 0.3602941, b: 0.3602941, a: 1}
-    - first:
-        name: _Specular
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _TextureDim
-      second: {r: 1, g: 1, b: 0, a: 0}
-    - first:
-        name: _Tint
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _TintColor
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-    - first:
-        name: _WireColor
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _fillColor
-      second: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
-    - first:
-        name: _fillShadingColor
-      second: {r: 0.28582504, g: 0.1583045, b: 0.35294116, a: 1}
-    - first:
-        name: _outlineColor
-      second: {r: 0.9852941, g: 0.9852941, b: 0.9852941, a: 1}
+    - _BaseColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ClipPlane: {r: 0, g: 1, b: 0, a: 0}
+    - _ClippingPlaneBorderColor: {r: 1, g: 0.2, b: 0, a: 1}
+    - _Color: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
+    - _Color1: {r: 0, g: 0, b: 1, a: 1}
+    - _Color2: {r: 1, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
+    - _EmissiveColor: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
+    - _EnvironmentColorX: {r: 1, g: 0, b: 0, a: 1}
+    - _EnvironmentColorY: {r: 0, g: 1, b: 0, a: 1}
+    - _EnvironmentColorZ: {r: 0, g: 0, b: 1, a: 1}
+    - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HoverColorOpaqueOverride: {r: 1, g: 1, b: 1, a: 1}
+    - _HoverColorOverride: {r: 1, g: 1, b: 1, a: 1}
+    - _InnerGlowColor: {r: 1, g: 1, b: 1, a: 0.75}
+    - _IridDirectCol: {r: 0, g: 1, b: 1, a: 1}
+    - _IridGlancingCol: {r: 0.4, g: 0.5, b: 0.4, a: 1}
+    - _QuadScale: {r: 1, g: 1, b: 0, a: 0}
+    - _RimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpecColor: {r: 0.3602941, g: 0.3602941, b: 0.3602941, a: 1}
+    - _Specular: {r: 0, g: 0, b: 0, a: 0}
+    - _TextureDim: {r: 1, g: 1, b: 0, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _WireColor: {r: 1, g: 1, b: 1, a: 1}
+    - _fillColor: {r: 0.3254902, g: 0.3764706, b: 0.92941177, a: 1}
+    - _fillShadingColor: {r: 0.28582504, g: 0.1583045, b: 0.35294116, a: 1}
+    - _outlineColor: {r: 0.9852941, g: 0.9852941, b: 0.9852941, a: 1}
