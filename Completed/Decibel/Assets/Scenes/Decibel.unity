@@ -157,6 +157,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114742747811649402, guid: 3eddd1c29199313478dd3f912bfab2ab,
+        type: 2}
+      propertyPath: Cursor
+      value: 
+      objectReference: {fileID: 1578020204}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3eddd1c29199313478dd3f912bfab2ab, type: 2}
   m_IsPrefabParent: 0
@@ -198,6 +203,11 @@ Prefab:
     - target: {fileID: 4543495872665798, guid: f46f9eddea7bd4d4e813283cdc60cb96, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20398397884145480, guid: f46f9eddea7bd4d4e813283cdc60cb96,
+        type: 2}
+      propertyPath: m_ClearFlags
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f46f9eddea7bd4d4e813283cdc60cb96, type: 2}
@@ -321,8 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9fbaad78bdb3243bc2de3a08ab8bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CutoffFrequency: 1500
-  VolumePassThrough: 0.9
+  cutoffFrequency: 1500
+  volumePassThrough: 0.9
 --- !u!1 &550191356 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013604407786, guid: 8b208d375c6fda543b309f99efaf76aa,
@@ -344,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2a32f9ebc013148a3bb80b5c03d479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpdateInterval: 0.25
-  MaxDistance: 20
+  updateInterval: 0.25
+  maxDistance: 20
   MaxObjects: 10
 --- !u!1001 &646970651
 Prefab:
@@ -401,6 +411,10 @@ Prefab:
       propertyPath: ObjectsToHide.Array.data[2]
       value: 
       objectReference: {fileID: 1960992064}
+    - target: {fileID: 1000012806757510, guid: 0b771757763cbd447baad406e560914d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b771757763cbd447baad406e560914d, type: 2}
   m_IsPrefabParent: 0
@@ -437,7 +451,7 @@ MonoBehaviour:
     Tap1Volume: 0.8
     Tap2Volume: 0.8
     Tap3Volume: 0.8
-    OriginalSoundVolume: 1
+    OriginalSoundVolume: 0.5
   UseEcho: 1
   EchoParameters:
     Delay: 300
@@ -525,39 +539,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1 &952684335 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 171268, guid: 286fb40bc02be9944850ac0c01150a16, type: 2}
-  m_PrefabInternal: {fileID: 2073913838}
---- !u!114 &952684336
+--- !u!114 &646970656 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 952684335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbad991a9894486418e4988222483ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlacementMaterial: {fileID: 2100000, guid: d698790d3facd3d4289a13fa1243030a, type: 2}
-  placementSound: {fileID: 8300000, guid: 4fd17422f2e217f4b83fc36f9b0b99aa, type: 3}
-  pickupSound: {fileID: 8300000, guid: e17a3369e4ab7e64390680ac10ccee09, type: 3}
---- !u!114 &952684337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 952684335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae1759d0c987f0446a0e4d25bd3f845c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NavigationStartedClip: {fileID: 8300000, guid: dbc4e792c6410bc4e8a4c92e15c28792,
-    type: 3}
-  NavigationUpdatedClip: {fileID: 8300000, guid: dbc4e792c6410bc4e8a4c92e15c28792,
-    type: 3}
+  m_PrefabParentObject: {fileID: 114000011967102272, guid: 0b771757763cbd447baad406e560914d,
+    type: 2}
+  m_PrefabInternal: {fileID: 646970651}
+  m_Script: {fileID: 11500000, guid: 457c92b59cee1b84b83007382eb85cf5, type: 3}
 --- !u!1001 &1142456846
 Prefab:
   m_ObjectHideFlags: 0
@@ -761,11 +748,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 82846982791360234, guid: 8b208d375c6fda543b309f99efaf76aa,
         type: 2}
-      propertyPath: Spatialize
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82846982791360234, guid: 8b208d375c6fda543b309f99efaf76aa,
-        type: 2}
       propertyPath: DopplerLevel
       value: 0
       objectReference: {fileID: 0}
@@ -788,6 +770,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b208d375c6fda543b309f99efaf76aa, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1480791052 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010154745404, guid: 8b208d375c6fda543b309f99efaf76aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1480791051}
+  m_Script: {fileID: 11500000, guid: 034d3407b63340846aa757198376eb4f, type: 3}
+--- !u!114 &1578020204 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013851064060, guid: b2db04283121ca74495c2ee000fb4243,
+    type: 2}
+  m_PrefabInternal: {fileID: 1142456846}
+  m_Script: {fileID: 11500000, guid: afa1ae235bc6cfa43addd1435e2fd822, type: 3}
 --- !u!1 &1666535173
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +791,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1666535174}
   - component: {fileID: 1666535176}
-  - component: {fileID: 1666535179}
+  - component: {fileID: 1666535175}
+  - component: {fileID: 1666535177}
+  - component: {fileID: 1666535178}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -818,6 +814,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666535175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666535173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62fd7a55ba7458499b69cae18f83806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PersistentKeywords: 0
+  RecognizerStart: 0
+  Keywords:
+  - Keyword: Go Hide
+    KeyCode: 104
+  - Keyword: Go Charge
+    KeyCode: 103
+  - Keyword: Come Here
+    KeyCode: 99
+  - Keyword: Show Underworld
+    KeyCode: 117
+  - Keyword: Hide Underworld
+    KeyCode: 105
+  recognitionConfidenceLevel: 1
 --- !u!114 &1666535176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,7 +854,106 @@ MonoBehaviour:
   Poly: {fileID: 550191356}
   HideDistance: 1.5
   MaxRaycastDistance: 20
---- !u!114 &1666535179
+--- !u!114 &1666535177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666535173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d6513c2cdf97f409654a2a4114d9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Keywords:
+  - Keyword: Go Hide
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1480791052}
+          m_MethodName: GoHide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Keyword: Go Charge
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1480791052}
+          m_MethodName: GoCharge
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Keyword: Come Here
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1480791052}
+          m_MethodName: ComeBack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Keyword: Show Underworld
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 646970656}
+          m_MethodName: OnEnable
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Keyword: Hide Underworld
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 646970656}
+          m_MethodName: OnDisable
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  IsGlobalListener: 1
+  PersistentKeywords: 0
+--- !u!114 &1666535178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -902,8 +1022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9fbaad78bdb3243bc2de3a08ab8bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CutoffFrequency: 750
-  VolumePassThrough: 0.75
+  cutoffFrequency: 750
+  volumePassThrough: 0.75
 --- !u!1 &1960992064 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013091593620, guid: abc1442470348a04b845ecb9a708bbbe,
@@ -951,3 +1071,36 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 286fb40bc02be9944850ac0c01150a16, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2073913839 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 171268, guid: 286fb40bc02be9944850ac0c01150a16, type: 2}
+  m_PrefabInternal: {fileID: 2073913838}
+--- !u!114 &2073913840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073913839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1759d0c987f0446a0e4d25bd3f845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NavigationStartedClip: {fileID: 8300000, guid: dbc4e792c6410bc4e8a4c92e15c28792,
+    type: 3}
+  NavigationUpdatedClip: {fileID: 8300000, guid: dbc4e792c6410bc4e8a4c92e15c28792,
+    type: 3}
+--- !u!114 &2073913841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073913839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbad991a9894486418e4988222483ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlacementMaterial: {fileID: 2100000, guid: d698790d3facd3d4289a13fa1243030a, type: 2}
+  placementSound: {fileID: 8300000, guid: 4fd17422f2e217f4b83fc36f9b0b99aa, type: 3}
+  pickupSound: {fileID: 8300000, guid: e17a3369e4ab7e64390680ac10ccee09, type: 3}
