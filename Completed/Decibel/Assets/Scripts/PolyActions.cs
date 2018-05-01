@@ -1,5 +1,4 @@
-﻿using Academy.HoloToolkit.Unity;
-using System.Collections;
+﻿using HoloToolkit.Unity;
 using UnityEngine;
 
 [RequireComponent(typeof(Interpolator))]

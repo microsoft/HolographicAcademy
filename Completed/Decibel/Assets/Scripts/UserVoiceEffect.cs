@@ -1,4 +1,4 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity.InputModule;
 using System;
 using UnityEngine;
 

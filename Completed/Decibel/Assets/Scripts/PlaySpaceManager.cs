@@ -1,4 +1,5 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
+using HoloToolkit.Unity.SpatialMapping;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -67,7 +68,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
                 // The user should be done scanning their environment,
                 // so start processing the spatial mapping data...
 
-                if(SpatialMappingManager.Instance.IsObserverRunning())
+                if (SpatialMappingManager.Instance.IsObserverRunning())
                 {
                     // Stop the observer.
                     SpatialMappingManager.Instance.StopObserver();
@@ -152,8 +153,10 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
     /// <summary>
     /// Called when the GameObject is unloaded.
     /// </summary>
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
+
         if (SurfaceMeshesToPlanes.Instance != null)
         {
             SurfaceMeshesToPlanes.Instance.MakePlanesComplete -= SurfaceMeshesToPlanes_MakePlanesComplete;

@@ -1,16 +1,16 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
-public class PolyChargerRotation : MonoBehaviour
+public class PolyChargerRotation : MonoBehaviour, INavigationHandler
 {
     [Tooltip("How rapidly should the charger rotate.")]
     [Range(2.0f, 100.0f)]
     public float RotationSensitivity = 10.0f;
 
-    private void PerformRotation()
+    private void PerformRotation(float rotationAmount)
     {
         // This will help control the amount of rotation.
-        float rotationFactor = GestureManager.Instance.NavigationPosition.x * RotationSensitivity;
+        float rotationFactor = rotationAmount * RotationSensitivity;
 
         // Rotate along the Y axis using rotationFactor.
         transform.parent.Rotate(new Vector3(0, -1 * rotationFactor, 0));
@@ -19,16 +19,26 @@ public class PolyChargerRotation : MonoBehaviour
     /// <summary>
     /// Handles navigation start messages.
     /// </summary>
-    public void OnNavigationStarted()
+    void INavigationHandler.OnNavigationStarted(NavigationEventData eventData)
     {
-        PerformRotation();
+        PerformRotation(eventData.NormalizedOffset.x);
     }
 
     /// <summary>
     /// Handles navigation update messages.
     /// </summary>
-    public void OnNavigationUpdated()
+    void INavigationHandler.OnNavigationUpdated(NavigationEventData eventData)
     {
-        PerformRotation();
+        PerformRotation(eventData.NormalizedOffset.x);
+    }
+
+    void INavigationHandler.OnNavigationCompleted(NavigationEventData eventData)
+    {
+        // Do nothing
+    }
+
+    void INavigationHandler.OnNavigationCanceled(NavigationEventData eventData)
+    {
+        // Do nothing
     }
 }

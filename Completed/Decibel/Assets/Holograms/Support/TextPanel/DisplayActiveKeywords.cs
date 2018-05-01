@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
-using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity.InputModule;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 /// <summary>
 /// Shows the list of available voice commands on the KeywordManager.cs script.
@@ -15,19 +15,19 @@ public class DisplayActiveKeywords : MonoBehaviour
     string originalText = string.Empty;
     StringBuilder sb = new StringBuilder();
 
-    KeywordManager[] keywordManagers;
+    SpeechInputHandler[] speechInputHandlers;
     Dictionary<string, UnityEvent> responsesLookup;
 
     void Start()
     {
-        textComponent = this.gameObject.GetComponent<Text>();
+        textComponent = gameObject.GetComponent<Text>();
         originalText = textComponent.text;
 
         // Find the KeywordManager scripts.
-        keywordManagers = FindObjectsOfType<KeywordManager>();
-        if (keywordManagers == null)
+        speechInputHandlers = FindObjectsOfType<SpeechInputHandler>();
+        if (speechInputHandlers == null)
         {
-            Debug.LogError("Could not find KeywordManager.cs anywhere.");
+            Debug.LogError("Could not find SpeechInputHandler.cs anywhere.");
             return;
         }
 
@@ -36,18 +36,18 @@ public class DisplayActiveKeywords : MonoBehaviour
         sb.AppendLine(originalText);
 
         // Ensure we display active commands on all keyword managers.
-        foreach (KeywordManager keywordManager in keywordManagers)
+        foreach (SpeechInputHandler speechInputHandler in speechInputHandlers)
         {
-            AddActiveKeywords(keywordManager);
+            AddActiveKeywords(speechInputHandler);
         }
 
         textComponent.text = sb.ToString();
     }
 
-    private void AddActiveKeywords(KeywordManager keywordManager)
+    private void AddActiveKeywords(SpeechInputHandler speechInputHandler)
     {
         // Convert the struct array into a dictionary, with the keywords as the keys and the methods as the values.
-        responsesLookup = keywordManager.KeywordsAndResponses.ToDictionary(
+        responsesLookup = speechInputHandler.Keywords.ToDictionary(
             keywordAndResponse => keywordAndResponse.Keyword,
             keywordAndResponse => keywordAndResponse.Response);
 

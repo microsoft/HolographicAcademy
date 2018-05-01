@@ -1,4 +1,4 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
 using UnityEngine;
 
 public class PolyStateManager : Singleton<PolyStateManager>
@@ -48,10 +48,9 @@ public class PolyStateManager : Singleton<PolyStateManager>
     /// <summary>
     /// P0ly's current state (charging, etc).
     /// </summary>
-    public PolyStates State 
-    { get; private set; }
+    public PolyStates State { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
         GoIdle();
     }
@@ -113,7 +112,7 @@ public class PolyStateManager : Singleton<PolyStateManager>
             case PolyStates.Hiding:
                 GoHide();
                 break;
-            
+
             case PolyStates.Returning:
                 ReturnToUser();
                 break;

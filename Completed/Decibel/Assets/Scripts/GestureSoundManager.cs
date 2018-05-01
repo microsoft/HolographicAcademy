@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Academy.HoloToolkit.Unity
+namespace HoloToolkit.Unity
 {
     public class GestureSoundManager : Singleton<GestureSoundManager>
     {

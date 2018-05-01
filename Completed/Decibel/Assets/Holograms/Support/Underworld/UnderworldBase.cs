@@ -1,4 +1,6 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
+using HoloToolkit.Unity.SpatialMapping;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +16,7 @@ public class UnderworldBase : Singleton<UnderworldBase>
             // Exclude the NavPath layer (used for UnderDrone navigation) from GazeManager raycasts.
             var navLayer = LayerMask.NameToLayer("NavPath");
             var ignoreNavLayerMask = ~(1 << navLayer);
-            GazeManager.Instance.RaycastLayerMask = GazeManager.Instance.RaycastLayerMask & ignoreNavLayerMask;
+            GazeManager.Instance.RaycastLayerMasks = new LayerMask[] { Physics.DefaultRaycastLayers & ignoreNavLayerMask };
         }
     }
 
@@ -38,9 +40,9 @@ public class UnderworldBase : Singleton<UnderworldBase>
     {
         ResetUnderworld();
     }
-    
+
     /// <summary>
-    /// Places the underworld at the user's gaze and makles it visible.
+    /// Places the underworld at the user's gaze and makes it visible.
     /// </summary>
     private void PlaceUnderworld()
     {
