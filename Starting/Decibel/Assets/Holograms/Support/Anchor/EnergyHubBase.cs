@@ -1,96 +1,111 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using Academy.HoloToolkit.Unity;
+using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 using UnityEngine.XR.WSA;
 
-[RequireComponent(typeof(AudioSource))]
-public class EnergyHubBase : Singleton<EnergyHubBase>
+namespace Academy
 {
-    public AudioClip AnchorLanding;
-    public Material PlacingMaterial;
-    public Material PlacedMaterial;
-
-    void Start()
+    [RequireComponent(typeof(AudioSource))]
+    public class EnergyHubBase : Singleton<EnergyHubBase>, IInputClickHandler
     {
-        OnSelect();
-    }
+        public AudioClip AnchorLanding;
+        public Material PlacingMaterial;
+        public Material PlacedMaterial;
 
-    void Update()
-    {
-        if (IsTargetVisible())
+        private AudioSource audioSource;
+        private Renderer blobOutsideRenderer;
+        private Animator animator;
+
+        private void Start()
         {
-            HolographicSettings.SetFocusPointForFrame(gameObject.transform.position, -Camera.main.transform.forward);
+            audioSource = GetComponent<AudioSource>();
+            blobOutsideRenderer = transform.Find("BlobOutside").gameObject.GetComponent<Renderer>();
+            animator = GetComponent<Animator>();
+
+            OnSelect();
         }
-    }
 
-    private bool IsTargetVisible()
-    {
-        // This will return true if the target's mesh is within the Main Camera's view frustums.
-        Vector3 targetViewportPosition = Camera.main.WorldToViewportPoint(gameObject.transform.position);
-        return (targetViewportPosition.x > 0.0 && targetViewportPosition.x < 1 &&
-            targetViewportPosition.y > 0.0 && targetViewportPosition.y < 1 &&
-            targetViewportPosition.z > 0);
-    }
-
-    void OnSelect()
-    {
-        ResetAnimation();
-        foreach (Transform child in this.transform)
+        private void Update()
         {
-            MaterialSwap(child, PlacingMaterial, PlacedMaterial);
-            foreach (Transform childnested in child.transform)
+            if (IsTargetVisible())
             {
-                MaterialSwap(childnested, PlacingMaterial, PlacedMaterial);
-            }
-        }
-        this.transform.Find("BlobOutside").gameObject.GetComponent<Renderer>().enabled = true;
-        Animator animator = GetComponent<Animator>();
-        animator.speed = 1;
-
-        GetComponent<AudioSource>().clip = AnchorLanding;
-        GetComponent<AudioSource>().loop = false;
-        GetComponent<AudioSource>().Play();
-    }
-
-    public void ResetAnimation()
-    {
-        Animator animator = GetComponent<Animator>();
-
-        animator.Rebind();
-        animator.speed = 0;
-
-        // Setup Placing Object
-        foreach (Transform child in this.transform)
-        {
-            MaterialSwap(child, PlacedMaterial, PlacingMaterial);
-            foreach (Transform childnested in child.transform)
-            {
-                MaterialSwap(childnested, PlacedMaterial, PlacingMaterial);
+                HolographicSettings.SetFocusPointForFrame(gameObject.transform.position, -Camera.main.transform.forward);
             }
         }
 
-        this.transform.Find("BlobOutside").gameObject.GetComponent<Renderer>().enabled = false;
-
-        GetComponent<AudioSource>().Stop();
-    }
-
-    void LightShieldsOpen()
-    {
-    }
-
-    void LandingDone()
-    {
-    }
-
-    void MaterialSwap(Transform mesh, Material currentMaterial, Material newMaterial)
-    {
-        if (mesh.GetComponent<Renderer>() == true)
+        private bool IsTargetVisible()
         {
-            if (mesh.gameObject.GetComponent<Renderer>().sharedMaterial == currentMaterial)
+            // This will return true if the target's mesh is within the Main Camera's view frustums.
+            Vector3 targetViewportPosition = Camera.main.WorldToViewportPoint(gameObject.transform.position);
+            return (targetViewportPosition.x > 0.0 && targetViewportPosition.x < 1 &&
+                targetViewportPosition.y > 0.0 && targetViewportPosition.y < 1 &&
+                targetViewportPosition.z > 0);
+        }
+
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            OnSelect();
+        }
+
+        public void OnSelect()
+        {
+            ResetAnimation();
+            foreach (Transform child in transform)
             {
-                mesh.gameObject.GetComponent<Renderer>().material = newMaterial;
+                MaterialSwap(child, PlacingMaterial, PlacedMaterial);
+                foreach (Transform childnested in child.transform)
+                {
+                    MaterialSwap(childnested, PlacingMaterial, PlacedMaterial);
+                }
+            }
+            blobOutsideRenderer.enabled = true;
+            animator.speed = 1;
+
+            audioSource.clip = AnchorLanding;
+            audioSource.loop = false;
+            audioSource.Play();
+        }
+
+        public void ResetAnimation()
+        {
+            animator.Rebind();
+            animator.speed = 0;
+
+            // Setup Placing Object
+            foreach (Transform child in transform)
+            {
+                MaterialSwap(child, PlacedMaterial, PlacingMaterial);
+                foreach (Transform childnested in child.transform)
+                {
+                    MaterialSwap(childnested, PlacedMaterial, PlacingMaterial);
+                }
+            }
+
+            blobOutsideRenderer.enabled = false;
+
+            audioSource.Stop();
+        }
+
+        void LightShieldsOpen()
+        {
+        }
+
+        void LandingDone()
+        {
+        }
+
+        void MaterialSwap(Transform mesh, Material currentMaterial, Material newMaterial)
+        {
+            Renderer meshRenderer = mesh.GetComponent<Renderer>();
+            if (meshRenderer != null)
+            {
+                if (meshRenderer.sharedMaterial == currentMaterial)
+                {
+                    meshRenderer.material = newMaterial;
+                }
             }
         }
     }

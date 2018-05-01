@@ -1,4 +1,6 @@
-﻿Shader "Holographic/PlacingWireFrame"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Holographic/PlacingWireFrame"
 {
     Properties
     {

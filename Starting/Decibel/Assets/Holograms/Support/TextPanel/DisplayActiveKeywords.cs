@@ -1,63 +1,69 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
-using Academy.HoloToolkit.Unity;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using HoloToolkit.Unity.InputModule;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
-/// <summary>
-/// Shows the list of available voice commands on the KeywordManager.cs script.
-/// </summary>
-public class DisplayActiveKeywords : MonoBehaviour
+namespace Academy
 {
-    Text textComponent;
-    string originalText = string.Empty;
-    StringBuilder sb = new StringBuilder();
-
-    KeywordManager[] keywordManagers;
-    Dictionary<string, UnityEvent> responsesLookup;
-
-    void Start()
+    /// <summary>
+    /// Shows the list of available voice commands on the KeywordManager.cs script.
+    /// </summary>
+    public class DisplayActiveKeywords : MonoBehaviour
     {
-        textComponent = this.gameObject.GetComponent<Text>();
-        originalText = textComponent.text;
+        Text textComponent;
+        string originalText = string.Empty;
+        StringBuilder sb = new StringBuilder();
 
-        // Find the KeywordManager scripts.
-        keywordManagers = FindObjectsOfType<KeywordManager>();
-        if (keywordManagers == null)
+        SpeechInputHandler[] speechInputHandlers;
+        Dictionary<string, UnityEvent> responsesLookup;
+
+        void Start()
         {
-            Debug.LogError("Could not find KeywordManager.cs anywhere.");
-            return;
-        }
+            textComponent = gameObject.GetComponent<Text>();
+            originalText = textComponent.text;
 
-        // Reset the text panel.
-        sb.Length = 0;
-        sb.AppendLine(originalText);
-
-        // Ensure we display active commands on all keyword managers.
-        foreach (KeywordManager keywordManager in keywordManagers)
-        {
-            AddActiveKeywords(keywordManager);
-        }
-
-        textComponent.text = sb.ToString();
-    }
-
-    private void AddActiveKeywords(KeywordManager keywordManager)
-    {
-        // Convert the struct array into a dictionary, with the keywords as the keys and the methods as the values.
-        responsesLookup = keywordManager.KeywordsAndResponses.ToDictionary(
-            keywordAndResponse => keywordAndResponse.Keyword,
-            keywordAndResponse => keywordAndResponse.Response);
-
-        // Find which keywords have wired up responses in the editor and display only those.
-        foreach (string keyword in responsesLookup.Keys)
-        {
-            if (responsesLookup[keyword].GetPersistentEventCount() != 0)
+            // Find the KeywordManager scripts.
+            speechInputHandlers = FindObjectsOfType<SpeechInputHandler>();
+            if (speechInputHandlers == null)
             {
-                sb.AppendLine(keyword);
+                Debug.LogError("Could not find SpeechInputHandler.cs anywhere.");
+                return;
             }
-        }        
+
+            // Reset the text panel.
+            sb.Length = 0;
+            sb.AppendLine(originalText);
+
+            // Ensure we display active commands on all keyword managers.
+            foreach (SpeechInputHandler speechInputHandler in speechInputHandlers)
+            {
+                AddActiveKeywords(speechInputHandler);
+            }
+
+            textComponent.text = sb.ToString();
+        }
+
+        private void AddActiveKeywords(SpeechInputHandler speechInputHandler)
+        {
+            // Convert the struct array into a dictionary, with the keywords as the keys and the methods as the values.
+            responsesLookup = speechInputHandler.Keywords.ToDictionary(
+                keywordAndResponse => keywordAndResponse.Keyword,
+                keywordAndResponse => keywordAndResponse.Response);
+
+            // Find which keywords have wired up responses in the editor and display only those.
+            foreach (string keyword in responsesLookup.Keys)
+            {
+                if (responsesLookup[keyword].GetPersistentEventCount() != 0)
+                {
+                    sb.AppendLine(keyword);
+                }
+            }
+        }
     }
 }
