@@ -1,25 +1,30 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
 
-public class ShrinkAway : MonoBehaviour
+using UnityEngine;
+
+namespace Academy
 {
-    Renderer[] renderers;
-
-    void Start()
+    public class ShrinkAway : MonoBehaviour
     {
-        renderers = GetComponentsInChildren<Renderer>();
-    }
+        Renderer[] renderers;
 
-    void Update()
-    {
-        transform.localScale = transform.localScale - Vector3.one * 0.01f;
-        if (transform.localScale.magnitude < 0.1f)
+        void Start()
         {
-            for (int index = 0; index < renderers.Length; index++)
+            renderers = GetComponentsInChildren<Renderer>();
+        }
+
+        void Update()
+        {
+            transform.localScale = transform.localScale - Vector3.one * 0.01f;
+            if (transform.localScale.magnitude < 0.1f)
             {
-                renderers[index].enabled = false;
+                for (int index = 0; index < renderers.Length; index++)
+                {
+                    renderers[index].enabled = false;
+                }
+                Destroy(this);
             }
-            Destroy(this);
         }
     }
 }
