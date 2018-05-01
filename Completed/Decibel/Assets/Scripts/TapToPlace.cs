@@ -17,7 +17,7 @@ namespace Academy
     /// and SpatialMappingManager.
     /// </summary>
 
-    public partial class TapToPlace : MonoBehaviour
+    public partial class TapToPlace : MonoBehaviour, IInputClickHandler
     {
         [Tooltip("Material applied to the spatial map, while placing an object.")]
         public Material PlacementMaterial;
@@ -34,7 +34,7 @@ namespace Academy
         // Multiplier to offset Y value when placing object on surface.
         float offsetValue = 0.1f;
 
-        void Start()
+        private void Start()
         {
             if (gameObject.GetComponent<Collider>() == null)
             {
@@ -66,8 +66,44 @@ namespace Academy
 
         }
 
-        // Called by GazeGestureManager when the user performs a tap gesture.
-        void OnSelect()
+        private void Update()
+        {
+            // If the user is in placing mode,
+            // update the placement to match the user's gaze.
+            if (placing)
+            {
+                // Do a raycast into the world that will only hit the Spatial Mapping mesh.
+                var headPosition = Camera.main.transform.position;
+                var gazeDirection = Camera.main.transform.forward;
+
+                RaycastHit hitInfo;
+                if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
+                    30.0f, SpatialMappingManager.Instance.LayerMask))
+                {
+                    // Move this object to where the raycast
+                    // hit the Spatial Mapping mesh.
+                    // Here is where you might consider adding intelligence
+                    // to how the object is placed.  For example, consider
+                    // placing based on the bottom of the object's
+                    // collider so it sits properly on surfaces.
+
+                    transform.parent.position = hitInfo.point + (Vector3.up * offsetValue);
+
+                    // Rotate this object to face the user.
+                    Quaternion toQuat = Camera.main.transform.localRotation;
+                    toQuat.x = 0;
+                    toQuat.z = 0;
+                    transform.parent.rotation = toQuat;
+                }
+            }
+        }
+
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            ToggleHologramPlacement();
+        }
+
+        public void ToggleHologramPlacement()
         {
             if (SpatialMappingManager.Instance == null)
             {
@@ -100,39 +136,6 @@ namespace Academy
                 SpatialMappingManager.Instance.SurfaceMaterial = nonPlacementMaterial;
 
                 SpatialMappingManager.Instance.DrawVisualMeshes = false;
-            }
-        }
-
-        // Update is called once per frame.
-        void Update()
-        {
-            // If the user is in placing mode,
-            // update the placement to match the user's gaze.
-            if (placing)
-            {
-                // Do a raycast into the world that will only hit the Spatial Mapping mesh.
-                var headPosition = Camera.main.transform.position;
-                var gazeDirection = Camera.main.transform.forward;
-
-                RaycastHit hitInfo;
-                if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
-                    30.0f, SpatialMappingManager.Instance.LayerMask))
-                {
-                    // Move this object to where the raycast
-                    // hit the Spatial Mapping mesh.
-                    // Here is where you might consider adding intelligence
-                    // to how the object is placed.  For example, consider
-                    // placing based on the bottom of the object's
-                    // collider so it sits properly on surfaces.
-
-                    transform.parent.position = hitInfo.point + (Vector3.up * offsetValue);
-
-                    // Rotate this object to face the user.
-                    Quaternion toQuat = Camera.main.transform.localRotation;
-                    toQuat.x = 0;
-                    toQuat.z = 0;
-                    transform.parent.rotation = toQuat;
-                }
             }
         }
     }

@@ -2,24 +2,33 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 using UnityEngine.XR.WSA;
 
 namespace Academy
 {
     [RequireComponent(typeof(AudioSource))]
-    public class EnergyHubBase : Singleton<EnergyHubBase>
+    public class EnergyHubBase : Singleton<EnergyHubBase>, IInputClickHandler
     {
         public AudioClip AnchorLanding;
         public Material PlacingMaterial;
         public Material PlacedMaterial;
 
-        void Start()
+        private AudioSource audioSource;
+        private Renderer blobOutsideRenderer;
+        private Animator animator;
+
+        private void Start()
         {
+            audioSource = GetComponent<AudioSource>();
+            blobOutsideRenderer = transform.Find("BlobOutside").gameObject.GetComponent<Renderer>();
+            animator = GetComponent<Animator>();
+
             OnSelect();
         }
 
-        void Update()
+        private void Update()
         {
             if (IsTargetVisible())
             {
@@ -36,10 +45,15 @@ namespace Academy
                 targetViewportPosition.z > 0);
         }
 
-        void OnSelect()
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            OnSelect();
+        }
+
+        public void OnSelect()
         {
             ResetAnimation();
-            foreach (Transform child in this.transform)
+            foreach (Transform child in transform)
             {
                 MaterialSwap(child, PlacingMaterial, PlacedMaterial);
                 foreach (Transform childnested in child.transform)
@@ -47,24 +61,21 @@ namespace Academy
                     MaterialSwap(childnested, PlacingMaterial, PlacedMaterial);
                 }
             }
-            this.transform.Find("BlobOutside").gameObject.GetComponent<Renderer>().enabled = true;
-            Animator animator = GetComponent<Animator>();
+            blobOutsideRenderer.enabled = true;
             animator.speed = 1;
 
-            GetComponent<AudioSource>().clip = AnchorLanding;
-            GetComponent<AudioSource>().loop = false;
-            GetComponent<AudioSource>().Play();
+            audioSource.clip = AnchorLanding;
+            audioSource.loop = false;
+            audioSource.Play();
         }
 
         public void ResetAnimation()
         {
-            Animator animator = GetComponent<Animator>();
-
             animator.Rebind();
             animator.speed = 0;
 
             // Setup Placing Object
-            foreach (Transform child in this.transform)
+            foreach (Transform child in transform)
             {
                 MaterialSwap(child, PlacedMaterial, PlacingMaterial);
                 foreach (Transform childnested in child.transform)
@@ -73,9 +84,9 @@ namespace Academy
                 }
             }
 
-            this.transform.Find("BlobOutside").gameObject.GetComponent<Renderer>().enabled = false;
+            blobOutsideRenderer.enabled = false;
 
-            GetComponent<AudioSource>().Stop();
+            audioSource.Stop();
         }
 
         void LightShieldsOpen()
@@ -88,11 +99,12 @@ namespace Academy
 
         void MaterialSwap(Transform mesh, Material currentMaterial, Material newMaterial)
         {
-            if (mesh.GetComponent<Renderer>() == true)
+            Renderer meshRenderer = mesh.GetComponent<Renderer>();
+            if (meshRenderer != null)
             {
-                if (mesh.gameObject.GetComponent<Renderer>().sharedMaterial == currentMaterial)
+                if (meshRenderer.sharedMaterial == currentMaterial)
                 {
-                    mesh.gameObject.GetComponent<Renderer>().material = newMaterial;
+                    meshRenderer.material = newMaterial;
                 }
             }
         }

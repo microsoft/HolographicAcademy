@@ -2,12 +2,13 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
 namespace Academy
 {
     [RequireComponent(typeof(Interpolator))]
-    public class PolyActions : MonoBehaviour
+    public class PolyActions : MonoBehaviour, IInputClickHandler
     {
         [Tooltip("The speed at which POLY is to move.")]
         [Range(5.0f, 60.0f)]
@@ -31,6 +32,11 @@ namespace Academy
             interpolator.InterpolationDone += Interpolator_InterpolationDone;
         }
 
+        private void Start()
+        {
+            PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Idle);
+        }
+
         private void Interpolator_InterpolationDone()
         {
             if (PolyStateManager.Instance.State != PolyStateManager.PolyStates.Charging)
@@ -38,11 +44,6 @@ namespace Academy
                 transform.LookAt(Camera.main.transform.position);
             }
 
-            PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Idle);
-        }
-
-        private void Start()
-        {
             PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Idle);
         }
 
@@ -71,7 +72,7 @@ namespace Academy
         /// <summary>
         /// Called when the Select Gesture is detected. Instructs P0ly to hide.
         /// </summary>
-        public void OnSelect()
+        public void GoHide()
         {
             if (PolyStateManager.Instance.State == PolyStateManager.PolyStates.Hiding) { return; }
 
@@ -80,6 +81,14 @@ namespace Academy
 
             interpolator.PositionPerSecond = MoveSpeed;
             interpolator.SetTargetPosition(PolyStateManager.Instance.Destination);
+        }
+
+        /// <summary>
+        /// Called when the Select Gesture is detected. Instructs P0ly to hide.
+        /// </summary>
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            GoHide();
         }
     }
 }

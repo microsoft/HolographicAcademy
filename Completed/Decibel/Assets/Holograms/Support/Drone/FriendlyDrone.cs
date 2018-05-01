@@ -1,15 +1,19 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using HoloToolkit.Unity.InputModule;
 using System.Collections;
 using UnityEngine;
 
 namespace Academy
 {
-    public class FriendlyDrone : MonoBehaviour
+    public class FriendlyDrone : MonoBehaviour, IInputClickHandler
     {
         public Color EmissiveColor = new Vector4(0f, .87f, 1f, .3f);
         public long OwningUserId { get; set; }
+
+        [SerializeField]
+        private PolyActions polyActions;
 
         void Start()
         {
@@ -58,11 +62,11 @@ namespace Academy
             GetComponent<Animator>().CrossFadeInFixedTime("Hit", 0.1f);
 
             // Get drone's eyes and enable rendering
-            GameObject eyes = this.transform.Find("friendly_droneEyes").gameObject;
+            GameObject eyes = transform.Find("friendly_droneEyes").gameObject;
             eyes.GetComponent<MeshRenderer>().enabled = true;
 
             // Hack for current bug on stopping/playing particles so we will instantiate the stars prefab instead
-            GameObject stars = this.transform.Find("StarArray").gameObject;
+            GameObject stars = transform.Find("StarArray").gameObject;
             var starsClone = Instantiate(stars, stars.transform.position, stars.transform.rotation) as GameObject;
             starsClone.transform.parent = transform;
             foreach (Transform child in starsClone.transform)
@@ -85,7 +89,7 @@ namespace Academy
         public void Happy()
         {
             GetComponent<Animator>().CrossFadeInFixedTime("Happy", 0.1f);
-            GameObject eyes = this.transform.Find("friendly_droneSmile").gameObject;
+            GameObject eyes = transform.Find("friendly_droneSmile").gameObject;
             eyes.GetComponent<MeshRenderer>().enabled = true;
             Invoke("Normal", 3);
         }
@@ -93,13 +97,18 @@ namespace Academy
         public void Normal()
         {
             GetComponent<Animator>().CrossFadeInFixedTime("Idle", 0.1f);
-            GameObject smile = this.transform.Find("friendly_droneSmile").gameObject;
+            GameObject smile = transform.Find("friendly_droneSmile").gameObject;
             smile.GetComponent<MeshRenderer>().enabled = false;
         }
 
-        void OnSelect()
+        public void GoHide()
         {
-            transform.parent.SendMessage("OnSelect");
+            polyActions.GoHide();
+        }
+
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            GoHide();
         }
     }
 }

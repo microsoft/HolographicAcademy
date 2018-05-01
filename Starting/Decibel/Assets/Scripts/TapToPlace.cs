@@ -1,9 +1,11 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using HoloToolkit.Unity.InputModule;
+using HoloToolkit.Unity.SpatialMapping;
 using UnityEngine;
 
-namespace Academy.HoloToolkit.Unity
+namespace Academy
 {
     /// <summary>
     /// The TapToPlace class is a basic way to enable users to move objects 
@@ -15,11 +17,11 @@ namespace Academy.HoloToolkit.Unity
     /// and SpatialMappingManager.
     /// </summary>
 
-    public partial class TapToPlace : MonoBehaviour
+    public partial class TapToPlace : MonoBehaviour, IInputClickHandler
     {
         [Tooltip("Material applied to the spatial map, while placing an object.")]
         public Material PlacementMaterial;
-    
+
         [Tooltip("Sound to play when game object is placed on spatial map.")]
         public AudioClip placementSound;
         [Tooltip("Sound to play when game object is picked up.")]
@@ -32,7 +34,7 @@ namespace Academy.HoloToolkit.Unity
         // Multiplier to offset Y value when placing object on surface.
         float offsetValue = 0.1f;
 
-        void Start()
+        private void Start()
         {
             if (gameObject.GetComponent<Collider>() == null)
             {
@@ -64,45 +66,7 @@ namespace Academy.HoloToolkit.Unity
 
         }
 
-        // Called by GazeGestureManager when the user performs a tap gesture.
-        void OnSelect()
-        {
-            if (SpatialMappingManager.Instance == null)
-            {
-                Debug.LogError("TapToPlace requires spatial mapping.");
-                return;
-            }
-
-            // On each tap gesture, toggle whether the user is in placing mode.
-            placing = !placing;
-
-            // If the user is in placing mode, display the spatial mapping mesh.
-            if (placing)
-            {
-                GestureManager.Instance.OverrideFocusedObject = transform.gameObject;
-                audioSource.clip = pickupSound;
-                audioSource.Play();
-
-                nonPlacementMaterial = SpatialMappingManager.Instance.surfaceMaterial;
-                SpatialMappingManager.Instance.surfaceMaterial = PlacementMaterial;
-
-                SpatialMappingManager.Instance.DrawVisualMeshes = true;
-            }
-            // If the user is not in placing mode, hide the spatial mapping mesh.
-            else
-            {
-                GestureManager.Instance.OverrideFocusedObject = null;
-                audioSource.clip = placementSound;
-                audioSource.Play();
-
-                SpatialMappingManager.Instance.surfaceMaterial = nonPlacementMaterial;
-
-                SpatialMappingManager.Instance.DrawVisualMeshes = false;
-            }
-        }
-
-        // Update is called once per frame.
-        void Update()
+        private void Update()
         {
             // If the user is in placing mode,
             // update the placement to match the user's gaze.
@@ -123,14 +87,55 @@ namespace Academy.HoloToolkit.Unity
                     // placing based on the bottom of the object's
                     // collider so it sits properly on surfaces.
 
-                    this.transform.parent.position = hitInfo.point + (Vector3.up * offsetValue);
+                    transform.parent.position = hitInfo.point + (Vector3.up * offsetValue);
 
                     // Rotate this object to face the user.
                     Quaternion toQuat = Camera.main.transform.localRotation;
                     toQuat.x = 0;
                     toQuat.z = 0;
-                    this.transform.parent.rotation = toQuat;
+                    transform.parent.rotation = toQuat;
                 }
+            }
+        }
+
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            ToggleHologramPlacement();
+        }
+
+        public void ToggleHologramPlacement()
+        {
+            if (SpatialMappingManager.Instance == null)
+            {
+                Debug.LogError("TapToPlace requires spatial mapping.");
+                return;
+            }
+
+            // On each tap gesture, toggle whether the user is in placing mode.
+            placing = !placing;
+
+            // If the user is in placing mode, display the spatial mapping mesh.
+            if (placing)
+            {
+                InputManager.Instance.OverrideFocusedObject = transform.gameObject;
+                audioSource.clip = pickupSound;
+                audioSource.Play();
+
+                nonPlacementMaterial = SpatialMappingManager.Instance.SurfaceMaterial;
+                SpatialMappingManager.Instance.SurfaceMaterial = PlacementMaterial;
+
+                SpatialMappingManager.Instance.DrawVisualMeshes = true;
+            }
+            // If the user is not in placing mode, hide the spatial mapping mesh.
+            else
+            {
+                InputManager.Instance.OverrideFocusedObject = null;
+                audioSource.clip = placementSound;
+                audioSource.Play();
+
+                SpatialMappingManager.Instance.SurfaceMaterial = nonPlacementMaterial;
+
+                SpatialMappingManager.Instance.DrawVisualMeshes = false;
             }
         }
     }
