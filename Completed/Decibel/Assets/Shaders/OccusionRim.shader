@@ -1,6 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-//Very fast shader that uses the Unity lighting model
+﻿//Very fast shader that uses the Unity lighting model
 //Compiles down to only performing the operations you're actually using
 //Does not currently support stereo instancing
 //Creates a blue rim effect when the hologram is occluded.

@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: AppBarBackgroundBar
   m_Shader: {fileID: 4800000, guid: d45c0efca53019e43891b0f610f8146e, type: 3}
-  m_ShaderKeywords: _HOVER_LIGHT _INNER_GLOW _METALLIC_TEXTURE_ALBEDO_CHANNEL_A
+  m_ShaderKeywords: _DISABLE_ALBEDO_MAP _HOVER_LIGHT _INNER_GLOW _METALLIC_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
