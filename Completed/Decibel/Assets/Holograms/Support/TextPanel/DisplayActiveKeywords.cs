@@ -2,6 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using HoloToolkit.Unity.InputModule;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,7 +60,7 @@ namespace Academy
             // Find which keywords have wired up responses in the editor and display only those.
             foreach (string keyword in responsesLookup.Keys)
             {
-                if (responsesLookup[keyword].GetPersistentEventCount() != 0)
+                if (!String.IsNullOrEmpty(responsesLookup[keyword].GetPersistentMethodName(0)))
                 {
                     sb.AppendLine(keyword);
                 }
