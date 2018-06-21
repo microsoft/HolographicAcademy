@@ -3,7 +3,7 @@
 //Does not currently support stereo instancing
 //Creates a blue rim effect when the hologram is occluded.
 
-Shader "Custom/OccusionRim" 
+Shader "Custom/OcclusionRim"
 {
 	Properties
 	{
