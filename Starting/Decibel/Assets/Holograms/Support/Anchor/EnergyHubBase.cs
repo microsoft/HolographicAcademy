@@ -2,18 +2,21 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using HoloToolkit.Unity;
-using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 using UnityEngine.XR.WSA;
 
 namespace Academy
 {
-    [RequireComponent(typeof(AudioSource))]
-    public class EnergyHubBase : Singleton<EnergyHubBase>, IInputClickHandler
+    public class EnergyHubBase : MonoBehaviour
     {
-        public AudioClip AnchorLanding;
-        public Material PlacingMaterial;
-        public Material PlacedMaterial;
+        [SerializeField]
+        private AudioClip anchorLanding;
+
+        [SerializeField]
+        private Material placingMaterial = null;
+
+        [SerializeField]
+        private Material placedMaterial = null;
 
         private AudioSource audioSource;
         private Renderer blobOutsideRenderer;
@@ -22,6 +25,9 @@ namespace Academy
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
+            audioSource.clip = anchorLanding;
+            audioSource.loop = false;
+
             blobOutsideRenderer = transform.Find("BlobOutside").gameObject.GetComponent<Renderer>();
             animator = GetComponent<Animator>();
 
@@ -32,40 +38,33 @@ namespace Academy
         {
             if (IsTargetVisible())
             {
-                HolographicSettings.SetFocusPointForFrame(gameObject.transform.position, -Camera.main.transform.forward);
+                HolographicSettings.SetFocusPointForFrame(gameObject.transform.position, -CameraCache.Main.transform.forward);
             }
         }
 
         private bool IsTargetVisible()
         {
             // This will return true if the target's mesh is within the Main Camera's view frustums.
-            Vector3 targetViewportPosition = Camera.main.WorldToViewportPoint(gameObject.transform.position);
+            Vector3 targetViewportPosition = CameraCache.Main.WorldToViewportPoint(gameObject.transform.position);
             return (targetViewportPosition.x > 0.0 && targetViewportPosition.x < 1 &&
                 targetViewportPosition.y > 0.0 && targetViewportPosition.y < 1 &&
                 targetViewportPosition.z > 0);
         }
 
-        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
-        {
-            OnSelect();
-        }
-
         public void OnSelect()
         {
-            ResetAnimation();
             foreach (Transform child in transform)
             {
-                MaterialSwap(child, PlacingMaterial, PlacedMaterial);
+                MaterialSwap(child, placingMaterial, placedMaterial);
                 foreach (Transform childnested in child.transform)
                 {
-                    MaterialSwap(childnested, PlacingMaterial, PlacedMaterial);
+                    MaterialSwap(childnested, placingMaterial, placedMaterial);
                 }
             }
+
             blobOutsideRenderer.enabled = true;
             animator.speed = 1;
 
-            audioSource.clip = AnchorLanding;
-            audioSource.loop = false;
             audioSource.Play();
         }
 
@@ -77,10 +76,10 @@ namespace Academy
             // Setup Placing Object
             foreach (Transform child in transform)
             {
-                MaterialSwap(child, PlacedMaterial, PlacingMaterial);
+                MaterialSwap(child, placedMaterial, placingMaterial);
                 foreach (Transform childnested in child.transform)
                 {
-                    MaterialSwap(childnested, PlacedMaterial, PlacingMaterial);
+                    MaterialSwap(childnested, placedMaterial, placingMaterial);
                 }
             }
 
@@ -97,7 +96,7 @@ namespace Academy
         {
         }
 
-        void MaterialSwap(Transform mesh, Material currentMaterial, Material newMaterial)
+        private void MaterialSwap(Transform mesh, Material currentMaterial, Material newMaterial)
         {
             Renderer meshRenderer = mesh.GetComponent<Renderer>();
             if (meshRenderer != null)
