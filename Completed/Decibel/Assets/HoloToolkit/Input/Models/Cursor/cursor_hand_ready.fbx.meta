@@ -31,7 +31,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: hand_ready
-    second: {fileID: 2100000, guid: 33479ef77376e13479877389eb1f39d3, type: 2}
+    second: {fileID: 2100000, guid: e3614b053e3b0bd4b8efece8f50c21ad, type: 2}
   materials:
     importMaterials: 0
     materialName: 0
