@@ -1,80 +1,94 @@
-﻿using Academy.HoloToolkit.Unity;
-using System.Collections;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using HoloToolkit.Unity;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
-[RequireComponent(typeof(Interpolator))]
-public class PolyActions : MonoBehaviour
+namespace Academy
 {
-    [Tooltip("The speed at which POLY is to move.")]
-    [Range(5.0f, 60.0f)]
-    public float MoveSpeed = 60.0f;
-
-    [Tooltip("How rapidly should POLY rotate.")]
-    [Range(2.0f, 100.0f)]
-    public float RotationSensitivity = 10.0f;
-
-    public GameObject Teleporticles;
-
-    private Interpolator interpolator;
-
-    private void Awake()
+    [RequireComponent(typeof(Interpolator))]
+    public class PolyActions : MonoBehaviour, IInputClickHandler
     {
-        interpolator = gameObject.GetComponent<Interpolator>();
+        [Tooltip("The speed at which POLY is to move.")]
+        [Range(5.0f, 60.0f)]
+        public float MoveSpeed = 60.0f;
 
-        interpolator.PositionPerSecond = MoveSpeed;
-        interpolator.SmoothLerpToTarget = true;
+        [Tooltip("How rapidly should POLY rotate.")]
+        [Range(2.0f, 100.0f)]
+        public float RotationSensitivity = 10.0f;
 
-        interpolator.InterpolationDone += Interpolator_InterpolationDone;
-    }
+        public GameObject Teleporticles;
 
-    private void Interpolator_InterpolationDone()
-    {
-        if (PolyStateManager.Instance.State != PolyStateManager.PolyStates.Charging)
+        private Interpolator interpolator;
+
+        private void Awake()
         {
-            transform.LookAt(Camera.main.transform.position);
+            interpolator = gameObject.GetComponent<Interpolator>();
+
+            interpolator.PositionPerSecond = MoveSpeed;
+            interpolator.SmoothLerpToTarget = true;
+
+            interpolator.InterpolationDone += Interpolator_InterpolationDone;
         }
 
-        PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Idle);
-    }
+        private void Start()
+        {
+            PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Idle);
+        }
 
-    private void Start()
-    {
-        PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Idle);
-    }
+        private void Interpolator_InterpolationDone()
+        {
+            if (PolyStateManager.Instance.State != PolyStateManager.PolyStates.Charging)
+            {
+                transform.LookAt(Camera.main.transform.position);
+            }
 
-    /// <summary>
-    /// Calls P0ly to the point at which the user is gazing.
-    /// </summary>
-    public void ComeBack()
-    {
-        PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Returning);
-        
-        interpolator.SetTargetPosition(PolyStateManager.Instance.Destination);
-    }
+            PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Idle);
+        }
 
-    /// <summary>
-    /// Sends P0ly to the charging box.
-    /// </summary>
-    public void GoCharge()
-    {
-        if (PolyStateManager.Instance.State == PolyStateManager.PolyStates.Charging) { return; }
+        /// <summary>
+        /// Calls P0ly to the point at which the user is gazing.
+        /// </summary>
+        public void ComeBack()
+        {
+            PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Returning);
 
-        PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Charging);
-        
-        interpolator.SetTargetPosition(PolyStateManager.Instance.Destination);
-    }
+            interpolator.SetTargetPosition(PolyStateManager.Instance.Destination);
+        }
 
-    /// <summary>
-    /// Called when the Select Gesture is detected. Instructs P0ly to hide.
-    /// </summary>
-    public void OnSelect()
-    {
-        if (PolyStateManager.Instance.State == PolyStateManager.PolyStates.Hiding) { return; }
+        /// <summary>
+        /// Sends P0ly to the charging box.
+        /// </summary>
+        public void GoCharge()
+        {
+            if (PolyStateManager.Instance.State == PolyStateManager.PolyStates.Charging) { return; }
 
-        // Hide P0ly.  It will be shown again when idle.
-        PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Hiding);
-        
-        interpolator.PositionPerSecond = MoveSpeed;
-        interpolator.SetTargetPosition(PolyStateManager.Instance.Destination);
+            PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Charging);
+
+            interpolator.SetTargetPosition(PolyStateManager.Instance.Destination);
+        }
+
+        /// <summary>
+        /// Called when the Select Gesture is detected. Instructs P0ly to hide.
+        /// </summary>
+        public void GoHide()
+        {
+            if (PolyStateManager.Instance.State == PolyStateManager.PolyStates.Hiding) { return; }
+
+            // Hide P0ly.  It will be shown again when idle.
+            PolyStateManager.Instance.SetState(PolyStateManager.PolyStates.Hiding);
+
+            interpolator.PositionPerSecond = MoveSpeed;
+            interpolator.SetTargetPosition(PolyStateManager.Instance.Destination);
+        }
+
+        /// <summary>
+        /// Called when the Select Gesture is detected. Instructs P0ly to hide.
+        /// </summary>
+        void IInputClickHandler.OnInputClicked(InputClickedEventData eventData)
+        {
+            GoHide();
+        }
     }
 }

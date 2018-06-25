@@ -1,18 +1,24 @@
-﻿using UnityEngine;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
 
-public class GrenadeRotate : MonoBehaviour
+using UnityEngine;
+
+namespace Academy
 {
-    public Color EmissiveColor = new Vector4(0f, .87f, 1f, 1f);
-
-    void Start()
+    public class GrenadeRotate : MonoBehaviour
     {
-        var materials = GetComponent<Renderer>().materials;
-        materials[1].SetColor("_EmissionColor", EmissiveColor);
-        GameObject childParticle = transform.Find("ParticleTrail").gameObject;
-        if (childParticle != null)
+        public Color EmissiveColor = new Vector4(0f, .87f, 1f, 1f);
+
+        void Start()
         {
-            ParticleSystem.MainModule ps = childParticle.GetComponent<ParticleSystem>().main;
-            ps.startColor = EmissiveColor;
+            var materials = GetComponent<Renderer>().materials;
+            materials[1].SetColor("_EmissionColor", EmissiveColor);
+            GameObject childParticle = transform.Find("ParticleTrail").gameObject;
+            if (childParticle != null)
+            {
+                ParticleSystem.MainModule ps = childParticle.GetComponent<ParticleSystem>().main;
+                ps.startColor = EmissiveColor;
+            }
         }
     }
 }

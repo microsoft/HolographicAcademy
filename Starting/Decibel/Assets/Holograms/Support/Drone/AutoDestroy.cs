@@ -1,22 +1,27 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
 
-public class AutoDestroy : MonoBehaviour
+using UnityEngine;
+
+namespace Academy
 {
-    public GameObject Poly;
-
-    void Start()
+    public class AutoDestroy : MonoBehaviour
     {
-        Invoke("DestroyMe", 2.0f);
-    }
+        public GameObject Poly;
 
-    void DestroyMe()
-    {
-        Destroy(this.gameObject);
-    }
+        void Start()
+        {
+            Invoke("DestroyMe", 2.0f);
+        }
 
-    void Update()
-    {
-        transform.position = Poly.transform.position;
+        void DestroyMe()
+        {
+            Destroy(this.gameObject);
+        }
+
+        void Update()
+        {
+            transform.position = Poly.transform.position;
+        }
     }
 }

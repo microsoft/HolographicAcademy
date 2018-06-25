@@ -1,34 +1,50 @@
-﻿using Academy.HoloToolkit.Unity;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
-public class PolyChargerRotation : MonoBehaviour
+namespace Academy
 {
-    [Tooltip("How rapidly should the charger rotate.")]
-    [Range(2.0f, 100.0f)]
-    public float RotationSensitivity = 10.0f;
-
-    private void PerformRotation()
+    public class PolyChargerRotation : MonoBehaviour, INavigationHandler
     {
-        // This will help control the amount of rotation.
-        float rotationFactor = GestureManager.Instance.NavigationPosition.x * RotationSensitivity;
+        [Tooltip("How rapidly should the charger rotate.")]
+        [Range(2.0f, 100.0f)]
+        public float RotationSensitivity = 10.0f;
 
-        // Rotate along the Y axis using rotationFactor.
-        transform.parent.Rotate(new Vector3(0, -1 * rotationFactor, 0));
-    }
+        private void PerformRotation(float rotationAmount)
+        {
+            // This will help control the amount of rotation.
+            float rotationFactor = rotationAmount * RotationSensitivity;
 
-    /// <summary>
-    /// Handles navigation start messages.
-    /// </summary>
-    public void OnNavigationStarted()
-    {
-        PerformRotation();
-    }
+            // Rotate along the Y axis using rotationFactor.
+            transform.parent.Rotate(new Vector3(0, -1 * rotationFactor, 0));
+        }
 
-    /// <summary>
-    /// Handles navigation update messages.
-    /// </summary>
-    public void OnNavigationUpdated()
-    {
-        PerformRotation();
+        /// <summary>
+        /// Handles navigation start messages.
+        /// </summary>
+        void INavigationHandler.OnNavigationStarted(NavigationEventData eventData)
+        {
+            PerformRotation(eventData.NormalizedOffset.x);
+        }
+
+        /// <summary>
+        /// Handles navigation update messages.
+        /// </summary>
+        void INavigationHandler.OnNavigationUpdated(NavigationEventData eventData)
+        {
+            PerformRotation(eventData.NormalizedOffset.x);
+        }
+
+        void INavigationHandler.OnNavigationCompleted(NavigationEventData eventData)
+        {
+            // Do nothing
+        }
+
+        void INavigationHandler.OnNavigationCanceled(NavigationEventData eventData)
+        {
+            // Do nothing
+        }
     }
 }
